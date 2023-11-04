@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+node_modules/
+
+# Editor
+.idea
+.DS_Store
+
+## Node-RED
+.config.runtime.json

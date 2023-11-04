@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  webhook-json:
+    container_name: webhook-json
+    build:
+      context: ./webhook-json
+    ports:
+      - 3002:3000
+    volumes:
+      - ./webhook-json/events:/app/events
+
+  node-red:
+    container_name: node-red
+    image: nodered/node-red:latest
+    ports:
+      - 1880:1880
+    volumes:
+      - ./node-red:/data
