@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "name": "volkovlabs-bi-toolkit",
   "scripts": {
-    "start": "docker-compose build && docker-compose up",
-    "stop": "docker-compose down"
+    "start": "docker compose pull && docker compose up",
+    "stop": "docker compose down"
   }
 }

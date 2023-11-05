@@ -3,7 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+# Files
 node_modules/
+grafana/
+events/
 
 # Editor
 .idea
