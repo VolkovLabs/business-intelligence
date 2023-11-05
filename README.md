@@ -1,10 +1,23 @@
-# Business Intelligence Toolkit
+# Business Intelligence for Grafana (BIG) Toolkit
 
 ## Introduction
 
-The Business Intelligence Toolkit provides additional tools for Business Intelligence for Grafana.
+The Toolkit provides configuration and additional tools for Business Intelligence for Grafana (BIG).
 
 ## Highlights
 
-- Webhook JSON server
-- Node-RED Slack notifications
+- Docker Compose configuration to start the BIG.
+- Webhook JSON server for testing.
+- Node-RED webhook for Slack notifications.
+
+## Start BIG
+
+```
+docker compose pull && docker compose up
+```
+
+## Stop BIG
+
+```
+docker compose down
+```
