@@ -10,5 +10,6 @@
   "scripts": {
     "start": "docker compose pull && docker compose up",
     "stop": "docker compose down"
-  }
+  },
+  "version": "1.1.0"
 }
