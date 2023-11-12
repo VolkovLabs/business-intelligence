@@ -11,7 +11,7 @@ services:
       - ./grafana:/var/lib/grafana
 
   database:
-    container_name: timescale
+    container_name: database
     image: timescale/timescaledb:latest-pg14
     restart: always
     environment:
