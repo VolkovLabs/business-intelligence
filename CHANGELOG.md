@@ -4,8 +4,9 @@
 
 ### Features / Enhancements
 
-- Update Docker Compose to use latest images instead of 1.1.0
-- Update Token for 1.2.0 release
+- Update Docker Compose to use latest images (#4)
+- Update Token for 1.2.0 release with global limit (#4)
+- Update Engine to use database migration (#4)
 
 ## 1.1.0 (2023-11-12)
 
