@@ -1,12 +1,13 @@
 # Change Log
 
-## 1.2.0 (IN PROGRESS)
+## 1.2.0 (2023-11-17)
 
 ### Features / Enhancements
 
 - Update Docker Compose to use latest images (#4)
 - Update Token for 1.2.0 release with global limit (#4)
 - Update Engine to use database migration (#4)
+- Use BI App and BI Engine 1.2.0 (#5)
 
 ## 1.1.0 (2023-11-12)
 
