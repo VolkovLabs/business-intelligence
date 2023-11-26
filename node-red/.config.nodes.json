@@ -426,28 +426,5 @@
                 "file": "/usr/src/node-red/node_modules/@node-red/nodes/core/storage/23-watch.js"
             }
         }
-    },
-    "node-red-contrib-slack": {
-        "name": "node-red-contrib-slack",
-        "version": "2.0.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "slack": {
-                "name": "slack",
-                "types": [
-                    "slack-config",
-                    "slack-state",
-                    "slack-rtm-in",
-                    "slack-rtm-out",
-                    "slack-web-out"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-slack",
-                "file": "/data/node_modules/node-red-contrib-slack/slackpost.js"
-            }
-        }
     }
 }

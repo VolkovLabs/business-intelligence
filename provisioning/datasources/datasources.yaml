@@ -1,0 +1,35 @@
+apiVersion: 1
+
+datasources:
+  - name: Business Intelligence Engine
+    type: volkovlabs-engine-datasource
+    access: proxy
+    uid: bi-engine
+    orgId: 1
+    version: 1
+    editable: true
+    jsonData:
+      url: ${ENGINE_URL}
+    secureJsonData:
+      token: ${ENGINE_TOKEN}
+  - name: Test
+    type: testdata
+    access: proxy
+    uid: a9457cec-7e48-49fa-9e0d-1d6882065e10
+    orgId: 1
+    version: 1
+    editable: true
+  - name: Timescale
+    type: postgres
+    access: proxy
+    uid: timescale
+    orgId: 1
+    version: 1
+    editable: true
+    url: database:5432
+    user: postgres
+    jsonData:
+      postgresVersion: 1200
+      sslmode: disable
+    secureJsonData:
+      password: postgres

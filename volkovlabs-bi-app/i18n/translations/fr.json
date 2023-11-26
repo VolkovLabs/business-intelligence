@@ -1,0 +1,6 @@
+{
+  "config": {
+    "description": "Business Intelligence App for Grafana.",
+    "updateButton": "Mettre à jour les paramètres"
+  }
+}

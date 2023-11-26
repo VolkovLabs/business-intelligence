@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.0 (IN PROGRESS)
+
+### Features / Enhancements
+
+- Update BI App and Docker Compose configuration (#6)
+
 ## 1.2.0 (2023-11-17)
 
 ### Features / Enhancements

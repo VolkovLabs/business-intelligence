@@ -1,0 +1,67 @@
+{
+  "id": "volkovlabs-engine-datasource",
+  "info": {
+    "author": {
+      "name": "Volkov Labs",
+      "url": "https://volkovlabs.io"
+    },
+    "description": "",
+    "logos": {
+      "large": "img/logo.svg",
+      "small": "img/logo.svg"
+    }
+  },
+  "metrics": true,
+  "name": "Business Intelligence Engine",
+  "routes": [
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "GET",
+      "path": "ping",
+      "reqRole": "Viewer",
+      "url": "{{ .JsonData.url }}/health"
+    },
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "*",
+      "path": "license",
+      "reqRole": "Admin",
+      "url": "{{ .JsonData.url }}/license"
+    },
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "*",
+      "path": "alerts",
+      "reqRole": "Viewer",
+      "url": "{{ .JsonData.url }}/alerts"
+    },
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "*",
+      "path": "webhooks",
+      "reqRole": "Viewer",
+      "url": "{{ .JsonData.url }}/webhooks"
+    }
+  ],
+  "type": "datasource"
+}
