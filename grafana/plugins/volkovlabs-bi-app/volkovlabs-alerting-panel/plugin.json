@@ -1,0 +1,16 @@
+{
+  "id": "volkovlabs-alerting-panel",
+  "info": {
+    "author": {
+      "name": "Volkov Labs",
+      "url": "https://volkovlabs.io"
+    },
+    "description": "Manage alerts based on panel queries with thresholds",
+    "logos": {
+      "large": "img/logo.svg",
+      "small": "img/logo.svg"
+    }
+  },
+  "name": "Business Intelligence Alerting",
+  "type": "panel"
+}
