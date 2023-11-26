@@ -5,11 +5,9 @@ npm-debug.log*
 
 # Files
 node_modules/
-grafana/grafana.db
-grafana/png
-grafana/csv
-grafana/alerting
+grafana/
 events/
+database/
 
 # Editor
 .idea

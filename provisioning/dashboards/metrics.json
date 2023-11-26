@@ -18,7 +18,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -87,7 +86,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 9,
+        "h": 13,
         "w": 12,
         "x": 0,
         "y": 0
@@ -169,84 +168,14 @@
     },
     {
       "datasource": {
-        "type": "testdata",
-        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "auto",
-            "cellOptions": {
-              "type": "auto"
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "#EAB839",
-                "value": 10
-              },
-              {
-                "color": "red",
-                "value": 20
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 9
-      },
-      "id": 2,
-      "options": {
-        "cellHeight": "sm",
-        "footer": {
-          "countRows": false,
-          "fields": "",
-          "reducer": ["sum"],
-          "show": false
-        },
-        "showHeader": true
-      },
-      "pluginVersion": "10.2.2",
-      "targets": [
-        {
-          "datasource": {
-            "type": "testdata",
-            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
-          },
-          "refId": "A",
-          "scenarioId": "table_static"
-        }
-      ],
-      "title": "Table Static",
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "testdata",
+        "type": "grafana-testdata-datasource",
         "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
       },
       "gridPos": {
-        "h": 9,
+        "h": 13,
         "w": 12,
         "x": 0,
-        "y": 18
+        "y": 13
       },
       "id": 3,
       "options": {
@@ -266,6 +195,8 @@
             "type": "testdata",
             "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
           },
+          "levelColumn": true,
+          "lines": 20,
           "refId": "A",
           "scenarioId": "logs"
         }
@@ -288,6 +219,6 @@
   "timezone": "",
   "title": "Business Intelligence Demo",
   "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
-  "version": 1,
+  "version": 3,
   "weekStart": ""
 }

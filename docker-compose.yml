@@ -9,6 +9,7 @@ services:
       - 3000:3000
     volumes:
       - ./grafana:/var/lib/grafana
+      - ./volkovlabs-bi-app:/var/lib/grafana/plugins/volkovlabs-bi-app
       - ./provisioning:/etc/grafana/provisioning
 
   database:
@@ -21,6 +22,7 @@ services:
       - 5432:5432
     volumes:
       - ./timescale:/docker-entrypoint-initdb.d
+      - ./database:/var/lib/postgresql/data
 
   engine:
     container_name: engine
