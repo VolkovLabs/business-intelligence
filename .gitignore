@@ -5,7 +5,10 @@ npm-debug.log*
 
 # Files
 node_modules/
-grafana/
+grafana/grafana.db
+grafana/png
+grafana/csv
+grafana/alerting
 events/
 
 # Editor

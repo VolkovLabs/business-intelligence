@@ -3,12 +3,13 @@ version: "3.4"
 services:
   grafana:
     container_name: grafana
-    image: ghcr.io/volkovlabs/bi-app:1.2.0
+    image: grafana/grafana:10.2.2
     env_file: .env
     ports:
       - 3000:3000
     volumes:
       - ./grafana:/var/lib/grafana
+      - ./provisioning:/etc/grafana/provisioning
 
   database:
     container_name: database
@@ -18,6 +19,8 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+    volumes:
+      - ./timescale:/docker-entrypoint-initdb.d
 
   engine:
     container_name: engine
@@ -45,3 +48,17 @@ services:
       - 1880:1880
     volumes:
       - ./node-red:/data
+
+  data-generator:
+    container_name: data-generator
+    build:
+      context: ./timescale
+    ports:
+      - 3003:3003/tcp
+    depends_on:
+      - database
+    environment:
+      WAIT_HOSTS: database:5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST: database
