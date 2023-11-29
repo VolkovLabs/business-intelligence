@@ -23,7 +23,7 @@
 - Update Alerting Panel (#32)
 - Add cron helper to transform cron value in human-readable format (#33)
 - Add Node-RED example for sending to Slack channel (#30)
-- Move Node-RED and JSON Webhook to BI(G) (#40)
+- Move Node-RED and JSON Webhook to BI Toolkit (#40)
 - Update GitHub workflows (#41)
 - Update Alert Rules, Workflows List (43)
 - Remove query from Alerts (#45)
