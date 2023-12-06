@@ -34,18 +34,6 @@
         }
       ],
       "method": "*",
-      "path": "license",
-      "reqRole": "Admin",
-      "url": "{{ .JsonData.url }}/license"
-    },
-    {
-      "headers": [
-        {
-          "content": "Bearer {{ .SecureJsonData.token }}",
-          "name": "Authorization"
-        }
-      ],
-      "method": "*",
       "path": "alerts",
       "reqRole": "Viewer",
       "url": "{{ .JsonData.url }}/alerts"

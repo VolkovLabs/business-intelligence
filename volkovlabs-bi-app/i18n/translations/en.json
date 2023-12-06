@@ -15,6 +15,9 @@
       "ok": "OK",
       "scheduled": "Scheduled"
     },
+    "thresholdColorsOptions": {
+      "green": "Green"
+    },
     "timeRangeSourceOptions": {
       "configured": "Custom",
       "dashboard": "From Dashboard"
@@ -126,6 +129,10 @@
         "scheduleLabel": "Schedule",
         "schedulePlaceholder": "Cron schedule, */5 * * * *",
         "targetLabel": "Target",
+        "thresholdColors": {
+          "fieldLabel": "Allowable Colors",
+          "fieldTooltip": "Alert rule will be triggered on all thresholds which are not in a specific color range"
+        },
         "timeRange": {
           "from": "From",
           "to": "To"
