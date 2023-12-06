@@ -11,29 +11,29 @@ Hash: SHA512
     "http://localhost:3000/"
   ],
   "plugin": "volkovlabs-bi-app",
-  "version": "1.2.0",
-  "time": 1700241262911,
+  "version": "1.3.0",
+  "time": 1701870954254,
   "keyId": "7e4d0c6a708866e7",
   "files": {
-    "plugin.json": "73d66bd9f253082eef8e4a8144b4aa110c5e463d2c9cf8e35db3cd79c704262a",
-    "volkovlabs-engine-datasource/plugin.json": "47c1e7fbb43ad09122c032c86cd2934421ee83bfab3b34a3821de74778148808",
-    "volkovlabs-engine-datasource/module.js.map": "64dcb37acf3db6849657e1d6cfb22b056e62bf59be2765f5e5f1a4830bf739a3",
-    "volkovlabs-engine-datasource/module.js": "2365452827deaa4ac699af10714e03697c0b0384bbc573bf962c6d2a1f267f09",
-    "volkovlabs-engine-datasource/img/logo.svg": "d509edef637aab646a41730128a1435b635398bd80c43617ce799cf52ef7f59d",
+    "CHANGELOG.md": "c20a93203e55d75ade0201f4dc734cad76b581a77cd05daebcadbcb4f8646c5e",
     "LICENSE": "031a979f6f00d5c5511ca3b813ae6feab2e964de261dda19a30d1932a16d3d97",
-    "module.js.map": "e6f13f31b6dd6e2db4038eb1f3fe494187bc3f98dda6bd80db1813c89578455f",
+    "volkovlabs-alerting-panel/module.js": "e46c3b64a138f8e4fc860b5db2d1fb60802dc855a830d51a96c78dbca4aeb57b",
+    "volkovlabs-alerting-panel/img/logo.svg": "cc953673a0d5a2b495346a2d7a5a105a423882906050bb3e6669556aaba77d54",
     "volkovlabs-alerting-panel/plugin.json": "25589f45f28fa8a17a60d94ba4e763ba77a5042a4b5966abc64fcf5be208f797",
-    "volkovlabs-alerting-panel/module.js.map": "5f5ded70f5b9adb1b2405d4e8a766bac71142023ca21dc8a3742dc335482ce91",
-    "volkovlabs-alerting-panel/module.js": "da9d31319198af3e93184c82e124fef0eee140de6265a19aa025122e3051364b",
-    "volkovlabs-alerting-panel/img/logo.svg": "e12e65b37e2407cc8f72e951d62098d480e9813b5a01060cfb8bdc68d75467c5",
-    "module.js": "2c0092643624847d8714d1896b6ec7664f88d4618fbdcac6b9a91e9f1d71c615",
+    "volkovlabs-alerting-panel/module.js.map": "a42e6195ff0295b60d4752a3c75ce5fd0bb47a4f4e7056e9fa6380a30924e767",
+    "module.js": "b6c092d8b4d4a7440adb15e0fa6dfd561eb660a708f16a0ffc22c077199e8709",
+    "volkovlabs-engine-datasource/module.js": "736f5d33516ee97372747079b20037cccf2e3c86868664dbb95067be9025897a",
+    "volkovlabs-engine-datasource/img/logo.svg": "0e6a1e5fdf1e6bc26f3bac7ea344600a3d030eafa6a2e1ca405a067cb46f5f6c",
+    "volkovlabs-engine-datasource/plugin.json": "1a3af4e2ff8daa96d953552f6c6f8c2e68379025dd050e9443ea3800fb49bf4b",
+    "volkovlabs-engine-datasource/module.js.map": "aa733de334d8dd9dd7eb040688d8e5bffa2acbf35316254fb80a357be91b09fd",
     "README.md": "2e0b2571ed2deec68b62897361235c3f558f4c57198fb2e2dd577b98daf74eed",
-    "img/logo.svg": "d509edef637aab646a41730128a1435b635398bd80c43617ce799cf52ef7f59d",
-    "CHANGELOG.md": "cc2a8f7e930ba399f878010498cecf848dbb7e6141738e22aa5a7ec2d0924eca",
+    "img/logo.svg": "093ba6350a46d255270fd8eed7f531e859445fd2f1a4eeff5f0c606bed3e35c6",
+    "plugin.json": "d007a111eb7ce47188844c45edb7571df05d39eb5f80ec7b9f8e24926baa2eb7",
+    "module.js.map": "367725af9f12127b3e7cdadeacd062a1ed5bbcd7606010ee78c28ba90b031752",
+    "i18n/translations/en.json": "74b014a5f2d11269bb73b8cfe0c470e80864c05c50052c72c7eab046aef8e942",
+    "i18n/translations/fr.json": "c7f07dc01b30c01d7a474e168e2999c900b99cc8157ca719aa5ffcfb06fc34c2",
     "i18n/translations/es.json": "e036982ba519a6235cdcc38a824735715da3f9ec8ef5e03b06b9d73b4583e7b3",
     "i18n/translations/zh.json": "222cfa154a3db1e58a5f75bd80a2bbe508f1538bbe97ebf8e84189655658e2ea",
-    "i18n/translations/fr.json": "c7f07dc01b30c01d7a474e168e2999c900b99cc8157ca719aa5ffcfb06fc34c2",
-    "i18n/translations/en.json": "3f52829013ab595007af4fb6176d53677fe25948a1df144747fe693777a3952b",
     "i18n/translations/de.json": "e90c2f75a1f4b037cbbc18c111c90821534b1a99be76b3b97d0539969fc782af"
   }
 }
@@ -41,10 +41,10 @@ Hash: SHA512
 Version: OpenPGP.js v4.10.10
 Comment: https://openpgpjs.org
 
-wrcEARMKAAYFAmVXn28AIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
-cIhm5zizAgjhZJZ0yz25gUqbDr+A76S8IGdb7zUDXXagwmqwyDfElrucqSmI
-c2IDpZBtNvCEDV++oDxrs1fm9vo0MAXmikc09wIIpsUzue7HGxPGIAiHbBLs
-u8mME7i2NUbyfSrXtBsB7ELIsawY2+3d++yC8UK/2z55WFjCBnVoIMbxrTPB
-GcLCWuY=
-=ZhHr
+wrcEARMKAAYFAmVwfWoAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm57ixAgjqJwxH2jadygQ572UmBjwb/lkaiI5mm9h5vk9N/ncC52JH6z5z
+0NPhH1i1XyQU5vMbDwBSbvfOkMST9bHfjyMzXQII63j0no6o0ZF4BerWMVWS
+sdop5GC7Q8Jpv9ekGbyoHMiBBrtSH1r9SXtpy7BUyTIBMTgu1qNWoU3J3sT6
+qWEwLS0=
+=To5L
 -----END PGP SIGNATURE-----

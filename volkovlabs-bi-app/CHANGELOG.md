@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.3.0 (2023-12-06)
+
+### Features / Enhancements
+
+- Add features access for Grafana user role (#65)
+- Update ESLint configuration and refactor (#66)
+- Add Thresholds in range (#68)
+- Remove Docker container workflow (#69)
+- Update Icons and Threshold Colors (#70)
+
 ## 1.2.0 (2023-11-17)
 
 ### Features / Enhancements
