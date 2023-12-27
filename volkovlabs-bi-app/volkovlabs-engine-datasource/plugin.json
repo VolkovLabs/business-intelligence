@@ -49,6 +49,30 @@
       "path": "webhooks",
       "reqRole": "Viewer",
       "url": "{{ .JsonData.url }}/webhooks"
+    },
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "*",
+      "path": "grafana",
+      "reqRole": "Viewer",
+      "url": "{{ .JsonData.url }}/grafana"
+    },
+    {
+      "headers": [
+        {
+          "content": "Bearer {{ .SecureJsonData.token }}",
+          "name": "Authorization"
+        }
+      ],
+      "method": "*",
+      "path": "license",
+      "reqRole": "Editor",
+      "url": "{{ .JsonData.url }}/license"
     }
   ],
   "type": "datasource"

@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.4.0 (2023-12-27)
+
+### Features / Enhancements
+
+- Update BI App and BI Engine (#6)
+- [App] Add Variables support.
+- [App] Add Grafana proxy requests.
+- [App] Update Dashboard annotation modes.
+- [App] Add License Info tab.
+- [App] Add Evaluation overrides.
+- [Engine] Add Alert State to created Annotations.
+- [Engine] Add Variables support.
+- [Engine] Modules refactoring.
+- [Engine] Add Grafana proxy for App requests.
+- [Engine] Update alert checksum.
+- [Engine] Update Dashboard annotations.
+- [Engine] Add Configurable grafana request timeout.
+- [Engine] Add License Info.
+- [Engine] Add Alert history.
+- [Engine] Add Evaluation overrides.
+
 ## 1.3.0 (2023-12-06)
 
 ### Features / Enhancements

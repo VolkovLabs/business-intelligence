@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.4.0 (2023-12-26)
+
+### Features / Enhancements
+
+- Add Variables support (#74, #76)
+- Add Grafana proxy requests (#78)
+- Update Dashboard annotation modes (#81)
+- Add License Info tab (#82)
+- Add Evaluation overrides (#84)
+
 ## 1.3.0 (2023-12-06)
 
 ### Features / Enhancements
