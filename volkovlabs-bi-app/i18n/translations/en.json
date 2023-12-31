@@ -1,22 +1,51 @@
 {
   "alert": {
     "annotationOptions": {
+      "dashboard": "Dashboard",
       "disabled": "Disabled",
-      "enabled": "Enabled"
+      "panel": "Panel"
     },
-    "evaluationTypeOptions": {
-      "anomaly": "Anomaly Detection",
-      "pattern": "Regex Pattern",
-      "thresholds": "Thresholds"
+    "conditions": {
+      "buttonAdd": "Add Condition",
+      "buttonDelete": "Delete Condition",
+      "evaluation": {
+        "pattern": {
+          "fieldLabel": "Fields",
+          "fieldTooltip": "Regex expression. Example: title$|message$. If empty, will be applied to all fields",
+          "noPatternMessage": "Pattern is required",
+          "patternLabel": "Pattern",
+          "patternTooltip": "Regex expression. Example: warn|error"
+        },
+        "thresholds": {
+          "fieldLabel": "Allowable Colors",
+          "fieldTooltip": "Alert rule will be triggered on all thresholds which are not in a specific color range",
+          "noGlobalColors": "Values are not set"
+        }
+      },
+      "evaluationLabel": "Evaluation",
+      "evaluationTypeLabel": "Type",
+      "evaluationTypeOptions": {
+        "anomaly": "Anomaly Detection",
+        "pattern": "Regex Pattern",
+        "thresholds": "Thresholds"
+      },
+      "globalLabel": "Global",
+      "globalVariablesLabel": "Variables",
+      "noItemsMessage": "Please add overrides to set custom evaluation for particular items.",
+      "noItemsTitle": "No Overrides",
+      "noVariablesLabel": "Variables not found",
+      "repeatOptions": {
+        "label": "Repeat Options",
+        "repeatByLabel": "Repeat By"
+      },
+      "sectionLabel": "Overrides",
+      "variablesLabel": "Variables"
     },
     "state": {
       "alerting": "Alerting",
       "error": "Error",
       "ok": "OK",
       "scheduled": "Scheduled"
-    },
-    "thresholdColorsOptions": {
-      "green": "Green"
     },
     "timeRangeSourceOptions": {
       "configured": "Custom",
@@ -29,14 +58,12 @@
         "actionLabel": "Action",
         "annotationsLabel": "Annotations",
         "closeButton": "Close",
-        "errorDetailsLabel": "Error Details",
-        "evaluation": {
-          "fieldLabel": "Fields",
-          "patternLabel": "Pattern"
-        },
-        "evaluationLabel": "Evaluation",
-        "evaluationTypeLabel": "Type",
+        "copyEventDetailsButton": "Copy",
+        "eventDetailsCopiedMessage": "Event details have been copied to clipboard.",
+        "eventDetailsCopiedTitle": "Success",
+        "eventDetailsLabel": "Event Details",
         "invalidSchedule": "Invalid Cron Format",
+        "noEventDetailsMessage": "No Details",
         "panelLabel": "Panel",
         "panelOptions": {
           "untitled": "Untitled"
@@ -96,6 +123,7 @@
         "removedDashboardTitle": "Dashboard removed",
         "removedPanelTitle": "Panel removed",
         "schedule": "Scheduled at {{schedule}}.",
+        "startAlertingDate": "In Alerting since {{- date, datetime}}",
         "status": {
           "active": "Active",
           "paused": "Paused"
@@ -105,19 +133,19 @@
           "valid": "Valid"
         }
       },
+      "configuration": {
+        "license": {
+          "expirationDate": "{{- date, datetime}}",
+          "expirationLabel": "Valid to",
+          "label": "License Info",
+          "usageLabel": "Total Usage"
+        }
+      },
       "editAlert": {
         "actionLabel": "Action",
         "annotationsLabel": "Add Annotations",
         "closeButton": "Close",
         "dashboardLabel": "Dashboard",
-        "evaluation": {
-          "fieldLabel": "Fields",
-          "fieldTooltip": "Regex expression. Example: title$|message$. If empty, will be applied to all fields",
-          "patternLabel": "Pattern",
-          "patternTooltip": "Regex expression. Example: warn|error"
-        },
-        "evaluationLabel": "Evaluation",
-        "evaluationTypeLabel": "Type",
         "invalidSchedule": "Invalid Cron Format",
         "noWebhooksError": "Please select at least one webhook or create default",
         "panelLabel": "Panel",
@@ -129,10 +157,6 @@
         "scheduleLabel": "Schedule",
         "schedulePlaceholder": "Cron schedule, */5 * * * *",
         "targetLabel": "Target",
-        "thresholdColors": {
-          "fieldLabel": "Allowable Colors",
-          "fieldTooltip": "Alert rule will be triggered on all thresholds which are not in a specific color range"
-        },
         "timeRange": {
           "from": "From",
           "to": "To"
@@ -146,6 +170,7 @@
       },
       "tabs": {
         "alerts": "Alert Rules",
+        "configuration": "Configuration",
         "webhooks": "Webhooks"
       },
       "webhookDetails": {
@@ -217,7 +242,9 @@
       "deleteWebhook": "Delete Webhook",
       "getAlerts": "Get Alert Rules",
       "getDefaultWebhook": "Get Default Webhook",
-      "getTriggerEvent": "Get Trigger Event",
+      "getHistoryEvent": "Get History Event",
+      "getHistoryEvents": "Get History Events",
+      "getLicenseInfo": "Get License Info",
       "getWebhooks": "Get Webhooks",
       "ping": "Ping",
       "testWebhook": "Test Webhook",
@@ -244,6 +271,13 @@
       "configured": "Configured",
       "tokenLabel": "Access Token",
       "urlLabel": "URL"
+    },
+    "queryEditor": {
+      "requestTypeLabel": "Request"
+    },
+    "requestTypeOptions": {
+      "alertHistory": "Alerts History",
+      "none": "None"
     }
   },
   "messages": {
