@@ -1,7 +1,5 @@
 # Business Intelligence for Grafana BI(G)
 
-![Grafana](https://img.shields.io/badge/Grafana-10.2-orange)
-
 ## Introduction
 
 Business Intelligence for Grafana at a Proof of Concept stage with an expected launch in January 2024. Become an early adopter and help this product solve your long-standing issues once and for all.
