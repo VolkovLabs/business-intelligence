@@ -1,10 +1,39 @@
 # Change Log
 
+## 1.6.0 (2023-01-16)
+
+### Features / Enhancements
+
+- Update BI App and BI Engine (#11)
+- [App] Update Prometheus dashboard.
+- [App] Make repeated variable is multi and add all option.
+- [App] Add Group Statuses.
+- [Engine] Add execution batching.
+- [Engine] Add running migrations only via server app.
+- [Engine] Skip creating annotations for repeat variables without results.
+- [Engine] Update Production scripts.
+
+## 1.5.0 (UNRELEASED)
+
+### Features / Enhancements
+
+- [App] Add Prometheus dashboard.
+- [App] Add showing load variables error.
+- [App] Add check for creating alerts without variable values.
+- [App] Update to Grafana Utils 1.2.0.
+- [Engine] Create mapper service to convert entities.
+- [Engine] Add Prometheus middleware.
+- [Engine] Add failing load variables request if unable to query variable options.
+- [Engine] Add redirect support for Home dashboard.
+- [Engine] Add prometheus datasource for getting variable options.
+- [Engine] Update the License Key.
+- [Engine] Update to Node 20.
+
 ## 1.4.0 (2023-12-31)
 
 ### Features / Enhancements
 
-- Update BI App and BI Engine (#6)
+- Update BI App and BI Engine (#10)
 - [App] Add Variables support.
 - [App] Add Grafana proxy requests.
 - [App] Update Dashboard annotation modes.

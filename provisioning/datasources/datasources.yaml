@@ -33,3 +33,11 @@ datasources:
       sslmode: disable
     secureJsonData:
       password: postgres
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    uid: prometheus
+    orgId: 1
+    version: 1
+    editable: true
+    url: http://prometheus:9090

@@ -11,41 +11,41 @@ Hash: SHA512
     "http://localhost:3000/"
   ],
   "plugin": "volkovlabs-bi-app",
-  "version": "1.4.0",
-  "time": 1703674810252,
+  "version": "1.6.0",
+  "time": 1705438288257,
   "keyId": "7e4d0c6a708866e7",
   "files": {
-    "CHANGELOG.md": "bd56133f9a109ef7fb83289b22fa15d27e4a66b5649cc88125c45cb6129e71ff",
+    "CHANGELOG.md": "b9c03829b8fb430ed7bf957bf933ad615101aeb5af1465725cb071023acd6017",
     "img/logo.svg": "093ba6350a46d255270fd8eed7f531e859445fd2f1a4eeff5f0c606bed3e35c6",
-    "i18n/translations/en.json": "0733bdc07c71971f5ebfa997f2b333ed5a68f923e7eab8436d625957d2f3a7f4",
+    "i18n/translations/en.json": "9d6db22c2db83f568019930d22bdd6c05f2c5e0a4738d80a2a203aecf0fd7f64",
     "i18n/translations/zh.json": "222cfa154a3db1e58a5f75bd80a2bbe508f1538bbe97ebf8e84189655658e2ea",
     "i18n/translations/de.json": "e90c2f75a1f4b037cbbc18c111c90821534b1a99be76b3b97d0539969fc782af",
     "i18n/translations/fr.json": "c7f07dc01b30c01d7a474e168e2999c900b99cc8157ca719aa5ffcfb06fc34c2",
     "i18n/translations/es.json": "e036982ba519a6235cdcc38a824735715da3f9ec8ef5e03b06b9d73b4583e7b3",
-    "plugin.json": "7319f18a5b4e9e3e5d7955fffd9d6a9e10e7f5c0e9ea3ddd8b53adc39e0781c5",
+    "plugin.json": "eedeecab761b2888833185d4bbf2647488caa46b55348fb2889b12a2b2e91740",
     "volkovlabs-alerting-panel/img/logo.svg": "cc953673a0d5a2b495346a2d7a5a105a423882906050bb3e6669556aaba77d54",
     "volkovlabs-alerting-panel/module.js.LICENSE.txt": "d48156fdced87f3b46d5fa1cd500f1589877fde56bd84442664dbf3a890a4377",
     "volkovlabs-alerting-panel/plugin.json": "25589f45f28fa8a17a60d94ba4e763ba77a5042a4b5966abc64fcf5be208f797",
-    "volkovlabs-alerting-panel/module.js.map": "a289d279279d0e19ae55e03afbd8497bc084117684bb3a5033c0400f5c5bf32f",
-    "volkovlabs-alerting-panel/module.js": "41f82edf53059242c9af2ccd878c97ec5a748f9def926fdb6cd9e7d0626933ae",
-    "module.js.map": "9209efb79e7d67648bfd1723920a2e3034c94e7983c4e57b7b2a7a64ebaaf782",
+    "volkovlabs-alerting-panel/module.js.map": "47587ea1075a6016c2c0780db83446269f823b4d27780bb4f83b1d21d80c544f",
+    "volkovlabs-alerting-panel/module.js": "f32eefe9feefa4a55d71ae9a213bdb46e32d9e44be6c126ffd536afec4d69d82",
+    "module.js.map": "236a94448b9af5388c5a2ac8ddd7ac4bbd2c4c46352481d7aa6809211cc9ed3b",
     "volkovlabs-engine-datasource/img/logo.svg": "0e6a1e5fdf1e6bc26f3bac7ea344600a3d030eafa6a2e1ca405a067cb46f5f6c",
     "volkovlabs-engine-datasource/plugin.json": "95e9260c7374a0c7b14b75252ec822223b636f0c5cce3eafa189915b1b53e060",
-    "volkovlabs-engine-datasource/module.js.map": "5e9518c92631ee539ac8550defe280eb6fa8f3b570fc49fb4abd6c89827686cb",
-    "volkovlabs-engine-datasource/module.js": "45b2a977ea9361130ac63a8f710c683dad49a3c721a0a462af2d60d0b5366268",
-    "LICENSE": "031a979f6f00d5c5511ca3b813ae6feab2e964de261dda19a30d1932a16d3d97",
-    "module.js": "4d0eda12e3d8bbe5fbb0803b4e284d2d45416a21c0d8818e90f28419a46a2aa0",
-    "README.md": "2e0b2571ed2deec68b62897361235c3f558f4c57198fb2e2dd577b98daf74eed"
+    "volkovlabs-engine-datasource/module.js.map": "0045c4c120e40c2569a808668d247c6f5931b4910535cfc0f74fbe596fa33536",
+    "volkovlabs-engine-datasource/module.js": "b52d53c573851dfb5cdaed9bf24674928dc23c47ec9890eddf67c5b274387b2f",
+    "LICENSE": "943aa8b52b0dc08cf3dcabd3f4fd586baf4dd470ff2e80052c3b2a6c82ba3e20",
+    "module.js": "9bfb7a319820e84b839d0d88b378c471dac37dc518598cdace332091d60b75aa",
+    "README.md": "ace22171095f0263de10a4663e909fbbb5e5867b80d598f2bda00490de339d95"
   }
 }
 -----BEGIN PGP SIGNATURE-----
 Version: OpenPGP.js v4.10.10
 Comment: https://openpgpjs.org
 
-wrcEARMKAAYFAmWMA7oAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
-cIhm5xKwAgiqqIPlppFWz5DOJlk/xwLRT5+s3z3md4E9ssVQ5CSz9pFz37Cr
-z3+K9qZkf9rY6G0HJo7wYKE+GL79rqfiBBbh/gIGIoyzFKoB0kAra9KdOe8K
-E+5irVqg94XImKP2oTK1N3qSYnHh7iJhSRaL8AOXFKGMueQD4TE6a0Rsi/1p
-2OvNnvU=
-=724h
+wrcEARMKAAYFAmWm7FAAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm5ycdAgjeGiXSAv2IVgO2I5u2fkdbPuHSKCdg40M443cfXcpgsIBdLZWd
+neu1muxJJYjAXbJC80ssE1BwR13l0MIujXDTjgII/JaTz7i+r4pCeFiK3Xlb
+PcSbV5Clt4GodPZmYvt/l8EOpBBBE3IrZQ1J8EykTmvqaLOowqaOs74llNLw
+00sN4x8=
+=+jCL
 -----END PGP SIGNATURE-----

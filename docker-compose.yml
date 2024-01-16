@@ -3,7 +3,7 @@ version: "3.4"
 services:
   grafana:
     container_name: grafana
-    image: grafana/grafana:10.2.2
+    image: grafana/grafana:10.2.3
     env_file: .env
     ports:
       - 3000:3000
@@ -21,7 +21,6 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./timescale:/docker-entrypoint-initdb.d
       - ./database:/var/lib/postgresql/data
 
   engine:
@@ -29,38 +28,28 @@ services:
     depends_on:
       - database
       - grafana
-    image: ghcr.io/volkovlabs/bi-engine:1.4.0
+    image: ghcr.io/volkovlabs/bi-engine:1.6.0
     env_file: .env
     ports:
       - 3001:3001
+      - 3002:3002
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
+      - "--web.console.templates=/usr/share/prometheus/consoles"
+    ports:
+      - 9090:9090
 
   webhook-json:
     container_name: webhook-json
     build:
       context: ./webhook-json
-    ports:
-      - 3002:3000
     volumes:
       - ./webhook-json/events:/app/events
-
-  node-red:
-    container_name: node-red
-    image: nodered/node-red:latest
-    ports:
-      - 1880:1880
-    volumes:
-      - ./node-red:/data
-
-  data-generator:
-    container_name: data-generator
-    build:
-      context: ./timescale
-    ports:
-      - 3003:3003/tcp
-    depends_on:
-      - database
-    environment:
-      WAIT_HOSTS: database:5432
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_HOST: database

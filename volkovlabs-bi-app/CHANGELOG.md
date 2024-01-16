@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.6.0 (2023-01-16)
+
+### Features / Enhancements
+
+- Update Prometheus dashboard (#96)
+- Make repeated variable is multi and add all option (#98)
+- Add Group Statuses (#99)
+
+## 1.5.0 (2023-01-12)
+
+### Features / Enhancements
+
+- Add Prometheus dashboard (#89)
+- Add showing load variables error (#91)
+- Add check for creating alerts without variable values (#92)
+- Update to Grafana Utils 1.2.0 (#95)
+
 ## 1.4.0 (2023-12-26)
 
 ### Features / Enhancements

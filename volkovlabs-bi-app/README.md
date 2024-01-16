@@ -14,5 +14,5 @@ The Business Intelligence App for Grafana.
 
 ## Highlights
 
-- Supports Business Intellignce Engine.
+- Supports Business Intelligence Engine.
 - Allows to Create Alerts.
