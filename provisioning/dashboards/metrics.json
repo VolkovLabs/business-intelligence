@@ -18,13 +18,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
-        "type": "postgres",
-        "uid": "timescale"
+        "type": "grafana-testdata-datasource",
+        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
       },
       "fieldConfig": {
         "defaults": {
@@ -108,31 +109,12 @@
       "targets": [
         {
           "datasource": {
-            "type": "postgres",
-            "uid": "timescale"
+            "type": "grafana-testdata-datasource",
+            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
           },
-          "editorMode": "code",
-          "format": "time_series",
-          "rawQuery": true,
-          "rawSql": "SELECT\n  time,\n  value as temp,\n  name\nFROM metrics\nWHERE\n  name in ('device1')\n  and $__timeFilter(time)\nORDER BY 1",
           "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
+          "scenarioId": "csv_metric_values",
+          "stringInput": "1,20,90,30,5,0"
         }
       ],
       "title": "Metrics",
@@ -206,7 +188,7 @@
     }
   ],
   "refresh": "",
-  "schemaVersion": 38,
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
@@ -219,6 +201,6 @@
   "timezone": "",
   "title": "Business Intelligence Demo",
   "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
-  "version": 3,
+  "version": 1,
   "weekStart": ""
 }

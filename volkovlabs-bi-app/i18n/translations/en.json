@@ -17,7 +17,7 @@
           "patternTooltip": "Regex expression. Example: warn|error"
         },
         "thresholds": {
-          "fieldLabel": "Allowable Colors",
+          "fieldLabel": "Allowed Range",
           "fieldTooltip": "Alert rule will be triggered on all thresholds which are not in a specific color range",
           "noGlobalColors": "Values are not set"
         }
@@ -33,6 +33,7 @@
       "globalVariablesLabel": "Variables",
       "noItemsMessage": "Please add overrides to set custom evaluation for particular items.",
       "noItemsTitle": "No Overrides",
+      "noVariableValueError": "Variable value is required.",
       "noVariablesLabel": "Variables not found",
       "repeatOptions": {
         "label": "Repeat Options",
@@ -45,7 +46,8 @@
       "alerting": "Alerting",
       "error": "Error",
       "ok": "OK",
-      "scheduled": "Scheduled"
+      "scheduled": "Scheduled",
+      "unknown": "Ready"
     },
     "timeRangeSourceOptions": {
       "configured": "Custom",
@@ -80,7 +82,7 @@
         "timeRangeLabel": "Time Range",
         "timeRangeSourceLabel": "Source",
         "untitled": "Untitled",
-        "webhooksLabel": "Webhooks"
+        "webhooksLabel": "Actions"
       },
       "alertsList": {
         "activateButton": "Start",
@@ -114,7 +116,7 @@
         "lastTriggeredDate": "Last Triggered at {{- date, datetime}}",
         "noItemsMessage": "Please add one or more alert rules to start.",
         "noItemsTitle": "Getting Started",
-        "noWebhooksMessage": "Please add webhooks to start working with alert rules.",
+        "noWebhooksMessage": "Please add actions to start working with alert rules.",
         "overviewButton": "Details",
         "overviewDrawer": {
           "title": "Alert Rule '{{name}}'"
@@ -147,7 +149,7 @@
         "closeButton": "Close",
         "dashboardLabel": "Dashboard",
         "invalidSchedule": "Invalid Cron Format",
-        "noWebhooksError": "Please select at least one webhook or create default",
+        "noWebhooksError": "Please select at least one action or create default",
         "panelLabel": "Panel",
         "panelOptions": {
           "untitled": "Untitled"
@@ -164,14 +166,14 @@
         "timeRangeLabel": "Time Range",
         "timeRangeSourceLabel": "Source",
         "titleLabel": "Title",
-        "webhooksLabel": "Webhooks",
-        "webhooksNoDefaultMessage": "Default Webhook doesn't exist",
-        "webhooksPlaceholder": "Default Webhook '{{name}}' will be used"
+        "webhooksLabel": "Actions",
+        "webhooksNoDefaultMessage": "Default action doesn't exist",
+        "webhooksPlaceholder": "Default actions '{{name}}' will be used"
       },
       "tabs": {
         "alerts": "Alert Rules",
         "configuration": "Configuration",
-        "webhooks": "Webhooks"
+        "webhooks": "Actions"
       },
       "webhookDetails": {
         "closeButton": "Close",
@@ -196,37 +198,37 @@
         "typeLabel": "Type"
       },
       "webhookType": {
-        "custom": "Test",
+        "custom": "Logs",
         "request": "HTTP Request"
       },
       "webhooksList": {
-        "addButton": "Add Webhook",
+        "addButton": "Add Action",
         "addDrawer": {
-          "title": "Add Webhook"
+          "title": "Add Action"
         },
         "deleteButton": "Delete",
-        "deleteButtonDisabled": "Webhook is being used",
+        "deleteButtonDisabled": "Action is being used",
         "deleteConfirmModal": {
-          "body": "Please confirm to delete Webhook '{{name}}'.",
+          "body": "Please confirm to delete Action '{{name}}'.",
           "confirmButton": "Delete",
           "confirmButtonLoading": "Deleting...",
           "title": "Delete"
         },
         "editButton": "Edit",
         "editDrawer": {
-          "title": "Edit Webhook"
+          "title": "Edit Action"
         },
         "isDefault": "Default",
-        "noItemsMessage": "Please add one or more webhooks to start.",
+        "noItemsMessage": "Please add one or more Action to start.",
         "noItemsTitle": "Getting Started",
         "testButton": "Test",
-        "webhookCreatedMessage": "Webhook '{{name}}' has been created.",
+        "webhookCreatedMessage": "Action '{{name}}' has been created.",
         "webhookCreatedTitle": "Success",
-        "webhookDeletedMessage": "Webhook '{{name}}' has been deleted.",
+        "webhookDeletedMessage": "Action '{{name}}' has been deleted.",
         "webhookDeletedTitle": "Success",
-        "webhookTestedMessage": "Webhook '{{name}}' connected.",
+        "webhookTestedMessage": "Action '{{name}}' connected.",
         "webhookTestedTitle": "Success",
-        "webhookUpdatedMessage": "Webhook '{{name}}' has been updated.",
+        "webhookUpdatedMessage": "Action '{{name}}' has been updated.",
         "webhookUpdatedTitle": "Success"
       }
     }
@@ -237,20 +239,21 @@
     "limitReached": "License limit reached.",
     "names": {
       "createAlert": "Create Alert Rule",
-      "createWebhook": "Create Webhook",
+      "createWebhook": "Create Action",
       "deleteAlert": "Delete Alert Rule",
-      "deleteWebhook": "Delete Webhook",
+      "deleteWebhook": "Delete Action",
       "getAlerts": "Get Alert Rules",
-      "getDefaultWebhook": "Get Default Webhook",
+      "getDefaultWebhook": "Get Default Action",
       "getHistoryEvent": "Get History Event",
       "getHistoryEvents": "Get History Events",
       "getLicenseInfo": "Get License Info",
-      "getWebhooks": "Get Webhooks",
+      "getVariableOptions": "Get Variable Options",
+      "getWebhooks": "Get Actions",
       "ping": "Ping",
-      "testWebhook": "Test Webhook",
+      "testWebhook": "Test Action",
       "updateAlert": "Update Alert Rule",
       "updateAlertStatus": "Update Alert Rule Status",
-      "updateWebhook": "Update Webhook"
+      "updateWebhook": "Update Action"
     },
     "requestFailed": "{{name}}: Request failed.",
     "testDatasource": {
