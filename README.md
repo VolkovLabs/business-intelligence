@@ -8,13 +8,18 @@ Business Intelligence for Grafana at a Proof of Concept stage with an expected l
 
 [![BIG Alerting in Grafana | Business Intelligence | Product announcement](https://raw.githubusercontent.com/VolkovLabs/volkovlabs-bi-grafana/main/img/alerting.png)](https://youtu.be/vky-7-DfvXE)
 
+## Requirements
+
+- BI(G) 1.X requires **Grafana 10**.
+
 ## Highlights
 
+- Supports **Grafana 10**.
 - Docker Compose configuration to start the BI(G).
-- Webhook JSON server for testing.
+- Timescale database to store Engine configuration.
+- Prometheus for Engine monitoring with dashboards.
+- Webhook JSON server for writing event files.
 - Node-RED webhook for Slack notifications.
-- Timescale database to store Engine configuration and test data.
-- Data generator to create test data for threshold evaluation.
 
 ## Start BI(G)
 
