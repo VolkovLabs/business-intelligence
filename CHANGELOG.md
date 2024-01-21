@@ -1,6 +1,17 @@
 # Change Log
 
-## 1.6.0 (2023-01-16)
+## 1.7.0 (2023-01-21)
+
+### Features / Enhancements
+
+- Updated BI App and BI Engine (#12)
+- [App] Added support dashboard refresh to alerting panel.
+- [App] Added filter rows from panel targets.
+- [App] Added enter custom variable values if unable to load options.
+- [App] Added cron validator to validate alert schedule.
+- [App] Added copy alert button.
+- [Engine] Added alerts assignment between engine nodes (#138)
+- [Engine] Added Swagger REST API documentation (#141, #145)
 
 ### Features / Enhancements
 

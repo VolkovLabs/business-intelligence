@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.7.0 (2023-01-21)
+
+### Features / Enhancements
+
+- Adopt alerting panel to support dashboard refresh (#104)
+- Filter rows from panel targets (#105)
+- Allow to enter custom variable values if unable to load options (#106)
+- Add cron validator to validate alert schedule (#110)
+- Add copy alert button (#111)
+
 ## 1.6.0 (2023-01-16)
 
 ### Features / Enhancements

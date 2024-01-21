@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Business Intelligence for Grafana at Development stage with an expected launch in January 2024. Become an early adopter and help this product solve your long-standing issues once and for all.
+Business Intelligence for Grafana simplifies alerting for business users, providing them with an accessible platform.
 
 [![Metrics, Logs, CPU Usage with BIG Alerting in Grafana | Unscripted and Hands-On](https://raw.githubusercontent.com/VolkovLabs/volkovlabs-bi-grafana/main/img/demo-1.6.0.png)](https://youtu.be/8UaY916PPXc)
 
@@ -12,7 +12,6 @@ Business Intelligence for Grafana at Development stage with an expected launch i
 
 ## Highlights
 
-- Supports **Grafana 10**.
 - Includes Docker Compose configuration to start the BI(G).
 - Timescale database to store Engine configuration.
 - Prometheus for Engine monitoring with dashboards.

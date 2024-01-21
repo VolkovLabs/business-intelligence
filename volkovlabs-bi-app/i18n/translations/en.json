@@ -101,6 +101,7 @@
         "alertUpdatedMessage": "Alert Rule '{{name}}' has been updated.",
         "alertUpdatedTitle": "Success",
         "collapseAllButton": "Collapse All",
+        "copyButton": "Duplicate",
         "deleteButton": "Delete",
         "deleteConfirmModal": {
           "body": "Please confirm to delete Alert Rule '{{name}}'.",
