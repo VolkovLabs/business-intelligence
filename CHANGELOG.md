@@ -10,8 +10,8 @@
 - [App] Added enter custom variable values if unable to load options.
 - [App] Added cron validator to validate alert schedule.
 - [App] Added copy alert button.
-- [Engine] Added alerts assignment between engine nodes (#138)
-- [Engine] Added Swagger REST API documentation (#141, #145)
+- [Engine] Added alerts assignment between engine nodes.
+- [Engine] Added Swagger REST API documentation.
 
 ### Features / Enhancements
 
