@@ -11,30 +11,30 @@ Hash: SHA512
     "http://localhost:3000/"
   ],
   "plugin": "volkovlabs-bi-app",
-  "version": "1.6.0",
-  "time": 1705438288257,
+  "version": "1.7.0",
+  "time": 1705869814833,
   "keyId": "7e4d0c6a708866e7",
   "files": {
-    "CHANGELOG.md": "b9c03829b8fb430ed7bf957bf933ad615101aeb5af1465725cb071023acd6017",
+    "CHANGELOG.md": "e56f8bf3c9958ad36e827fba4f75b9ecd17c6600905aae996d5f2584f4a08b4f",
     "img/logo.svg": "093ba6350a46d255270fd8eed7f531e859445fd2f1a4eeff5f0c606bed3e35c6",
-    "i18n/translations/en.json": "9d6db22c2db83f568019930d22bdd6c05f2c5e0a4738d80a2a203aecf0fd7f64",
+    "i18n/translations/en.json": "21ef930238826dcd923db26e6940dafdf3ac0fb76d8855fe1f07007a8ad81c6d",
     "i18n/translations/zh.json": "222cfa154a3db1e58a5f75bd80a2bbe508f1538bbe97ebf8e84189655658e2ea",
     "i18n/translations/de.json": "e90c2f75a1f4b037cbbc18c111c90821534b1a99be76b3b97d0539969fc782af",
     "i18n/translations/fr.json": "c7f07dc01b30c01d7a474e168e2999c900b99cc8157ca719aa5ffcfb06fc34c2",
     "i18n/translations/es.json": "e036982ba519a6235cdcc38a824735715da3f9ec8ef5e03b06b9d73b4583e7b3",
-    "plugin.json": "eedeecab761b2888833185d4bbf2647488caa46b55348fb2889b12a2b2e91740",
+    "plugin.json": "268100c877bd4d01c721b59b2b605c18e7e8f66a40b51113a06a70d24aca1443",
     "volkovlabs-alerting-panel/img/logo.svg": "cc953673a0d5a2b495346a2d7a5a105a423882906050bb3e6669556aaba77d54",
     "volkovlabs-alerting-panel/module.js.LICENSE.txt": "d48156fdced87f3b46d5fa1cd500f1589877fde56bd84442664dbf3a890a4377",
     "volkovlabs-alerting-panel/plugin.json": "25589f45f28fa8a17a60d94ba4e763ba77a5042a4b5966abc64fcf5be208f797",
-    "volkovlabs-alerting-panel/module.js.map": "47587ea1075a6016c2c0780db83446269f823b4d27780bb4f83b1d21d80c544f",
-    "volkovlabs-alerting-panel/module.js": "f32eefe9feefa4a55d71ae9a213bdb46e32d9e44be6c126ffd536afec4d69d82",
-    "module.js.map": "236a94448b9af5388c5a2ac8ddd7ac4bbd2c4c46352481d7aa6809211cc9ed3b",
+    "volkovlabs-alerting-panel/module.js.map": "95cd28d7667cc9152cacfe312d69dae640f8f0c788813a8bd05b26ce124e40d8",
+    "volkovlabs-alerting-panel/module.js": "6693ef659aa9fc7637b5607ebe820e354913ca4c3242d0750342bccd1b85b931",
+    "module.js.map": "db5c3c57e498c8161ced3b18602fe5d7d54d4a70455e4c383322be732add78df",
     "volkovlabs-engine-datasource/img/logo.svg": "0e6a1e5fdf1e6bc26f3bac7ea344600a3d030eafa6a2e1ca405a067cb46f5f6c",
     "volkovlabs-engine-datasource/plugin.json": "95e9260c7374a0c7b14b75252ec822223b636f0c5cce3eafa189915b1b53e060",
-    "volkovlabs-engine-datasource/module.js.map": "0045c4c120e40c2569a808668d247c6f5931b4910535cfc0f74fbe596fa33536",
-    "volkovlabs-engine-datasource/module.js": "b52d53c573851dfb5cdaed9bf24674928dc23c47ec9890eddf67c5b274387b2f",
+    "volkovlabs-engine-datasource/module.js.map": "5b08bf7bd63930a970a45c18fe32320f5bfdac97617605831464370139e0c09d",
+    "volkovlabs-engine-datasource/module.js": "454d073ebc4e96b1b74231edbd66fa35122bdd7cbcdd1dd3eee2a4f77db48ad3",
     "LICENSE": "943aa8b52b0dc08cf3dcabd3f4fd586baf4dd470ff2e80052c3b2a6c82ba3e20",
-    "module.js": "9bfb7a319820e84b839d0d88b378c471dac37dc518598cdace332091d60b75aa",
+    "module.js": "bd3dbdfcb5216ad45a8a9a4deb375b58c122de96310aba1de1699cb3ea639fea",
     "README.md": "ace22171095f0263de10a4663e909fbbb5e5867b80d598f2bda00490de339d95"
   }
 }
@@ -42,10 +42,10 @@ Hash: SHA512
 Version: OpenPGP.js v4.10.10
 Comment: https://openpgpjs.org
 
-wrcEARMKAAYFAmWm7FAAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
-cIhm5ycdAgjeGiXSAv2IVgO2I5u2fkdbPuHSKCdg40M443cfXcpgsIBdLZWd
-neu1muxJJYjAXbJC80ssE1BwR13l0MIujXDTjgII/JaTz7i+r4pCeFiK3Xlb
-PcSbV5Clt4GodPZmYvt/l8EOpBBBE3IrZQ1J8EykTmvqaLOowqaOs74llNLw
-00sN4x8=
-=+jCL
+wrgEARMKAAYFAmWtgfcAIQkQfk0ManCIZucWIQTzOyW2kQdOhGNlcPN+TQxq
+cIhm53zNAgjVOxqqyi/Ioz11ubY/nNJVc7vDN0vibLykIj9gF6U1PmnFq1LX
+a+qPK7rr9GrVnN/wKFlMMblV00pkuPrmX6UTCAIJAeSHpLGEUryoLrbBjQ/2
+c7k0AdfbTGWdcTCTBo1f4so8VC7J1viaHkmFAaDKn0/rQ/t46wE3Vrre6HKX
+juBx05A/
+=8tXV
 -----END PGP SIGNATURE-----
