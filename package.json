@@ -3,7 +3,7 @@
   "dependencies": {},
   "description": "Business Intelligence for Grafana",
   "license": "Apache-2.0",
-  "name": "volkovlabs-bi-grafana",
+  "name": "business-intelligence",
   "scripts": {
     "start": "docker compose pull && docker compose up",
     "stop": "docker compose down"

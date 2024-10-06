@@ -1,19 +1,15 @@
-version: "3.4"
-
 services:
   grafana:
-    container_name: grafana
     image: grafana/grafana:10.2.3
     env_file: .env
     ports:
       - 3000:3000
     volumes:
       - ./grafana:/var/lib/grafana
-      - ./volkovlabs-bi-app:/var/lib/grafana/plugins/volkovlabs-bi-app
+      - ./volkovlabs-manager-app:/var/lib/grafana/plugins/volkovlabs-manager-app
       - ./provisioning:/etc/grafana/provisioning
 
   database:
-    container_name: database
     image: timescale/timescaledb:latest-pg14
     restart: always
     environment:
@@ -24,7 +20,6 @@ services:
       - ./database:/var/lib/postgresql/data
 
   engine:
-    container_name: engine
     depends_on:
       - database
       - grafana
@@ -35,7 +30,6 @@ services:
       - 3002:3002
 
   prometheus:
-    container_name: prometheus
     image: prom/prometheus:latest
     volumes:
       - ./prometheus/:/etc/prometheus/
@@ -48,7 +42,6 @@ services:
       - 9090:9090
 
   webhook-json:
-    container_name: webhook-json
     build:
       context: ./webhook-json
     volumes:
