@@ -1,0 +1,61 @@
+name: E2E
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Start Grafana
+        run: docker compose up -d grafana
+
+      - name: Wait Grafana Started
+        run: sleep 3
+
+      - name: Create Engine Service Account
+        id: serviceAccount
+        run: |
+          sudo apt-get install jq
+          source ./test/generate-token.sh
+          echo "grafana-token=${GRAFANA_TOKEN}" >> $GITHUB_OUTPUT
+
+      - name: Insert env variables
+        run: echo "GRAFANA_TOKEN=${{ steps.serviceAccount.outputs.grafana-token }}" >> .env
+
+      - name: Start Server
+        run: docker compose up -d
+
+      - name: Run e2e tests
+        run: docker compose -f test/docker-compose.yml build && docker compose -f test/docker-compose.yml up --exit-code-from test
+
+      - name: Stop Grafana
+        run: docker compose down
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: test/playwright-report/
+          retention-days: 30

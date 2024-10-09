@@ -1,0 +1,12 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - E2E_GRAFANA_URL=http://127.0.0.1:3000
+      - E2E_ENGINE_URL=http://127.0.0.1:3001
+      - E2E_ENGINE_TOKEN=eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJjb21tdW5pdHkiOnRydWUsImxpbWl0IjoxMCwiaWF0IjoxNzI4MjQyMDE0LCJleHAiOjE3NTk3OTk2MTQsImF1ZCI6IkNvbW11bml0eSIsImlzcyI6Imh0dHBzOi8vdm9sa292bGFicy5pbyIsInN1YiI6IkJ1c2luZXNzIEludGVsbGlnZW5jZSAyLjAuMCIsImp0aSI6IjcwNTQwNjdkLTA3ZjctNGQ1ZC1iMmQ2LTkyMzIyNTg0ZWU1NSJ9.H9qLbcFwLHAmEnwzwIXK8KIysXk2daKDYRiFGcWJmta9d2nE1kFWRIxPlSuXej5YaQAndPMyb3ILQ8TR8KnSzzdxhz7I9hQ0GgUHT_7n3xaE5P1ql6FSJsWAgtlrFRDsHrtczjwdEXISYgvcu8-JxJ6P8jdF4kD2rTnda8FKPzOdEiC6YG2vvSVm11GEzJRuDlWesw-STcvYQijbYMHFvft2Qy73t-wXMhAGhZlbJVA5sh23xPkI3P-FeWu-rh6cqjMHGpwV8PtNKSDxXe4hW-vhl0OcmD-wDZ_oWUSyZxbDxpWY-ACjumy1q1rvJF133NsjgyztD95l4YJ62iSyxV1KQfxs3Qp3TTfZn9WQ9dOg_eDR1C7KtayoiCx3N9TWEV7m-6wo5SIaq-DTZL_MxqaDv7jz1Rfc4EIHdqp-InkluON1W6OdNc8aBHkqXaEEl28L61E1frq-5f_z7UfKwAwknLFna-HhRYyw8HkRknK6piBJF76rQUA5K4iDBlhlXJ7NwDh_T7KJLThOPEsRX8fgNRl5qt-SyukwIo2tcSyHyLkiaqp1w0_gG4ycDYWJQtrIIYrh85x4T8Tt1lyDxNCIEQJLPldaybbNzl0MfWOlGilf8LX46rY848CFzpf9M8ZiwhOEIG2deE8ZVygf3ThCQbaKeB6WvBUD7mJgvok
+    volumes:
+      - ./playwright-report:/app/playwright-report
+    network_mode: host

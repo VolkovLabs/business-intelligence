@@ -5,7 +5,8 @@
 ### Features / Enhancements
 
 - Updated Business Intelligence 1.8.0 (#18)
-- Updated Business Intelligence 2.0.0 (#12)
+- Updated Business Intelligence 2.0.0 (#19)
+- Add E2E workflow (#20)
 - [Manager] Removed create annotations metric and replace calculation to execution (#131)
 - [Manager] Added evaluation apply mode (#132)
 - [Manager] Added percentage of values evaluation (#133)
