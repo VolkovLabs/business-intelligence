@@ -2,7 +2,6 @@ services:
   test:
     build:
       context: .
-      dockerfile: Dockerfile
     env_file: .env
     volumes:
       - ./playwright-report:/app/playwright-report

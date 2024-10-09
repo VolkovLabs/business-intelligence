@@ -15,8 +15,6 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
-    volumes:
-      - ./database:/var/lib/postgresql/data
 
   engine:
     depends_on:
