@@ -1,8 +1,8 @@
 {
   "author": "Volkov Labs",
   "dependencies": {},
-  "description": "Business Intelligence for Grafana",
-  "license": "Apache-2.0",
+  "description": "Business Intelligence platform",
+  "license": "Commercial",
   "name": "business-intelligence",
   "scripts": {
     "start": "docker compose pull && docker compose up",

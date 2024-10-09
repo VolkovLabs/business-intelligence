@@ -1,5 +1,29 @@
 # Change Log
 
+## 2.0.0 (2024-10-09)
+
+### Features / Enhancements
+
+- Updated Business Intelligence 1.8.0 (#18)
+- Updated Business Intelligence 2.0.0 (#12)
+- [Manager] Removed create annotations metric and replace calculation to execution (#131)
+- [Manager] Added evaluation apply mode (#132)
+- [Manager] Added percentage of values evaluation (#133)
+- [Manager] Added headers and message to actions (#134)
+- [Manager] Added EULA and updated to Business Manager (#136)
+- [Manager] Updated to Grafana 11 and dependencies (#137)
+- [Manager] Updated E2E tests (#138)
+- [Manager] Updated Engine token and images (#139)
+- [Manager] Added German, French, Spanish and Chinese (Simplified) translations (#140)
+- [Engine] Added Split alert execution and clean up dataFrame after (#164)
+- [Engine] Added applying evaluation on last value (#165)
+- [Engine] Added evaluation percentage of values (#167)
+- [Engine] Added headers and message to actions (#168)
+- [Engine] Updated to Grafana 11 and dependencies (#170)
+- [Engine] Updated Public Key (#171)
+- [Engine] Added json helper for action message (#174)
+- [Engine] Added E2E Tests (#158)
+
 ## 1.8.0 (UNRELEASED)
 
 ### Features / Enhancements
@@ -27,6 +51,8 @@
 - [Manager] Added copy alert button.
 - [Engine] Added alerts assignment between engine nodes.
 - [Engine] Added Swagger REST API documentation.
+
+## 1.6.0 (2023-01-16)
 
 ### Features / Enhancements
 
@@ -138,7 +164,7 @@
 - [Manager] Updated Alerting Panel.
 - [Manager] Added cron helper to transform cron value in human-readable format.
 - [Manager] Added Node-RED example for sending to Slack channel.
-- [Manager] Moved Node-RED and JSON Webhook to BI Toolkit.
+- [Manager] Moved Node-RED and JSON Webhook to Business Intelligence repository.
 - [Manager] Updated GitHub workflows.
 - [Manager] Updated Alert Rules, Workflows List.
 - [Manager] Removed query from Alerts.

@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -39,6 +39,7 @@
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
@@ -118,13 +119,12 @@
         }
       ],
       "title": "Metrics",
-      "transformations": [],
       "type": "timeseries"
     },
     {
       "datasource": {
         "type": "volkovlabs-engine-datasource",
-        "uid": "bi-engine"
+        "uid": "business-engine"
       },
       "gridPos": {
         "h": 26,
@@ -140,7 +140,7 @@
         {
           "datasource": {
             "type": "volkovlabs-engine-datasource",
-            "uid": "bi-engine"
+            "uid": "business-engine"
           },
           "queryText": "test",
           "refId": "api"

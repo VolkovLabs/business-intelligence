@@ -1,4 +1,35 @@
 {
+  "actionHeadersEditor": {
+    "addButton": "Add Header",
+    "deleteButton": "Delete Header",
+    "key": {
+      "placeholder": "Key"
+    },
+    "label": "Headers",
+    "value": {
+      "placeholder": "Value"
+    }
+  },
+  "actionMessageSuggestions": {
+    "event": {
+      "alert": {
+        "label": "Alert Rule data",
+        "state": {
+          "label": "State"
+        },
+        "title": {
+          "label": "Title"
+        }
+      },
+      "error": {
+        "label": "Error state true/false"
+      },
+      "errorDetails": {
+        "label": "Error Details"
+      },
+      "label": "Event Data"
+    }
+  },
   "alert": {
     "annotationOptions": {
       "dashboard": "Dashboard",
@@ -17,9 +48,21 @@
           "patternTooltip": "Regex expression. Example: warn|error"
         },
         "thresholds": {
-          "fieldLabel": "Allowed Range",
-          "fieldTooltip": "Alert rule will be triggered on all thresholds which are not in a specific color range",
-          "noGlobalColors": "Values are not set"
+          "colors": {
+            "description": "Alert rule will be triggered on all thresholds which are not in a specific color range",
+            "label": "Allowed Range",
+            "placeholder": "Values are not set"
+          }
+        }
+      },
+      "evaluationApply": {
+        "mode": {
+          "description": "Rules will be applied for selected values",
+          "label": "Apply to"
+        },
+        "percentage": {
+          "description": "Max allowed % values count to not to alert",
+          "label": "Allowed %"
         }
       },
       "evaluationLabel": "Evaluation",
@@ -49,6 +92,11 @@
       "scheduled": "Scheduled",
       "unknown": "Ready"
     },
+    "thresholdsApplyModeOptions": {
+      "all": "All Values",
+      "last": "Last Value",
+      "percentage": "Percentage of Values"
+    },
     "timeRangeSourceOptions": {
       "configured": "Custom",
       "dashboard": "From Dashboard"
@@ -56,8 +104,68 @@
   },
   "alertingPanel": {
     "panel": {
+      "actionDetails": {
+        "closeButton": "Close",
+        "defaultLabel": "Use by Default",
+        "isDefaultOptions": {
+          "disabled": "Disabled",
+          "enabled": "Enabled"
+        },
+        "message": {
+          "label": "Message"
+        },
+        "requestOptions": {
+          "label": "Request",
+          "methodLabel": "Method",
+          "urlLabel": "URL"
+        },
+        "saveButton": "Save",
+        "testButton": "Test Connectivity",
+        "testErrorTitle": "Error",
+        "testProgressMessage": "Checking...",
+        "testProgressTitle": "Test Connectivity",
+        "testSuccessMessage": "Connected",
+        "testSuccessTitle": "Success",
+        "titleLabel": "Title",
+        "typeLabel": "Type"
+      },
+      "actionType": {
+        "custom": "Logs",
+        "request": "HTTP Request"
+      },
+      "actionsList": {
+        "actionCreatedMessage": "Action '{{name}}' has been created.",
+        "actionCreatedTitle": "Success",
+        "actionDeletedMessage": "Action '{{name}}' has been deleted.",
+        "actionDeletedTitle": "Success",
+        "actionTestedMessage": "Action '{{name}}' connected.",
+        "actionTestedTitle": "Success",
+        "actionUpdatedMessage": "Action '{{name}}' has been updated.",
+        "actionUpdatedTitle": "Success",
+        "addButton": "Add Action",
+        "addDrawer": {
+          "title": "Add Action"
+        },
+        "deleteButton": "Delete",
+        "deleteButtonDisabled": "Action is being used",
+        "deleteConfirmModal": {
+          "body": "Please confirm to delete Action '{{name}}'.",
+          "confirmButton": "Delete",
+          "confirmButtonLoading": "Deleting...",
+          "title": "Delete"
+        },
+        "editButton": "Edit",
+        "editDrawer": {
+          "title": "Edit Action"
+        },
+        "isDefault": "Default",
+        "noItemsMessage": "Please add one or more Action to start.",
+        "noItemsTitle": "Getting Started",
+        "testButton": "Test"
+      },
       "alertOverview": {
         "actionLabel": "Action",
+        "actionsLabel": "Actions",
         "annotationsLabel": "Annotations",
         "closeButton": "Close",
         "copyEventDetailsButton": "Copy",
@@ -81,8 +189,7 @@
         },
         "timeRangeLabel": "Time Range",
         "timeRangeSourceLabel": "Source",
-        "untitled": "Untitled",
-        "webhooksLabel": "Actions"
+        "untitled": "Untitled"
       },
       "alertsList": {
         "activateButton": "Start",
@@ -115,9 +222,9 @@
         },
         "expandAllButton": "Expand All",
         "lastTriggeredDate": "Last Triggered at {{- date, datetime}}",
+        "noActionsMessage": "Please add an action to start working with alert rules.",
         "noItemsMessage": "Please add one or more alert rules to start.",
         "noItemsTitle": "Getting Started",
-        "noWebhooksMessage": "Please add actions to start working with alert rules.",
         "overviewButton": "Details",
         "overviewDrawer": {
           "title": "Alert Rule '{{name}}'"
@@ -146,11 +253,14 @@
       },
       "editAlert": {
         "actionLabel": "Action",
+        "actionsLabel": "Actions",
+        "actionsNoDefaultMessage": "Default action doesn't exist",
+        "actionsPlaceholder": "Default actions '{{name}}' will be used",
         "annotationsLabel": "Add Annotations",
         "closeButton": "Close",
         "dashboardLabel": "Dashboard",
         "invalidSchedule": "Invalid Cron Format",
-        "noWebhooksError": "Please select at least one action or create default",
+        "noActionsError": "Please select at least one action or create default",
         "panelLabel": "Panel",
         "panelOptions": {
           "untitled": "Untitled"
@@ -166,71 +276,12 @@
         },
         "timeRangeLabel": "Time Range",
         "timeRangeSourceLabel": "Source",
-        "titleLabel": "Title",
-        "webhooksLabel": "Actions",
-        "webhooksNoDefaultMessage": "Default action doesn't exist",
-        "webhooksPlaceholder": "Default actions '{{name}}' will be used"
+        "titleLabel": "Title"
       },
       "tabs": {
+        "actions": "Actions",
         "alerts": "Alert Rules",
-        "configuration": "Configuration",
-        "webhooks": "Actions"
-      },
-      "webhookDetails": {
-        "closeButton": "Close",
-        "defaultLabel": "Use by Default",
-        "isDefaultOptions": {
-          "disabled": "Disabled",
-          "enabled": "Enabled"
-        },
-        "requestOptions": {
-          "label": "Request",
-          "methodLabel": "Method",
-          "urlLabel": "URL"
-        },
-        "saveButton": "Save",
-        "testButton": "Test Connectivity",
-        "testErrorTitle": "Error",
-        "testProgressMessage": "Checking...",
-        "testProgressTitle": "Test Connectivity",
-        "testSuccessMessage": "Connected",
-        "testSuccessTitle": "Success",
-        "titleLabel": "Title",
-        "typeLabel": "Type"
-      },
-      "webhookType": {
-        "custom": "Logs",
-        "request": "HTTP Request"
-      },
-      "webhooksList": {
-        "addButton": "Add Action",
-        "addDrawer": {
-          "title": "Add Action"
-        },
-        "deleteButton": "Delete",
-        "deleteButtonDisabled": "Action is being used",
-        "deleteConfirmModal": {
-          "body": "Please confirm to delete Action '{{name}}'.",
-          "confirmButton": "Delete",
-          "confirmButtonLoading": "Deleting...",
-          "title": "Delete"
-        },
-        "editButton": "Edit",
-        "editDrawer": {
-          "title": "Edit Action"
-        },
-        "isDefault": "Default",
-        "noItemsMessage": "Please add one or more Action to start.",
-        "noItemsTitle": "Getting Started",
-        "testButton": "Test",
-        "webhookCreatedMessage": "Action '{{name}}' has been created.",
-        "webhookCreatedTitle": "Success",
-        "webhookDeletedMessage": "Action '{{name}}' has been deleted.",
-        "webhookDeletedTitle": "Success",
-        "webhookTestedMessage": "Action '{{name}}' connected.",
-        "webhookTestedTitle": "Success",
-        "webhookUpdatedMessage": "Action '{{name}}' has been updated.",
-        "webhookUpdatedTitle": "Success"
+        "configuration": "Configuration"
       }
     }
   },
@@ -239,35 +290,34 @@
     "licenseVerificationFailed": "License verification failed.",
     "limitReached": "License limit reached.",
     "names": {
+      "createAction": "Create Action",
       "createAlert": "Create Alert Rule",
-      "createWebhook": "Create Action",
+      "deleteAction": "Delete Action",
       "deleteAlert": "Delete Alert Rule",
-      "deleteWebhook": "Delete Action",
+      "getActions": "Get Actions",
       "getAlerts": "Get Alert Rules",
-      "getDefaultWebhook": "Get Default Action",
+      "getDefaultAction": "Get Default Action",
       "getHistoryEvent": "Get History Event",
       "getHistoryEvents": "Get History Events",
       "getLicenseInfo": "Get License Info",
       "getVariableOptions": "Get Variable Options",
-      "getWebhooks": "Get Actions",
       "ping": "Ping",
-      "testWebhook": "Test Action",
+      "testAction": "Test Action",
+      "updateAction": "Update Action",
       "updateAlert": "Update Alert Rule",
-      "updateAlertStatus": "Update Alert Rule Status",
-      "updateWebhook": "Update Action"
+      "updateAlertStatus": "Update Alert Rule Status"
     },
     "requestFailed": "{{name}}: Request failed.",
     "testDatasource": {
       "connected": "Connected",
-      "connectionFailed": "Error. Can't connect.",
-      "licenseActivated": "Connected. Current license limits: {{alerts}} alert rules, {{forecasts}} forecasts."
+      "connectionFailed": "Error. Can't connect."
     }
   },
   "basic": {
     "wait": "Please wait"
   },
   "config": {
-    "description": "Business Intelligence App for Grafana.",
+    "description": "Business Manager.",
     "updateButton": "Update Settings"
   },
   "engineDatasource": {
@@ -286,7 +336,7 @@
   },
   "messages": {
     "loading": "Loading...",
-    "notAvailableMessage": "Engine is unavailable. Please check data source settings and try again",
+    "notAvailableMessage": "Business Engine is unavailable. Please check data source settings and try again",
     "notAvailableTitle": "Not Available"
   }
 }

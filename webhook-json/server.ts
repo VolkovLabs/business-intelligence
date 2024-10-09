@@ -21,6 +21,9 @@ const server = http.createServer(function (req, res) {
   );
   res.setHeader("Access-Control-Allow-Headers", "*");
 
+  /**
+   * OPTIONS
+   */
   if (req.method === "OPTIONS") {
     res.writeHead(200);
     res.end();
@@ -28,6 +31,9 @@ const server = http.createServer(function (req, res) {
     return;
   }
 
+  /**
+   * GET
+   */
   if (req.method === "GET") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write("ok");

@@ -1,18 +1,19 @@
-# Business Intelligence App for Grafana
+# Business Manager for Grafana
 
-![Grafana](https://img.shields.io/badge/Grafana-10.1-orange)
-![CI](https://github.com/volkovlabs/volkovlabs-bi-app/workflows/CI/badge.svg)
-![E2E](https://github.com/volkovlabs/volkovlabs-bi-app/workflows/E2E/badge.svg)
+![Grafana](https://img.shields.io/badge/Grafana-11.2-orange)
+![CI](https://github.com/volkovlabs/business-manager/workflows/CI/badge.svg)
+![E2E](https://github.com/volkovlabs/business-manager/workflows/E2E/badge.svg)
 
 ## Introduction
 
-The Business Intelligence App for Grafana.
+The Business Manager is a frontend for the Business Intelligence for Grafana.
 
 ## Requirements
 
-- Version 1.X requires Grafana 9 or Grafana 10.
+- Business Manager 2.X requires Grafana 10 or Grafana 11.
+- Business Manager 1.X requires Grafana 10.
 
 ## Highlights
 
-- Supports Business Intelligence Engine.
-- Allows to Create Alerts.
+- Business Engine.
+- Business Alerting.
