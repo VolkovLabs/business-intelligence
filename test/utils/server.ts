@@ -5,7 +5,7 @@ import { expect, request } from "@playwright/test";
  */
 export class EngineServerHelper {
   private readonly url = process.env.E2E_ENGINE_URL || "http://localhost:3001";
-  private readonly token = process.env.E2E_ENGINE_TOKEN;
+  private readonly token = process.env.ENGINE_TOKEN;
 
   /**
    * Request
