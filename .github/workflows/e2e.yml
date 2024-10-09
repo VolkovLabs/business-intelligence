@@ -23,10 +23,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Start Grafana
-        run: docker compose up -d grafana
+        run: docker compose up grafana
 
       - name: Wait Grafana Started
-        run: sleep 5
+        run: sleep 10
 
       - name: Create Engine Service Account
         id: serviceAccount
