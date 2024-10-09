@@ -1,6 +1,342 @@
 {
+  "actionHeadersEditor": {
+    "addButton": "Añadir encabezado",
+    "deleteButton": "Eliminar encabezado",
+    "key": {
+      "placeholder": "Clave"
+    },
+    "label": "Encabezados",
+    "value": {
+      "placeholder": "Valor"
+    }
+  },
+  "actionMessageSuggestions": {
+    "event": {
+      "alert": {
+        "label": "Datos de regla de alerta",
+        "state": {
+          "label": "Estado"
+        },
+        "title": {
+          "label": "Título"
+        }
+      },
+      "error": {
+        "label": "Estado de error verdadero/falso"
+      },
+      "errorDetails": {
+        "label": "Detalles del error"
+      },
+      "label": "Datos del evento"
+    }
+  },
+  "alert": {
+    "annotationOptions": {
+      "dashboard": "Tablero",
+      "disabled": "Desactivado",
+      "panel": "Panel"
+    },
+    "conditions": {
+      "buttonAdd": "Añadir condición",
+      "buttonDelete": "Eliminar condición",
+      "evaluation": {
+        "pattern": {
+          "fieldLabel": "Campos",
+          "fieldTooltip": "Expresión Regex. Ejemplo: title$|message$. Si está vacío, se aplica a todos los campos",
+          "noPatternMessage": "Se requiere un patrón",
+          "patternLabel": "Patrón",
+          "patternTooltip": "Expresión Regex. Ejemplo: warn|error"
+        },
+        "thresholds": {
+          "colors": {
+            "description": "La regla de alerta se activará en cualquier valor fuera del rango de color especificado",
+            "label": "Rango permitido",
+            "placeholder": "Valores no establecidos"
+          }
+        }
+      },
+      "evaluationApply": {
+        "mode": {
+          "description": "Las reglas se aplican a los valores seleccionados",
+          "label": "Aplicar a"
+        },
+        "percentage": {
+          "description": "Porcentaje máximo permitido de valores antes de activar una alerta",
+          "label": "Porcentaje permitido"
+        }
+      },
+      "evaluationLabel": "Evaluación",
+      "evaluationTypeLabel": "Tipo",
+      "evaluationTypeOptions": {
+        "anomaly": "Detección de anomalías",
+        "pattern": "Patrón Regex",
+        "thresholds": "Umbrales"
+      },
+      "globalLabel": "Global",
+      "globalVariablesLabel": "Variables",
+      "noItemsMessage": "Añade sobrescrituras para definir evaluaciones personalizadas para elementos específicos.",
+      "noItemsTitle": "No hay sobrescrituras",
+      "noVariableValueError": "Se requiere valor de variable.",
+      "noVariablesLabel": "No se encontraron variables",
+      "repeatOptions": {
+        "label": "Opciones de repetición",
+        "repeatByLabel": "Repetir por"
+      },
+      "sectionLabel": "Sobrescrituras",
+      "variablesLabel": "Variables"
+    },
+    "state": {
+      "alerting": "Alertando",
+      "error": "Error",
+      "ok": "OK",
+      "scheduled": "Programado",
+      "unknown": "Listo"
+    },
+    "thresholdsApplyModeOptions": {
+      "all": "Todos los valores",
+      "last": "Último valor",
+      "percentage": "Porcentaje de valores"
+    },
+    "timeRangeSourceOptions": {
+      "configured": "Personalizado",
+      "dashboard": "Desde el tablero"
+    }
+  },
+  "alertingPanel": {
+    "panel": {
+      "actionDetails": {
+        "closeButton": "Cerrar",
+        "defaultLabel": "Usar por defecto",
+        "isDefaultOptions": {
+          "disabled": "Desactivado",
+          "enabled": "Activado"
+        },
+        "message": {
+          "label": "Mensaje"
+        },
+        "requestOptions": {
+          "label": "Petición",
+          "methodLabel": "Método",
+          "urlLabel": "URL"
+        },
+        "saveButton": "Guardar",
+        "testButton": "Probar conectividad",
+        "testErrorTitle": "Error",
+        "testProgressMessage": "Verificando...",
+        "testProgressTitle": "Probar conectividad",
+        "testSuccessMessage": "Conectado",
+        "testSuccessTitle": "Éxito",
+        "titleLabel": "Título",
+        "typeLabel": "Tipo"
+      },
+      "actionType": {
+        "custom": "Registros",
+        "request": "Petición HTTP"
+      },
+      "actionsList": {
+        "actionCreatedMessage": "Acción '{{name}}' creada.",
+        "actionCreatedTitle": "Éxito",
+        "actionDeletedMessage": "Acción '{{name}}' eliminada.",
+        "actionDeletedTitle": "Éxito",
+        "actionTestedMessage": "Acción '{{name}}' conectada.",
+        "actionTestedTitle": "Éxito",
+        "actionUpdatedMessage": "Acción '{{name}}' actualizada.",
+        "actionUpdatedTitle": "Éxito",
+        "addButton": "Añadir acción",
+        "addDrawer": {
+          "title": "Añadir acción"
+        },
+        "deleteButton": "Eliminar",
+        "deleteButtonDisabled": "Acción en uso",
+        "deleteConfirmModal": {
+          "body": "Confirma que deseas eliminar la acción '{{name}}'.",
+          "confirmButton": "Eliminar",
+          "confirmButtonLoading": "Eliminando...",
+          "title": "Eliminar"
+        },
+        "editButton": "Editar",
+        "editDrawer": {
+          "title": "Editar acción"
+        },
+        "isDefault": "Por defecto",
+        "noItemsMessage": "Añade una o más acciones para empezar.",
+        "noItemsTitle": "Primeros pasos",
+        "testButton": "Probar"
+      },
+      "alertOverview": {
+        "actionLabel": "Acción",
+        "actionsLabel": "Acciones",
+        "annotationsLabel": "Anotaciones",
+        "closeButton": "Cerrar",
+        "copyEventDetailsButton": "Copiar",
+        "eventDetailsCopiedMessage": "Detalles del evento copiados al portapapeles.",
+        "eventDetailsCopiedTitle": "Éxito",
+        "eventDetailsLabel": "Detalles del evento",
+        "invalidSchedule": "Formato de cron no válido",
+        "noEventDetailsMessage": "Sin detalles",
+        "panelLabel": "Panel",
+        "panelOptions": {
+          "untitled": "Sin título"
+        },
+        "removedPanel": "Panel eliminado",
+        "saveButton": "Guardar",
+        "scheduleLabel": "Programación",
+        "schedulePlaceholder": "Programación cron, */5 * * * *",
+        "targetLabel": "Objetivo",
+        "timeRange": {
+          "from": "Desde",
+          "to": "Hasta"
+        },
+        "timeRangeLabel": "Rango de tiempo",
+        "timeRangeSourceLabel": "Fuente",
+        "untitled": "Sin título"
+      },
+      "alertsList": {
+        "activateButton": "Iniciar",
+        "addButton": "Añadir regla",
+        "addDrawer": {
+          "title": "Añadir regla de alerta"
+        },
+        "alertActivatedMessage": "Regla de alerta '{{name}}' activada.",
+        "alertActivatedTitle": "Éxito",
+        "alertCreatedMessage": "Regla de alerta '{{name}}' creada.",
+        "alertCreatedTitle": "Éxito",
+        "alertDeletedMessage": "Regla de alerta '{{name}}' eliminada.",
+        "alertDeletedTitle": "Éxito",
+        "alertPausedMessage": "Regla de alerta '{{name}}' pausada.",
+        "alertPausedTitle": "Éxito",
+        "alertUpdatedMessage": "Regla de alerta '{{name}}' actualizada.",
+        "alertUpdatedTitle": "Éxito",
+        "collapseAllButton": "Contraer todo",
+        "copyButton": "Duplicar",
+        "deleteButton": "Eliminar",
+        "deleteConfirmModal": {
+          "body": "Confirma que deseas eliminar la regla de alerta '{{name}}'.",
+          "confirmButton": "Eliminar",
+          "confirmButtonLoading": "Eliminando...",
+          "title": "Eliminar"
+        },
+        "editButton": "Editar",
+        "editDrawer": {
+          "title": "Editar regla de alerta"
+        },
+        "expandAllButton": "Expandir todo",
+        "lastTriggeredDate": "Última activación {{- date, datetime}}",
+        "noActionsMessage": "Añade una acción para trabajar con reglas de alerta.",
+        "noItemsMessage": "Añade una o más reglas de alerta para empezar.",
+        "noItemsTitle": "Primeros pasos",
+        "overviewButton": "Detalles",
+        "overviewDrawer": {
+          "title": "Regla de alerta '{{name}}'"
+        },
+        "pauseButton": "Pausar",
+        "removedDashboardTitle": "Tablero eliminado",
+        "removedPanelTitle": "Panel eliminado",
+        "schedule": "Programado para {{schedule}}.",
+        "startAlertingDate": "Alertando desde {{- date, datetime}}",
+        "status": {
+          "active": "Activo",
+          "paused": "Pausado"
+        },
+        "targetStatus": {
+          "invalid": "Inválido",
+          "valid": "Válido"
+        }
+      },
+      "configuration": {
+        "license": {
+          "expirationDate": "{{- date, datetime}}",
+          "expirationLabel": "Válido hasta",
+          "label": "Información de la licencia",
+          "usageLabel": "Uso total"
+        }
+      },
+      "editAlert": {
+        "actionLabel": "Acción",
+        "actionsLabel": "Acciones",
+        "actionsNoDefaultMessage": "Acción por defecto no existe",
+        "actionsPlaceholder": "Acciones por defecto '{{name}}' utilizadas",
+        "annotationsLabel": "Añadir anotaciones",
+        "closeButton": "Cerrar",
+        "dashboardLabel": "Tablero",
+        "invalidSchedule": "Formato cron inválido",
+        "noActionsError": "Por favor selecciona al menos una acción o crea una acción por defecto",
+        "panelLabel": "Panel",
+        "panelOptions": {
+          "untitled": "Sin título"
+        },
+        "queryLabel": "Consulta",
+        "saveButton": "Guardar",
+        "scheduleLabel": "Programación",
+        "schedulePlaceholder": "Programación cron, */5 * * * *",
+        "targetLabel": "Objetivo",
+        "timeRange": {
+          "from": "Desde",
+          "to": "Hasta"
+        },
+        "timeRangeLabel": "Rango de tiempo",
+        "timeRangeSourceLabel": "Fuente",
+        "titleLabel": "Título"
+      },
+      "tabs": {
+        "actions": "Acciones",
+        "alerts": "Reglas de alerta",
+        "configuration": "Configuración"
+      }
+    }
+  },
+  "api": {
+    "error": "Error",
+    "licenseVerificationFailed": "Fallo en la verificación de la licencia.",
+    "limitReached": "Límite de licencia alcanzado.",
+    "names": {
+      "createAction": "Crear acción",
+      "createAlert": "Crear regla de alerta",
+      "deleteAction": "Eliminar acción",
+      "deleteAlert": "Eliminar regla de alerta",
+      "getActions": "Obtener acciones",
+      "getAlerts": "Obtener reglas de alerta",
+      "getDefaultAction": "Obtener acción por defecto",
+      "getHistoryEvent": "Obtener evento del historial",
+      "getHistoryEvents": "Obtener eventos del historial",
+      "getLicenseInfo": "Obtener información de la licencia",
+      "getVariableOptions": "Obtener opciones de variables",
+      "ping": "Ping",
+      "testAction": "Probar acción",
+      "updateAction": "Actualizar acción",
+      "updateAlert": "Actualizar regla de alerta",
+      "updateAlertStatus": "Actualizar estado de la regla de alerta"
+    },
+    "requestFailed": "{{name}}: Petición fallida.",
+    "testDatasource": {
+      "connected": "Conectado",
+      "connectionFailed": "Error. No se pudo conectar."
+    }
+  },
+  "basic": {
+    "wait": "Por favor espera"
+  },
   "config": {
-    "description": "Business Intelligence App for Grafana.",
-    "updateButton": "Ajustes de actualización"
+    "description": "Business-Manager.",
+    "updateButton": "Actualizar configuración"
+  },
+  "engineDatasource": {
+    "configEditor": {
+      "configured": "Configurado",
+      "tokenLabel": "Token de acceso",
+      "urlLabel": "URL"
+    },
+    "queryEditor": {
+      "requestTypeLabel": "Petición"
+    },
+    "requestTypeOptions": {
+      "alertHistory": "Historial de alertas",
+      "none": "Ninguno"
+    }
+  },
+  "messages": {
+    "loading": "Cargando...",
+    "notAvailableMessage": "Business-Engine no está disponible. Verifique la configuración de la fuente de datos y vuelva a intentarlo.",
+    "notAvailableTitle": "No disponible"
   }
 }

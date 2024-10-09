@@ -5,14 +5,14 @@
       "name": "Volkov Labs",
       "url": "https://volkovlabs.io"
     },
-    "description": "",
+    "description": "High performance backend",
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"
     }
   },
   "metrics": true,
-  "name": "Business Intelligence Engine",
+  "name": "Business Engine",
   "routes": [
     {
       "headers": [
@@ -46,9 +46,9 @@
         }
       ],
       "method": "*",
-      "path": "webhooks",
+      "path": "actions",
       "reqRole": "Viewer",
-      "url": "{{ .JsonData.url }}/webhooks"
+      "url": "{{ .JsonData.url }}/actions"
     },
     {
       "headers": [

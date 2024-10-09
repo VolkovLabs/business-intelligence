@@ -1,6 +1,6 @@
 services:
   grafana:
-    image: grafana/grafana:10.2.3
+    image: grafana/grafana:11.2.0
     env_file: .env
     ports:
       - 3000:3000
@@ -23,7 +23,7 @@ services:
     depends_on:
       - database
       - grafana
-    image: ghcr.io/volkovlabs/bi-engine:1.7.0
+    image: ghcr.io/volkovlabs/business-engine:2.0.0
     env_file: .env
     ports:
       - 3001:3001

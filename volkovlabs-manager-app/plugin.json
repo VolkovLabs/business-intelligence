@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "autoEnabled": true,
   "dependencies": {
-    "grafanaDependency": ">=9.0.0",
+    "grafanaDependency": ">=10.0.0",
     "plugins": []
   },
-  "id": "volkovlabs-bi-app",
+  "id": "volkovlabs-manager-app",
   "includes": [],
   "info": {
     "author": {
@@ -21,7 +21,7 @@
       },
       {
         "name": "GitHub",
-        "url": "https://github.com/volkovlabs/volkovlabs-bi-grafana"
+        "url": "https://github.com/volkovlabs/business-manager"
       }
     ],
     "logos": {
@@ -29,9 +29,9 @@
       "small": "img/logo.svg"
     },
     "screenshots": [],
-    "updated": "2024-01-21",
-    "version": "1.7.0"
+    "updated": "2024-10-09",
+    "version": "2.0.0"
   },
-  "name": "Business Intelligence App",
+  "name": "Business Manager",
   "type": "app"
 }

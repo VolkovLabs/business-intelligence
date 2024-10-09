@@ -3,7 +3,7 @@ global:
   evaluation_interval: 15s
 
   external_labels:
-    monitor: "bi-engine"
+    monitor: "business-engine"
 
 scrape_configs:
   - job_name: "prometheus"
@@ -11,7 +11,7 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "bi-engine"
+  - job_name: "business-engine"
 
     static_configs:
       - targets: ["engine:3001"]
