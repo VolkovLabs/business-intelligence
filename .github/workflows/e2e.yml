@@ -37,13 +37,13 @@ jobs:
       - name: Insert env variables
         run: echo "GRAFANA_TOKEN=${{ steps.serviceAccount.outputs.grafana-token }}" >> .env
 
-      - name: Start Server
+      - name: Start Platform
         run: docker compose up -d
 
       - name: Run e2e tests
         run: docker compose -f test/docker-compose.yml build && docker compose -f test/docker-compose.yml up --exit-code-from test
 
-      - name: Stop Grafana
+      - name: Stop Platform
         run: docker compose down
 
       - uses: actions/upload-artifact@v4
