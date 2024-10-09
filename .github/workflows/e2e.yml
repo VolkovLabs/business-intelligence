@@ -26,12 +26,11 @@ jobs:
         run: docker compose up -d grafana
 
       - name: Wait Grafana Started
-        run: sleep 3
+        run: sleep 5
 
       - name: Create Engine Service Account
         id: serviceAccount
         run: |
-          sudo apt-get install jq
           source ./test/generate-token.sh
           echo "grafana-token=${GRAFANA_TOKEN}" >> $GITHUB_OUTPUT
 
