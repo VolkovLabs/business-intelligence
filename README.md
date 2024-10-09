@@ -1,5 +1,8 @@
 # Business Intelligence
 
+![Grafana](https://img.shields.io/badge/Grafana-11.2-orange)
+![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
+
 ## Introduction
 
 The Business Intelligence provides an accessible platform for business users.
@@ -14,7 +17,7 @@ The Business Intelligence provides an accessible platform for business users.
 ## Highlights
 
 - Manage alerts based on panel queries with thresholds with Business Alerting
-- High performance Business Engine with HA support
+- High performance Business Engine with HA
 
 ## Includes
 

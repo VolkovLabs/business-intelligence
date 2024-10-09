@@ -5,7 +5,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./grafana:/var/lib/grafana
       - ./volkovlabs-manager-app:/var/lib/grafana/plugins/volkovlabs-manager-app
       - ./provisioning:/etc/grafana/provisioning
 
@@ -16,8 +15,6 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
-    volumes:
-      - ./database:/var/lib/postgresql/data
 
   engine:
     depends_on:
