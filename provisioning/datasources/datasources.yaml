@@ -1,17 +1,6 @@
 apiVersion: 1
 
 datasources:
-  - name: Business Engine
-    type: volkovlabs-engine-datasource
-    access: proxy
-    uid: business-engine
-    orgId: 1
-    version: 1
-    editable: true
-    jsonData:
-      url: ${ENGINE_URL}
-    secureJsonData:
-      token: ${ENGINE_TOKEN}
   - name: Test
     type: testdata
     access: proxy
@@ -26,7 +15,7 @@ datasources:
     orgId: 1
     version: 1
     editable: true
-    url: database:5432
+    url: timescale:5432
     user: postgres
     jsonData:
       postgresVersion: 1200

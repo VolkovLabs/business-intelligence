@@ -5,7 +5,9 @@
   "license": "Commercial",
   "name": "business-intelligence",
   "scripts": {
-    "start": "docker compose pull && docker compose up",
-    "stop": "docker compose down"
+    "start:engine": "docker compose --profile engine pull && docker compose --profile engine up",
+    "start:grafana": "docker compose --profile grafana pull && docker compose --profile grafana up",
+    "stop:engine": "docker compose --profile engine down",
+    "stop:grafana": "docker compose --profile grafana down"
   }
 }

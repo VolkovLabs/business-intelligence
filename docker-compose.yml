@@ -1,30 +1,33 @@
 services:
   grafana:
     image: grafana/grafana:11.2.0
-    env_file: .env
     ports:
       - 3000:3000
     volumes:
-      - ./volkovlabs-manager-app:/var/lib/grafana/plugins/volkovlabs-manager-app
       - ./provisioning:/etc/grafana/provisioning
+    profiles:
+      - grafana
 
-  database:
+  timescale:
     image: timescale/timescaledb:latest-pg14
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+    profiles:
+      - engine
 
   engine:
     depends_on:
-      - database
-      - grafana
-    image: ghcr.io/volkovlabs/business-engine:2.0.0
+      - timescale
+    image: ghcr.io/volkovlabs/business-engine:2.1.0
     env_file: .env
     ports:
       - 3001:3001
       - 3002:3002
+    profiles:
+      - engine
 
   prometheus:
     image: prom/prometheus:latest
@@ -37,9 +40,13 @@ services:
       - "--web.console.templates=/usr/share/prometheus/consoles"
     ports:
       - 9090:9090
+    profiles:
+      - engine
 
-  webhook-json:
+  json-server:
     build:
-      context: ./webhook-json
+      context: ./json-server
     volumes:
-      - ./webhook-json/events:/app/events
+      - ./json-server/events:/app/events
+    profiles:
+      - engine
