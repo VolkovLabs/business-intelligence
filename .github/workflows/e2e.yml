@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Start Grafana
-        run: docker compose up -d grafana
+        run: docker compose --profile grafana up -d
 
       - name: Wait Grafana Started
         run: sleep 5
@@ -38,7 +38,7 @@ jobs:
         run: echo "GRAFANA_TOKEN=${{ steps.serviceAccount.outputs.grafana-token }}" >> .env
 
       - name: Start Platform
-        run: docker compose up -d
+        run: docker compose --profile engine up -d
 
       - name: Run e2e tests
         run: cp .env test && docker compose -f test/docker-compose.yml build && docker compose -f test/docker-compose.yml up --exit-code-from test
