@@ -88,8 +88,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 13,
-        "w": 12,
+        "h": 14,
+        "w": 24,
         "x": 0,
         "y": 0
       },
@@ -123,41 +123,14 @@
     },
     {
       "datasource": {
-        "type": "volkovlabs-engine-datasource",
-        "uid": "business-engine"
-      },
-      "gridPos": {
-        "h": 26,
-        "w": 12,
-        "x": 12,
-        "y": 0
-      },
-      "id": 1,
-      "options": {
-        "name": "Time"
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "volkovlabs-engine-datasource",
-            "uid": "business-engine"
-          },
-          "queryText": "test",
-          "refId": "api"
-        }
-      ],
-      "type": "volkovlabs-alerting-panel"
-    },
-    {
-      "datasource": {
         "type": "grafana-testdata-datasource",
         "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
       },
       "gridPos": {
-        "h": 13,
-        "w": 12,
+        "h": 12,
+        "w": 24,
         "x": 0,
-        "y": 13
+        "y": 14
       },
       "id": 3,
       "options": {
@@ -201,6 +174,6 @@
   "timezone": "",
   "title": "Business Intelligence Demo",
   "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }

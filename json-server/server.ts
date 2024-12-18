@@ -56,23 +56,43 @@ const server = http.createServer(function (req, res) {
       res.write(`${req.method}: Success!`);
       res.end();
 
-      const event = JSON.parse(body);
-      const fileName = `${event.alert.title}-${event.alert.id}.json`;
+      /**
+       * Event
+       */
+      const parsedBody = JSON.parse(body);
+      const fileName = `${parsedBody.event.alert.title}-${parsedBody.event.alert.id}`;
 
       /**
-       * Write File
+       * Write Event File
        */
       fs.writeFile(
-        `./events/${fileName}`,
-        JSON.stringify(event, null, 2),
+        `./events/${fileName}.json`,
+        JSON.stringify(parsedBody.event, null, 2),
         "utf-8",
         (error) => {
           if (error) {
-            console.error("Error while saving", error);
+            console.error("Error while saving event file", error);
             return;
           }
 
-          console.log("JSON saved to", fileName);
+          console.log("Event saved to", `${fileName}.json`);
+        }
+      );
+
+      /**
+       * Write Message File
+       */
+      fs.writeFile(
+        `./events/${fileName}.txt`,
+        JSON.stringify(parsedBody.message, null, 2),
+        "utf-8",
+        (error) => {
+          if (error) {
+            console.error("Error while saving message file", error);
+            return;
+          }
+
+          console.log("Message saved to", `${fileName}.txt`);
         }
       );
     });
