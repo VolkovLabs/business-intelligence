@@ -33,12 +33,12 @@ docker compose --profile grafana up
 docker compose --profile engine up
 ```
 
-4. Download and start the Business Studio from [releases](https://github.com/VolkovLabs/business-intelligence/releases).
+4. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
 
 5. Configure Actions and Alert Rules:
 
-- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files.
-- Use `Test Dashboard` for adding Alert Rules based on threshold and Regex pattern.
+- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered.
+- Use `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
 
 ![Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
