@@ -5,44 +5,51 @@
 
 ## Introduction
 
-The Business Intelligence provides an accessible platform for business users.
+The Business Intelligence provides an accessible platform for business users:
 
-[![Metrics, Logs, CPU Usage with Business Alerting in Grafana | Unscripted and Hands-On](https://raw.githubusercontent.com/VolkovLabs/volkovlabs-bi-grafana/main/img/unscripted-1.png)](https://youtu.be/8UaY916PPXc)
+- High performance Business Engine with distributed load and high availability to connect to Grafana instance.
+- Easy to use Business Studio to manage Business Engines.
+- Business Alerts based on panel queries with thresholds and variables support.
+
+[Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
 
 ## Requirements
 
-- Business Intelligence 2.X requires **Grafana 11**.
-- Business Intelligence 1.X requires **Grafana 10**.
+- Business Intelligence 2.X supports **Grafana 11**.
 
-## Highlights
+## Getting started
 
-- Manage alerts based on panel queries with thresholds with Business Alerting
-- High performance Business Engine with HA
-
-## Includes
-
-- Includes Docker Compose configuration to start the Business Intelligence platform.
-- Timescale database to store Engine configuration.
-- Prometheus configuration for Business Engine monitoring.
-- Webhook JSON server for writing event files.
-- Node-RED webhook for Slack notifications.
-
-## Start the Business Intelligence platform
+1. Start Grafana container
 
 ```
-docker compose pull && docker compose up
+docker compose --profile grafana up
 ```
 
-## Stop the Business Intelligence platform
+2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file.
+
+3. Start the Business Engine, Timescale database, and Prometheus
 
 ```
-docker compose down
+docker compose --profile engine up
 ```
 
-## Feedback
+4. Download and start the Business Studio from [releases](https://github.com/VolkovLabs/business-intelligence/releases).
 
-We're looking forward to hearing from you. You can use different ways to get in touch with us.
+5. Configure Actions and Alert Rules:
 
-- Ask a question, request a new feature, or report an issue at [GitHub issues](https://github.com/volkovlabs/business-intelligence/issues).
-- Subscribe to our [YouTube Channel](https://www.youtube.com/@volkovlabs) and leave your comments.
-- Support our project by starring the repository.
+- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files.
+- Use `Test Dashboard` for adding Alert Rules based on threshold and Regex pattern.
+
+[Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
+
+6. Stop the Business Intelligence platform
+
+```
+docker compose --profile engine down
+docker compose --profile grafana down
+```
+
+## Always happy to hear from you
+
+- Ask a question, request a new feature, and file a bug with [GitHub issues](https://github.com/volkovlabs/business-intelligence/issues).
+- Subscribe to our [YouTube Channel](https://youtube.com/@volkovlabs) and leave your comments.
