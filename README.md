@@ -11,7 +11,7 @@ The Business Intelligence provides an accessible platform for business users:
 - Easy to use Business Studio to manage Business Engines.
 - Business Alerts based on panel queries with thresholds and variables support.
 
-[Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
+![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
 
 ## Requirements
 
@@ -40,7 +40,7 @@ docker compose --profile engine up
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files.
 - Use `Test Dashboard` for adding Alert Rules based on threshold and Regex pattern.
 
-[Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
+![Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
 6. Stop the Business Intelligence platform
 
