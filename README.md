@@ -38,11 +38,13 @@ docker compose --profile engine up
 5. Configure Actions and Alert Rules:
 
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered.
-- Use `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
+- Use provisioned `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
 
 ![Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
-6. Stop the Business Intelligence platform
+6. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard.
+
+7. Stop the Business Intelligence platform
 
 ```
 docker compose --profile engine down
