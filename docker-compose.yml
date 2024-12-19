@@ -49,4 +49,4 @@ services:
     volumes:
       - ./json-server/events:/app/events
     profiles:
-      - engine
+      - actions

@@ -5,8 +5,10 @@
   "license": "Commercial",
   "name": "business-intelligence",
   "scripts": {
+    "start:actions": "docker compose --profile actions pull && docker compose --profile actions up",
     "start:engine": "docker compose --profile engine pull && docker compose --profile engine up",
     "start:grafana": "docker compose --profile grafana pull && docker compose --profile grafana up",
+    "stop:actions": "docker compose --profile actions down",
     "stop:engine": "docker compose --profile engine down",
     "stop:grafana": "docker compose --profile grafana down"
   }
