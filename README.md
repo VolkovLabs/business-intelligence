@@ -22,7 +22,7 @@ The Business Intelligence provides an accessible platform for business users:
 1. Start Grafana container
 
 ```
-docker compose --profile grafana up
+docker compose --profile grafana up -d
 ```
 
 2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file.
@@ -30,13 +30,13 @@ docker compose --profile grafana up
 3. Start the Business Engine, Timescale database, and Prometheus
 
 ```
-docker compose --profile engine up
+docker compose --profile engine up -d
 ```
 
 4. Start JSON Server to test Actions (optional)
 
 ```
-docker compose --profile actions up
+docker compose --profile actions up -d
 ```
 
 5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
