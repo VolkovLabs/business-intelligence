@@ -84,7 +84,7 @@ const server = http.createServer(function (req, res) {
        */
       fs.writeFile(
         `./events/${fileName}.txt`,
-        JSON.stringify(parsedBody.message, null, 2),
+        parsedBody.message,
         "utf-8",
         (error) => {
           if (error) {
