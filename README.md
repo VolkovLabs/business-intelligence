@@ -33,21 +33,28 @@ docker compose --profile grafana up
 docker compose --profile engine up
 ```
 
-4. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
+4. Start JSON Server to test Actions (optional)
 
-5. Configure Actions and Alert Rules:
+```
+docker compose --profile actions up
+```
 
-- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered.
+5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
+
+6. Configure Actions and Alert Rules:
+
+- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
 - Use provisioned `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
 
 ![Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
-6. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard.
+7. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard.
 
-7. Stop the Business Intelligence platform
+8. Stop the Business Intelligence platform
 
 ```
 docker compose --profile engine down
+docker compose --profile actions down
 docker compose --profile grafana down
 ```
 
