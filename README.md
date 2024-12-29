@@ -5,11 +5,11 @@
 
 ## Introduction
 
-The Business Intelligence provides an accessible platform for business users and includes:
+Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-Driven Analytics!
 
-- High performance Business Engine with distributed load and high availability to connect to Grafana instance.
-- Easy to use Business Studio to manage Business Engines.
-- Business Alerts based on panel queries with thresholds and variables support.
+- **High-Performance Business Engine**: Delivers robust performance with distributed load balancing and high availability, integrating seamlessly with Grafana.
+- **User-Friendly Business Studio**: Simplifies management of Business Engines, allowing non-technical users to configure, monitor, and maintain data workflows.
+- **Advanced Business Alerts**: Features alert systems based on Grafana panel queries, with support for customizable thresholds and variables, ensuring timely and relevant notifications for business metrics.
 
 ![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
 
