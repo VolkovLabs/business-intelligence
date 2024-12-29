@@ -21,7 +21,7 @@ services:
   engine:
     depends_on:
       - timescale
-    image: ghcr.io/volkovlabs/business-engine:2.1.0
+    image: ghcr.io/volkovlabs/business-engine:2.2.0
     env_file: .env
     ports:
       - 3001:3001
