@@ -18,6 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 3,
   "links": [],
   "panels": [
     {
@@ -125,7 +126,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name=${metric:sqlstring}\n  and $__timeFilter(time)\nORDER BY 1",
+          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name='$metric'\n  and $__timeFilter(time)\nORDER BY 1",
           "refId": "A",
           "sql": {
             "columns": [
@@ -189,6 +190,6 @@
   "timezone": "browser",
   "title": "Metrics",
   "uid": "ae8712i9z25mod",
-  "version": 1,
+  "version": 4,
   "weekStart": ""
 }
