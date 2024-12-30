@@ -5,11 +5,11 @@
 
 ## Introduction
 
-The Business Intelligence provides an accessible platform for business users:
+Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-Driven Analytics!
 
-- High performance Business Engine with distributed load and high availability to connect to Grafana instance.
-- Easy to use Business Studio to manage Business Engines.
-- Business Alerts based on panel queries with thresholds and variables support.
+- **High-Performance Business Engine**: Delivers robust performance with distributed load balancing and high availability, integrating seamlessly with Grafana.
+- **User-Friendly Business Studio**: Simplifies management of Business Engines, allowing non-technical users to configure, monitor, and maintain data workflows.
+- **Advanced Business Alerts**: Features alert systems based on Grafana panel queries, with support for customizable thresholds and variables, ensuring timely and relevant notifications for business metrics.
 
 ![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
 
@@ -25,9 +25,9 @@ The Business Intelligence provides an accessible platform for business users:
 docker compose --profile grafana up -d
 ```
 
-2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file.
+2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file
 
-3. Start the Business Engine, Timescale database, and Prometheus
+3. Start the Business Engine, Timescale database, and Prometheus containers
 
 ```
 docker compose --profile engine up -d
@@ -39,16 +39,18 @@ docker compose --profile engine up -d
 docker compose --profile actions up -d
 ```
 
-5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
+5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases)
 
-6. Configure Actions and Alert Rules:
+6. Configure Actions and Alert Rules
 
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
 - Use provisioned `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
 
-![Engine Overview](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
+![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
-7. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard.
+7. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard
+
+![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/prometheus.png)
 
 8. Stop the Business Intelligence platform
 
@@ -57,6 +59,12 @@ docker compose --profile engine down
 docker compose --profile actions down
 docker compose --profile grafana down
 ```
+
+## Support
+
+You can create a Zendesk ticket to request assistance directly from the Business Studio:
+
+![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/support.png)
 
 ## Always happy to hear from you
 
