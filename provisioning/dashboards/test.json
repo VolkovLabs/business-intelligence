@@ -22,8 +22,9 @@
   "panels": [
     {
       "datasource": {
-        "type": "grafana-testdata-datasource",
-        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
+        "default": false,
+        "type": "grafana-postgresql-datasource",
+        "uid": "timescale"
       },
       "fieldConfig": {
         "defaults": {
@@ -34,13 +35,14 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
+            "axisGridShow": true,
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
-            "barWidthFactor": 0.6,
+            "barWidthFactor": 0.5,
             "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
+            "fillOpacity": 21,
+            "gradientMode": "hue",
             "hideFrom": {
               "legend": false,
               "tooltip": false,
@@ -48,23 +50,25 @@
             },
             "insertNulls": false,
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 3,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
             },
             "showPoints": "auto",
-            "spanNulls": false,
+            "spanNulls": true,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
-              "mode": "area"
+              "mode": "dashed+area"
             }
           },
           "mappings": [],
-          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -73,7 +77,15 @@
                 "value": null
               },
               {
+                "color": "blue",
+                "value": 30
+              },
+              {
                 "color": "yellow",
+                "value": 60
+              },
+              {
+                "color": "orange",
                 "value": 70
               },
               {
@@ -86,16 +98,16 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 14,
+        "h": 12,
         "w": 24,
         "x": 0,
         "y": 0
       },
-      "id": 5,
+      "id": 1,
       "options": {
         "legend": {
           "calcs": [],
-          "displayMode": "list",
+          "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
         },
@@ -104,61 +116,41 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.3.0",
       "targets": [
         {
           "datasource": {
-            "type": "grafana-testdata-datasource",
-            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
+            "type": "grafana-postgresql-datasource",
+            "uid": "timescale"
           },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name=${metric:sqlstring}\n  and $__timeFilter(time)\nORDER BY 1",
           "refId": "A",
-          "scenarioId": "csv_metric_values",
-          "stringInput": "1,20,90,30,5,0"
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
         }
       ],
       "title": "Metrics",
       "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "grafana-testdata-datasource",
-        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
-      },
-      "gridPos": {
-        "h": 12,
-        "w": 24,
-        "x": 0,
-        "y": 14
-      },
-      "id": 3,
-      "options": {
-        "dedupStrategy": "none",
-        "enableLogDetails": true,
-        "prettifyLogMessage": false,
-        "showCommonLabels": false,
-        "showLabels": false,
-        "showTime": false,
-        "sortOrder": "Descending",
-        "wrapLogMessage": false
-      },
-      "pluginVersion": "11.3.0",
-      "targets": [
-        {
-          "datasource": {
-            "type": "testdata",
-            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
-          },
-          "levelColumn": true,
-          "lines": 20,
-          "refId": "A",
-          "scenarioId": "logs"
-        }
-      ],
-      "title": "Logs",
-      "type": "logs"
     }
   ],
-  "refresh": "",
+  "refresh": "10s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -166,236 +158,21 @@
       {
         "current": {
           "selected": false,
-          "text": "Test",
-          "value": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "DS",
-        "options": [],
-        "query": "grafana-testdata-datasource",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "type": "datasource"
-      },
-      {
-        "current": {
-          "selected": true,
-          "text": ["21"],
-          "value": ["21"]
-        },
-        "hide": 0,
-        "includeAll": false,
-        "multi": true,
-        "name": "Values",
-        "options": [
-          {
-            "selected": false,
-            "text": "1",
-            "value": "1"
-          },
-          {
-            "selected": false,
-            "text": "2",
-            "value": "2"
-          },
-          {
-            "selected": false,
-            "text": "3",
-            "value": "3"
-          },
-          {
-            "selected": false,
-            "text": "4",
-            "value": "4"
-          },
-          {
-            "selected": false,
-            "text": "5",
-            "value": "5"
-          },
-          {
-            "selected": false,
-            "text": "6",
-            "value": "6"
-          },
-          {
-            "selected": false,
-            "text": "7",
-            "value": "7"
-          },
-          {
-            "selected": false,
-            "text": "8",
-            "value": "8"
-          },
-          {
-            "selected": false,
-            "text": "9",
-            "value": "9"
-          },
-          {
-            "selected": false,
-            "text": "10",
-            "value": "10"
-          },
-          {
-            "selected": false,
-            "text": "11",
-            "value": "11"
-          },
-          {
-            "selected": false,
-            "text": "12",
-            "value": "12"
-          },
-          {
-            "selected": false,
-            "text": "13",
-            "value": "13"
-          },
-          {
-            "selected": false,
-            "text": "14",
-            "value": "14"
-          },
-          {
-            "selected": false,
-            "text": "15",
-            "value": "15"
-          },
-          {
-            "selected": false,
-            "text": "16",
-            "value": "16"
-          },
-          {
-            "selected": false,
-            "text": "17",
-            "value": "17"
-          },
-          {
-            "selected": false,
-            "text": "18",
-            "value": "18"
-          },
-          {
-            "selected": false,
-            "text": "19",
-            "value": "19"
-          },
-          {
-            "selected": false,
-            "text": "20",
-            "value": "20"
-          },
-          {
-            "selected": true,
-            "text": "21",
-            "value": "21"
-          },
-          {
-            "selected": false,
-            "text": "22",
-            "value": "22"
-          },
-          {
-            "selected": false,
-            "text": "23",
-            "value": "23"
-          },
-          {
-            "selected": false,
-            "text": "24",
-            "value": "24"
-          },
-          {
-            "selected": false,
-            "text": "25",
-            "value": "25"
-          },
-          {
-            "selected": false,
-            "text": "26",
-            "value": "26"
-          },
-          {
-            "selected": false,
-            "text": "27",
-            "value": "27"
-          },
-          {
-            "selected": false,
-            "text": "28",
-            "value": "28"
-          },
-          {
-            "selected": false,
-            "text": "29",
-            "value": "29"
-          },
-          {
-            "selected": false,
-            "text": "30",
-            "value": "30"
-          }
-        ],
-        "query": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30",
-        "skipUrlSync": false,
-        "type": "custom"
-      },
-      {
-        "current": {
-          "text": "26",
-          "value": "26"
-        },
-        "description": "1",
-        "hide": 0,
-        "label": "text",
-        "name": "text",
-        "options": [
-          {
-            "selected": true,
-            "text": "26",
-            "value": "26"
-          }
-        ],
-        "query": "26",
-        "skipUrlSync": false,
-        "type": "textbox"
-      },
-      {
-        "hide": 2,
-        "label": "const",
-        "name": "const",
-        "query": "28",
-        "skipUrlSync": true,
-        "type": "constant"
-      },
-      {
-        "current": {
-          "selected": false,
-          "text": "200",
-          "value": "200"
+          "text": "device1",
+          "value": "device1"
         },
         "datasource": {
-          "type": "prometheus",
-          "uid": "prometheus"
+          "type": "grafana-postgresql-datasource",
+          "uid": "timescale"
         },
-        "definition": "label_values(code)",
+        "definition": "select distinct name from metrics",
         "hide": 0,
         "includeAll": false,
-        "label": "query",
+        "label": "metric",
         "multi": false,
-        "name": "query",
+        "name": "metric",
         "options": [],
-        "query": {
-          "qryType": 1,
-          "query": "label_values(code)",
-          "refId": "PrometheusVariableQueryEditor-VariableQuery"
-        },
+        "query": "select distinct name from metrics",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -405,13 +182,13 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
-  "title": "Test Dashboard",
-  "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
+  "timezone": "browser",
+  "title": "Metrics",
+  "uid": "ae8712i9z25mod",
   "version": 1,
   "weekStart": ""
 }
