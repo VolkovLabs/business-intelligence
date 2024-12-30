@@ -7,32 +7,36 @@ CREATE TABLE metrics (
     value DOUBLE PRECISION NULL
 );
 
-CREATE TABLE controls (
+CREATE TABLE devices (
     id integer NOT NULL,
-    time timestamp with time zone NOT NULL,
     name text NOT NULL,
-    value DOUBLE PRECISION NULL
+    city text NOT NULL,
+    state text NOT NULL,
+    country text NOT NULL
 );
 
-CREATE TABLE config (
-    id integer NOT NULL,
-    time timestamp with time zone NOT NULL,
-    name text NOT NULL,
-    max DOUBLE PRECISION NULL,
-    min DOUBLE PRECISION NULL
-);
 
 CREATE SEQUENCE seq_metrics START 1;
-CREATE SEQUENCE seq_controls START 1;
-CREATE SEQUENCE seq_config START 1;
+CREATE SEQUENCE seq_devices START 1;
 
 SELECT create_hypertable('metrics','time');
-SELECT create_hypertable('controls','time');
-SELECT create_hypertable('config','time');
 
 CREATE INDEX ix_metrics_name_time ON metrics (name, time DESC);
-CREATE INDEX ix_controls_name_time ON controls (name, time DESC);
-CREATE INDEX ix_config_name_time ON config (name, time DESC);
 
-insert into config values(nextval('seq_config'), now(), 'device1', 100, 0);
-insert into config values(nextval('seq_config'), now(), 'device2', 50, 80);
+insert into devices values (nextval('seq_devices'), 'Chicago North 125', 'Chicago', 'IL', 'USA');
+insert into devices values (nextval('seq_devices'), 'Chicago North 242', 'Chicago', 'IL', 'USA');
+insert into devices values (nextval('seq_devices'), 'Tampa South 124', 'Tampa', 'FL', 'USA');
+insert into devices values (nextval('seq_devices'), 'Tampa South 232', 'Tampa', 'FL', 'USA');
+insert into devices values (nextval('seq_devices'), 'NY Central 133', 'New York', 'NY', 'USA');
+insert into devices values (nextval('seq_devices'), 'NY Central 221', 'New York', 'NY', 'USA');
+insert into devices values (nextval('seq_devices'), 'NY Beach 213', 'New York', 'NY', 'USA');
+insert into devices values (nextval('seq_devices'), 'NY South 432', 'New York', 'NY', 'USA');
+insert into devices values (nextval('seq_devices'), 'Sweden 192', 'Stockholm', 'Stockholm', 'Sweden');
+insert into devices values (nextval('seq_devices'), 'Sweden 299', 'Stockholm', 'Stockholm', 'Sweden');
+insert into devices values (nextval('seq_devices'), 'RU 198 BU', 'Moscow', 'Moscow', 'Russia');
+insert into devices values (nextval('seq_devices'), 'RU 12 BU', 'Moscow', 'Moscow', 'Russia');
+insert into devices values (nextval('seq_devices'), 'JPY 398', 'Tokyo', 'Tokyo', 'Japan');
+insert into devices values (nextval('seq_devices'), 'JPY 176', 'Tokyo', 'Tokyo', 'Japan');
+insert into devices values (nextval('seq_devices'), 'Asia 287', 'Singapore', 'Singapore', 'Singapore');
+insert into devices values (nextval('seq_devices'), 'Asia 987', 'Singapore', 'Singapore', 'Singapore');
+
