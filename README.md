@@ -39,13 +39,15 @@ docker compose --profile grafana up -d
 docker compose --profile engine up -d
 ```
 
-4a. Start JSON Server to test Actions (optional)
+### Optional
+
+4a. Start JSON Server to test Actions
 
 ```
 docker compose --profile actions up -d
 ```
 
-4b. Start Data emulator to test dashboard variables and threshold overrides (optional)
+4b. Start Data emulator to test dashboard variables and threshold overrides
 
 ```
 docker compose --profile emulator up -d
