@@ -30,6 +30,9 @@ let names = [
   "Asia 987",
 ];
 
+/**
+ * Add metrics and randomly increase temperature
+ */
 const addMetrics = async () => {
   temps = temps.map((temp) => temp + Math.random());
 

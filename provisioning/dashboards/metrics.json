@@ -18,7 +18,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 3,
   "links": [],
   "panels": [
     {
@@ -99,7 +98,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 17,
         "w": 24,
         "x": 0,
         "y": 0
@@ -110,7 +109,7 @@
           "calcs": [],
           "displayMode": "table",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "mode": "single",
@@ -126,7 +125,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name='$metric'\n  and $__timeFilter(time)\nORDER BY 1",
+          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name=${metric:sqlstring}\n  and $__timeFilter(time)\nORDER BY 1",
           "refId": "A",
           "sql": {
             "columns": [
@@ -158,9 +157,9 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "device1",
-          "value": "device1"
+          "selected": true,
+          "text": "Asia 987",
+          "value": "Asia 987"
         },
         "datasource": {
           "type": "grafana-postgresql-datasource",
@@ -190,6 +189,6 @@
   "timezone": "browser",
   "title": "Metrics",
   "uid": "ae8712i9z25mod",
-  "version": 4,
+  "version": 2,
   "weekStart": ""
 }

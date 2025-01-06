@@ -15,7 +15,6 @@ CREATE TABLE devices (
     country text NOT NULL
 );
 
-
 CREATE SEQUENCE seq_metrics START 1;
 CREATE SEQUENCE seq_devices START 1;
 

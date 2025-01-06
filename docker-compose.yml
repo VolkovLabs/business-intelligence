@@ -21,10 +21,10 @@ services:
     volumes:
       - ./timescale:/docker-entrypoint-initdb.d
     profiles:
-      - emulation
+      - emulator
       - engine
 
-  metrics-server:
+  data-emulator:
     build:
       context: ./timescale
     ports:
@@ -37,7 +37,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: timescale
     profiles:
-      - emulation
+      - emulator
 
   engine:
     depends_on:

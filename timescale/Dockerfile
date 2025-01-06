@@ -3,8 +3,8 @@ FROM node
 ## Create app directory
 WORKDIR /app
 
-## Copy Server
-COPY server.ts .
+## Copy Emulator
+COPY emulator.ts .
 
 ## Add Postgres package
 RUN yarn add pg
@@ -15,4 +15,4 @@ RUN chmod +x /wait
 
 EXPOSE 3008
 
-CMD /wait && node server.ts
+CMD /wait && node emulator.ts
