@@ -41,15 +41,10 @@ docker compose --profile engine up -d
 
 ### Optional
 
-4a. Start JSON Server to test Actions
+4. Start JSON Server to test Actions and data emulator to test dashboard variables and threshold overrides
 
 ```
 docker compose --profile actions up -d
-```
-
-4b. Start Data emulator to test dashboard variables and threshold overrides
-
-```
 docker compose --profile emulator up -d
 ```
 
