@@ -18,13 +18,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 2,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": {
-        "default": false,
-        "type": "grafana-postgresql-datasource",
-        "uid": "timescale"
+        "type": "grafana-testdata-datasource",
+        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
       },
       "fieldConfig": {
         "defaults": {
@@ -35,14 +36,13 @@
             "axisBorderShow": false,
             "axisCenteredZero": false,
             "axisColorMode": "text",
-            "axisGridShow": true,
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
-            "barWidthFactor": 0.5,
+            "barWidthFactor": 0.6,
             "drawStyle": "line",
-            "fillOpacity": 21,
-            "gradientMode": "hue",
+            "fillOpacity": 0,
+            "gradientMode": "none",
             "hideFrom": {
               "legend": false,
               "tooltip": false,
@@ -50,25 +50,23 @@
             },
             "insertNulls": false,
             "lineInterpolation": "linear",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 3,
+            "lineWidth": 1,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
             },
             "showPoints": "auto",
-            "spanNulls": true,
+            "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "normal"
+              "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "dashed+area"
+              "mode": "area"
             }
           },
           "mappings": [],
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -77,15 +75,7 @@
                 "value": null
               },
               {
-                "color": "blue",
-                "value": 30
-              },
-              {
                 "color": "yellow",
-                "value": 60
-              },
-              {
-                "color": "orange",
                 "value": 70
               },
               {
@@ -98,16 +88,16 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 12,
+        "h": 14,
         "w": 24,
         "x": 0,
         "y": 0
       },
-      "id": 1,
+      "id": 4,
       "options": {
         "legend": {
           "calcs": [],
-          "displayMode": "table",
+          "displayMode": "list",
           "placement": "bottom",
           "showLegend": true
         },
@@ -116,79 +106,74 @@
           "sort": "none"
         }
       },
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "timescale"
+            "type": "grafana-testdata-datasource",
+            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
           },
-          "editorMode": "code",
-          "format": "table",
-          "rawQuery": true,
-          "rawSql": "SELECT\n  time,\n  value\nFROM metrics\nWHERE\n  name=${metric:sqlstring}\n  and $__timeFilter(time)\nORDER BY 1",
           "refId": "A",
-          "sql": {
-            "columns": [
-              {
-                "parameters": [],
-                "type": "function"
-              }
-            ],
-            "groupBy": [
-              {
-                "property": {
-                  "type": "string"
-                },
-                "type": "groupBy"
-              }
-            ],
-            "limit": 50
-          }
+          "scenarioId": "csv_metric_values",
+          "stringInput": "1,20,90,30,5,0"
         }
       ],
       "title": "Metrics",
       "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-testdata-datasource",
+        "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 3,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": false,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "pluginVersion": "10.1.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "testdata",
+            "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
+          },
+          "levelColumn": true,
+          "lines": 20,
+          "refId": "A",
+          "scenarioId": "logs"
+        }
+      ],
+      "title": "Logs",
+      "type": "logs"
     }
   ],
-  "refresh": "10s",
+  "refresh": "",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
-    "list": [
-      {
-        "current": {
-          "selected": false,
-          "text": "device1",
-          "value": "device1"
-        },
-        "datasource": {
-          "type": "grafana-postgresql-datasource",
-          "uid": "timescale"
-        },
-        "definition": "select distinct name from metrics",
-        "hide": 0,
-        "includeAll": false,
-        "label": "metric",
-        "multi": false,
-        "name": "metric",
-        "options": [],
-        "query": "select distinct name from metrics",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "type": "query"
-      }
-    ]
+    "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "browser",
-  "title": "Metrics",
-  "uid": "ae8712i9z25mod",
-  "version": 1,
+  "timezone": "",
+  "title": "Test Dashboard",
+  "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
+  "version": 2,
   "weekStart": ""
 }
