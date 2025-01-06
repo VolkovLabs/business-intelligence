@@ -41,7 +41,7 @@ docker compose --profile engine up -d
 
 ### Optional
 
-4. Start JSON Server to test Actions and data emulator to test dashboard variables and threshold overrides
+4. Start JSON Server to test Actions and data emulator to test dashboard variables
 
 ```
 docker compose --profile actions up -d
@@ -55,7 +55,8 @@ docker compose --profile emulator up -d
 6. Configure Actions and Alert Rules
 
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
-- Use provisioned `Test Dashboard` for adding Alert Rules based on thresholds and Regex pattern.
+- Use provisioned `Test Dashboard` dashboard for adding Alert Rules based on thresholds and Regex pattern.
+- Use provisioned `Metrics` dashboard for adding Alert Rules based on dashboard variables and threshold overrides.
 
 ![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 

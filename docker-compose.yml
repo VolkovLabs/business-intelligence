@@ -27,8 +27,6 @@ services:
   data-emulator:
     build:
       context: ./timescale
-    ports:
-      - 3008:3008/tcp
     depends_on:
       - timescale
     environment:
