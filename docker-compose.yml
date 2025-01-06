@@ -1,6 +1,9 @@
 services:
   grafana:
     image: grafana/grafana:11.2.0
+    environment:
+      - GF_USERS_DEFAULT_THEME=light
+      - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
     ports:
       - 3000:3000
     volumes:
@@ -15,8 +18,26 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
+    volumes:
+      - ./timescale:/docker-entrypoint-initdb.d
     profiles:
+      - emulator
       - engine
+
+  data-emulator:
+    build:
+      context: ./timescale
+    ports:
+      - 3008:3008/tcp
+    depends_on:
+      - timescale
+    environment:
+      WAIT_HOSTS: timescale:5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST: timescale
+    profiles:
+      - emulator
 
   engine:
     depends_on:

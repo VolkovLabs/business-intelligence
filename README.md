@@ -11,13 +11,17 @@ Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-
 - **User-Friendly Business Studio**: Simplifies management of Business Engines, allowing non-technical users to configure, monitor, and maintain data workflows.
 - **Advanced Business Alerts**: Features alert systems based on Grafana panel queries, with support for customizable thresholds and variables, ensuring timely and relevant notifications for business metrics.
 
-![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)
+[![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)](https://volkovlabs.io/big/)
 
 ## Requirements
 
 - Business Intelligence 2.X supports **Grafana 11**.
 
 ## Getting started
+
+The Business Intelligence platform utilize Docker containers to be modular and scalable.
+
+### Grafana
 
 1. Start Grafana container
 
@@ -27,17 +31,24 @@ docker compose --profile grafana up -d
 
 2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file
 
+### Business Engine
+
 3. Start the Business Engine, Timescale database, and Prometheus containers
 
 ```
 docker compose --profile engine up -d
 ```
 
-4. Start JSON Server to test Actions (optional)
+### Optional
+
+4. Start JSON Server to test Actions and data emulator to test dashboard variables and threshold overrides
 
 ```
 docker compose --profile actions up -d
+docker compose --profile emulator up -d
 ```
+
+### Business Studio
 
 5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases)
 
@@ -48,6 +59,8 @@ docker compose --profile actions up -d
 
 ![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
+### Prometheus
+
 7. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard
 
 ![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/prometheus.png)
@@ -57,6 +70,7 @@ docker compose --profile actions up -d
 ```
 docker compose --profile engine down
 docker compose --profile actions down
+docker compose --profile emulator down
 docker compose --profile grafana down
 ```
 
