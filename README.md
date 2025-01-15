@@ -23,13 +23,13 @@ The Business Intelligence platform utilize Docker containers to be modular and s
 
 ### Grafana
 
-1. Start Grafana container
+1. Start Grafana container and login as admin user with 'admin' password:
 
 ```
 docker compose --profile grafana up -d
 ```
 
-2. Create Service Account and update `GRAFANA_TOKEN` in the `.env` file
+2. Create Service Account and update `GRAFANA_TOKEN` in the `docker-compose.yml` file
 
 ### Business Engine
 

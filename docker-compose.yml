@@ -41,7 +41,15 @@ services:
     depends_on:
       - timescale
     image: ghcr.io/volkovlabs/business-engine:2.2.0
-    env_file: .env
+    #env_file: .env
+    environment:
+      DATABASE_HOST: timescale
+      DATABASE_PORT: 5432
+      DATABASE_DB: postgres
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: postgres
+      GRAFANA_URL: http://grafana:3000
+      GRAFANA_TOKEN: SERVICE-ACCOUNT-TOKEN
     ports:
       - 3001:3001
       - 3002:3002
