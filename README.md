@@ -1,6 +1,6 @@
 # Business Intelligence
 
-![Grafana](https://img.shields.io/badge/Grafana-11.2-orange)
+![Grafana](https://img.shields.io/badge/Grafana-11.4-orange)
 ![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
 
 ## Introduction
@@ -20,6 +20,8 @@ Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-
 ## Getting started
 
 The Business Intelligence platform utilize Docker containers to be modular and scalable.
+
+![Architecture](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/getting-started.png)
 
 ### Grafana
 
