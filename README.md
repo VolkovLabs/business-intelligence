@@ -21,6 +21,8 @@ Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-
 
 The Business Intelligence platform utilize Docker containers to be modular and scalable.
 
+![Architecture](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/getting-started.png)
+
 ### Grafana
 
 1. Start Grafana container and login as admin user with 'admin' password:
