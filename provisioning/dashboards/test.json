@@ -18,12 +18,12 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
+        "default": false,
         "type": "grafana-testdata-datasource",
         "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
       },
@@ -114,11 +114,10 @@
             "uid": "a9457cec-7e48-49fa-9e0d-1d6882065e10"
           },
           "refId": "A",
-          "scenarioId": "csv_metric_values",
-          "stringInput": "1,20,90,30,5,0"
+          "scenarioId": "random_walk"
         }
       ],
-      "title": "Metrics",
+      "title": "Random Walk",
       "type": "timeseries"
     },
     {
@@ -174,6 +173,6 @@
   "timezone": "",
   "title": "Test Dashboard",
   "uid": "bd0aabe4-3d2d-4d2e-a34d-d6260b06e10b",
-  "version": 2,
+  "version": 5,
   "weekStart": ""
 }
