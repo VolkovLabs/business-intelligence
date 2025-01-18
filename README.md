@@ -1,6 +1,6 @@
 # Business Intelligence
 
-![Grafana](https://img.shields.io/badge/Grafana-11.4-orange)
+![Grafana](https://img.shields.io/badge/Grafana-11.2-orange)
 ![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
 
 ## Introduction
