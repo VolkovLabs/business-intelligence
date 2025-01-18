@@ -1,6 +1,6 @@
 services:
   grafana:
-    image: grafana/grafana:11.4.0
+    image: grafana/grafana:11.2.0
     environment:
       - GF_USERS_DEFAULT_THEME=light
       - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
