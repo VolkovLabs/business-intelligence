@@ -56,6 +56,10 @@ docker compose --profile emulator up -d
 
 6. Add Engine and update Grafana connection details in Environment configuration
 
+```
+http://grafana:3000
+```
+
 7. Configure Actions and Alert Rules
 
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
