@@ -1,6 +1,6 @@
 services:
   grafana:
-    image: grafana/grafana:11.2.0
+    image: grafana/grafana:11.5.1
     environment:
       - GF_USERS_DEFAULT_THEME=light
       - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
@@ -40,7 +40,7 @@ services:
   engine:
     depends_on:
       - timescale
-    image: ghcr.io/volkovlabs/business-engine:2.3.0
+    image: ghcr.io/volkovlabs/business-engine:2.4.0
     #env_file: .env
     environment:
       DATABASE_HOST: timescale
@@ -48,8 +48,6 @@ services:
       DATABASE_DB: postgres
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
-      GRAFANA_URL: http://grafana:3000
-      GRAFANA_TOKEN: SERVICE-ACCOUNT-TOKEN
     ports:
       - 3001:3001
       - 3002:3002
