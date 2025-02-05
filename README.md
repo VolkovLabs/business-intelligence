@@ -1,6 +1,6 @@
 # Business Intelligence
 
-![Grafana](https://img.shields.io/badge/Grafana-11.2-orange)
+![Grafana](https://img.shields.io/badge/Grafana-11.5-orange)
 ![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
 
 ## Introduction
@@ -11,7 +11,7 @@ Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-
 - **User-Friendly Business Studio**: Simplifies management of Business Engines, allowing non-technical users to configure, monitor, and maintain data workflows.
 - **Advanced Business Alerts**: Features alert systems based on Grafana panel queries, with support for customizable thresholds and variables, ensuring timely and relevant notifications for business metrics.
 
-[![Business Studio](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/studio.png)](https://volkovlabs.io/big/)
+[![How to get started with Business Intelligence Platform for Grafana 2.3.0 | Tutorial for beginners](https://raw.githubusercontent.com/volkovlabs/business-intelligence/main/img/installation.png)](https://youtu.be/KM5a2qzlOak)
 
 ## Requirements
 
@@ -31,7 +31,7 @@ The Business Intelligence platform utilize Docker containers to be modular and s
 docker compose --profile grafana up -d
 ```
 
-2. Create Service Account and update `GRAFANA_TOKEN` in the `docker-compose.yml` file
+2. Create Service Account
 
 ### Business Engine
 
@@ -54,7 +54,13 @@ docker compose --profile emulator up -d
 
 5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases)
 
-6. Configure Actions and Alert Rules
+6. Add Engine and update Grafana connection details in Environment configuration
+
+```
+http://grafana:3000
+```
+
+7. Configure Actions and Alert Rules
 
 - Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
 - Use provisioned `Test Dashboard` dashboard for adding Alert Rules based on thresholds and Regex pattern.
