@@ -85,7 +85,7 @@ docker compose --profile grafana down
 
 ## Support
 
-You can create a Zendesk ticket to request assistance directly from the Business Studio:
+Request assistance directly from the Business Studio:
 
 ![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/support.png)
 
