@@ -1,4 +1,4 @@
-# Business Intelligence
+# Business Intelligence platform
 
 ![Grafana](https://img.shields.io/badge/Grafana-11.5-orange)
 ![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
@@ -15,7 +15,7 @@ Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-
 
 ## Requirements
 
-- Business Intelligence 2.X supports **Grafana 11**.
+- Business Intelligence platform 2.X supports **Grafana 11**.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ The Business Intelligence platform utilize Docker containers to be modular and s
 
 ### Grafana
 
-1. Start Grafana container and login as admin user with 'admin' password:
+1. Start Grafana container and login as admin user with `admin` password:
 
 ```
 docker compose --profile grafana up -d
