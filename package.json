@@ -2,7 +2,7 @@
   "author": "Volkov Labs",
   "dependencies": {},
   "description": "Business Intelligence platform",
-  "license": "Commercial",
+  "license": "Volkov Labs",
   "name": "business-intelligence",
   "scripts": {
     "start:actions": "docker compose --profile actions pull && docker compose --profile actions up",
