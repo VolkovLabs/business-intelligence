@@ -40,7 +40,7 @@ services:
   engine:
     depends_on:
       - timescale
-    image: ghcr.io/volkovlabs/business-engine:2.5.1
+    image: ghcr.io/volkovlabs/business-engine:2.6.0
     #env_file: .env
     environment:
       DATABASE_HOST: timescale
