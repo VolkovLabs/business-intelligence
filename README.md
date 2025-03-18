@@ -24,7 +24,7 @@ The Business Intelligence platform uses Docker for modularity and scalability. F
 
 ![Architecture](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/getting-started.png)
 
-### 1. Launch Grafana
+### 1. Launch Grafana OSS or use Grafana Cloud
 
 - Start the Grafana container and log in as `admin` (password: `admin`):
   ```bash
@@ -54,7 +54,7 @@ The Business Intelligence platform uses Docker for modularity and scalability. F
 
 - Download Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
 - Open Business Studio and add an Engine.
-- Update the Grafana connection in Environment settings:
+- Update the Grafana OSS connection in Environment settings or Grafana Cloud:
   ```
   http://grafana:3000
   ```
