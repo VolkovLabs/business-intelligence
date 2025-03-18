@@ -1,6 +1,6 @@
 services:
   grafana:
-    image: grafana/grafana:11.5.1
+    image: grafana/grafana:11.5.2
     environment:
       - GF_USERS_DEFAULT_THEME=light
       - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
@@ -40,7 +40,7 @@ services:
   engine:
     depends_on:
       - timescale
-    image: ghcr.io/volkovlabs/business-engine:2.6.0
+    image: ghcr.io/volkovlabs/business-engine:2.7.0
     #env_file: .env
     environment:
       DATABASE_HOST: timescale
