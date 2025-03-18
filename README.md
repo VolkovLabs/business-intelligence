@@ -94,5 +94,6 @@ Need help? Request assistance directly in Business Studio:
 
 - **GitHub Issues**: Ask questions, suggest features, or report bugs at [github.com/volkovlabs/business-intelligence/issues](https://github.com/volkovlabs/business-intelligence/issues).
 - **YouTube**: Subscribe to [youtube.com/@volkovlabs](https://youtube.com/@volkovlabs) and share your feedback in the comments.
+- **Business Suite Enterpise**: Open Zendesk tickets at [Support portal](https://volkovlabs.zendesk.com/hc/en-us).
 
 We’re excited to hear from you!
