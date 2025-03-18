@@ -1,95 +1,98 @@
-# Business Intelligence platform
+# Business Intelligence Platform
 
 ![Grafana](https://img.shields.io/badge/Grafana-11.5-orange)
 ![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
 
 ## Introduction
 
-Revolutionize Your Business Insights with High-Performance, Scalable, and Alert-Driven Analytics!
+Transform your analytics with the Business Intelligence platform—crafted by Volkov Labs for high-performance, scalable, and alert-driven insights in Grafana.
 
-- **High-Performance Business Engine**: Delivers robust performance with distributed load balancing and high availability, integrating seamlessly with Grafana.
-- **User-Friendly Business Studio**: Simplifies management of Business Engines, allowing non-technical users to configure, monitor, and maintain data workflows.
-- **Advanced Business Alerts**: Features alert systems based on Grafana panel queries, with support for customizable thresholds and variables, ensuring timely and relevant notifications for business metrics.
+- **High-Performance Business Engine**: Powers robust analytics with distributed load balancing and high availability, seamlessly integrated with Grafana.
+- **User-Friendly Business Studio**: Simplifies engine management for all users, enabling easy configuration and monitoring of data workflows.
+- **Advanced Business Alerts**: Leverages Grafana panel queries with customizable thresholds and variables for timely, actionable notifications.
 
-[![How to get started with Business Intelligence Platform for Grafana 2.3.0 | Tutorial for beginners](https://raw.githubusercontent.com/volkovlabs/business-intelligence/main/img/installation.png)](https://youtu.be/KM5a2qzlOak)
+Get started with this tutorial:  
+[![How to Get Started with Business Intelligence Platform 2.3.0 | Tutorial for Beginners](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/installation.png)](https://youtu.be/KM5a2qzlOak)
 
 ## Requirements
 
-- Business Intelligence platform 2.X supports **Grafana 11**.
+- Compatible with **Grafana 11** (Business Intelligence 2.X).
 
-## Getting started
+## Getting Started
 
-The Business Intelligence platform utilize Docker containers to be modular and scalable.
+The Business Intelligence platform uses Docker for modularity and scalability. Follow these steps to set it up:
 
 ![Architecture](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/getting-started.png)
 
-### Grafana
+### 1. Launch Grafana
 
-1. Start Grafana container and login as admin user with `admin` password:
+- Start the Grafana container and log in as `admin` (password: `admin`):
+  ```bash
+  docker compose --profile grafana up -d
+  ```
+- Create a Service Account in Grafana for API access.
 
-```
-docker compose --profile grafana up -d
-```
+### 2. Start the Business Engine
 
-2. Create Service Account
+- Launch the Business Engine, Timescale database, and Prometheus:
+  ```bash
+  docker compose --profile engine up -d
+  ```
 
-### Business Engine
+### 3. Optional Components
 
-3. Start the Business Engine, Timescale database, and Prometheus containers
+- **Actions Testing**: Start the JSON Server for webhook testing:
+  ```bash
+  docker compose --profile actions up -d
+  ```
+- **Data Emulator**: Start the emulator for dashboard variables:
+  ```bash
+  docker compose --profile emulator up -d
+  ```
 
-```
-docker compose --profile engine up -d
-```
+### 4. Set Up Business Studio
 
-### Optional
+- Download Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
+- Open Business Studio and add an Engine.
+- Update the Grafana connection in Environment settings:
+  ```
+  http://grafana:3000
+  ```
 
-4. Start JSON Server to test Actions and data emulator to test dashboard variables
+### 5. Configure Alerts and Actions
 
-```
-docker compose --profile actions up -d
-docker compose --profile emulator up -d
-```
-
-### Business Studio
-
-5. Download and start the Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases)
-
-6. Add Engine and update Grafana connection details in Environment configuration
-
-```
-http://grafana:3000
-```
-
-7. Configure Actions and Alert Rules
-
-- Use JSON server `http://json-server:3000` for HTTP Request Action to create event and message files when alert triggered if started.
-- Use provisioned `Test Dashboard` dashboard for adding Alert Rules based on thresholds and Regex pattern.
-- Use provisioned `Metrics` dashboard for adding Alert Rules based on dashboard variables and threshold overrides.
+- **Actions**: Use `http://json-server:3000` (if started) for HTTP actions to log events/messages.
+- **Alert Rules**:
+  - Base rules on the provisioned `Test Dashboard` using thresholds or regex patterns.
+  - Use the `Metrics` dashboard for variable-based rules with threshold overrides.
 
 ![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
 
-### Prometheus
+### 6. Monitor with Prometheus
 
-7. Check performance and Prometheus metrics using provisioned `Business Engine` dashboard
+- View performance metrics in the provisioned `Business Engine` dashboard:
 
-![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/prometheus.png)
+![Prometheus Metrics](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/prometheus.png)
 
-8. Stop the Business Intelligence platform
+### 7. Shut Down
 
-```
-docker compose --profile engine down
-docker compose --profile actions down
-docker compose --profile emulator down
-docker compose --profile grafana down
-```
+- Stop all components:
+  ```bash
+  docker compose --profile grafana down
+  docker compose --profile engine down
+  docker compose --profile actions down
+  docker compose --profile emulator down
+  ```
 
 ## Support
 
-Request assistance directly from the Business Studio:
+Need help? Request assistance directly in Business Studio:
 
-![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/support.png)
+![Support](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/support.png)
 
-## Always happy to hear from you
+## Connect with Us
 
-- Ask a question, request a new feature, and file a bug with [GitHub issues](https://github.com/volkovlabs/business-intelligence/issues).
-- Subscribe to our [YouTube Channel](https://youtube.com/@volkovlabs) and leave your comments.
+- **GitHub Issues**: Ask questions, suggest features, or report bugs at [github.com/volkovlabs/business-intelligence/issues](https://github.com/volkovlabs/business-intelligence/issues).
+- **YouTube**: Subscribe to [youtube.com/@volkovlabs](https://youtube.com/@volkovlabs) and share your feedback in the comments.
+
+We’re excited to hear from you!
