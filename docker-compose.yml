@@ -1,77 +1,52 @@
 services:
-  grafana:
-    image: grafana/grafana:11.5.2
-    environment:
-      - GF_USERS_DEFAULT_THEME=light
-      - GF_INSTALL_PLUGINS=yesoreyeram-infinity-datasource
-    ports:
-      - 3000:3000
-    volumes:
-      - ./provisioning:/etc/grafana/provisioning
-    profiles:
-      - grafana
-
-  timescale:
-    image: timescale/timescaledb:latest-pg14
+  postgres:
+    container_name: postgres
+    image: postgres
     restart: always
-    environment:
-      POSTGRES_PASSWORD: postgres
     ports:
       - 5432:5432
-    volumes:
-      - ./timescale:/docker-entrypoint-initdb.d
-    profiles:
-      - emulator
-      - engine
-
-  data-emulator:
-    build:
-      context: ./timescale
-    depends_on:
-      - timescale
+    shm_size: 128mb
     environment:
-      WAIT_HOSTS: timescale:5432
-      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_HOST: timescale
-    profiles:
-      - emulator
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
 
   engine:
+    image: ghcr.io/volkovlabs/business-engine:3.3.0
     depends_on:
-      - timescale
-    image: ghcr.io/volkovlabs/business-engine:2.7.0
+      - postgres
+    ports:
+      - "3001-3002:3001"
     #env_file: .env
     environment:
-      DATABASE_HOST: timescale
+      DATABASE_HOST: postgres
       DATABASE_PORT: 5432
       DATABASE_DB: postgres
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
-    ports:
-      - 3001:3001
-      - 3002:3002
-    profiles:
-      - engine
+    deploy:
+      mode: replicated
+      replicas: 1
 
   prometheus:
     image: prom/prometheus:latest
+    container_name: prometheus
+    restart: always
+    ports:
+      - 9090:9090
     volumes:
-      - ./prometheus/:/etc/prometheus/
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/data:/prometheus
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
-      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
-      - "--web.console.templates=/usr/share/prometheus/consoles"
-    ports:
-      - 9090:9090
-    profiles:
-      - engine
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--web.console.templates=/etc/prometheus/consoles"
+      - "--web.enable-lifecycle"
 
   json-server:
+    container_name: json-server
     build:
       context: ./json-server
     volumes:
       - ./json-server/events:/app/events
-    profiles:
-      - actions

@@ -1,22 +1,12 @@
 global:
   scrape_interval: 15s
-  evaluation_interval: 15s
-
-  external_labels:
-    monitor: "business-engine"
 
 scrape_configs:
-  - job_name: "prometheus"
-
-    static_configs:
-      - targets: ["localhost:9090"]
-
   - job_name: "business-engine"
-
     static_configs:
-      - targets: ["engine:3001"]
-        labels:
-          group: "server"
-      - targets: ["engine:3002"]
-        labels:
-          group: "scheduler"
+      - targets: ["business-intelligence-engine-1:3001"]
+#remote_write:
+#  - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
+#    basic_auth:
+#      username: ""
+#      password: glc_123==
