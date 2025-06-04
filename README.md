@@ -18,12 +18,6 @@ Transform your analytics with the Business Intelligence platform—crafted by Vo
 
 The [Quick Start guide](https://volkovlabs.io/big/quick-start/) provides the essential steps to deploy the Business Intelligence platform using an existing Grafana LGTM (Loki, Grafana, Tempo, Mimir) stack and production data.
 
-## Support
-
-Need help? Request assistance directly in Business Studio:
-
-![Support](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/support.png)
-
 ## Connect with Us
 
 - **Questions, Features, or Bugs**: Open a [Zendesk ticket](https://support.volkovlabs.io).

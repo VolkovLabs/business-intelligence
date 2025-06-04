@@ -4,8 +4,7 @@ global:
 scrape_configs:
   - job_name: "business-engine"
     static_configs:
-      - targets: ["engine:3001"]
-      - targets: ["engine:3002"]
+      - targets: ["business-intelligence-engine-1:3001"]
 #remote_write:
 #  - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
 #    basic_auth:
