@@ -1,7 +1,6 @@
 # Business Intelligence Platform
 
-![Grafana](https://img.shields.io/badge/Grafana-11.5-orange)
-![E2E](https://github.com/volkovlabs/business-intelligence/workflows/E2E/badge.svg)
+![Grafana](https://img.shields.io/badge/Grafana-12.0-orange)
 
 ## Introduction
 
@@ -11,78 +10,13 @@ Transform your analytics with the Business Intelligence platform—crafted by Vo
 - **User-Friendly Business Studio**: Simplifies engine management for all users, enabling easy configuration and monitoring of data workflows.
 - **Advanced Business Alerts**: Leverages Grafana panel queries with customizable thresholds and variables for timely, actionable notifications.
 
-Get started with this tutorial:  
-[![How to Get Started with Business Intelligence Platform 2.3.0 | Tutorial for Beginners](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/installation.png)](https://youtu.be/KM5a2qzlOak)
-
 ## Requirements
 
-- Compatible with **Grafana 11** (Business Intelligence 2.X).
+- Compatible with **Grafana 11** and **Grafana 12**.
 
-## Getting Started
+## Quick Start
 
-The Business Intelligence platform uses Docker for modularity and scalability. Follow these steps to set it up:
-
-![Architecture](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/getting-started.png)
-
-### 1. Launch Grafana OSS or use Grafana Cloud
-
-- Start the Grafana container and log in as `admin` (password: `admin`):
-  ```bash
-  docker compose --profile grafana up -d
-  ```
-- Create a Service Account in Grafana for API access.
-
-### 2. Start the Business Engine
-
-- Launch the Business Engine, Timescale database, and Prometheus:
-  ```bash
-  docker compose --profile engine up -d
-  ```
-
-### 3. Optional Components
-
-- **Actions Testing**: Start the JSON Server for webhook testing:
-  ```bash
-  docker compose --profile actions up -d
-  ```
-- **Data Emulator**: Start the emulator for dashboard variables:
-  ```bash
-  docker compose --profile emulator up -d
-  ```
-
-### 4. Set Up Business Studio
-
-- Download Business Studio from [Releases](https://github.com/VolkovLabs/business-intelligence/releases).
-- Open Business Studio and add an Engine.
-- Update the Grafana OSS connection in Environment settings or Grafana Cloud:
-  ```
-  http://grafana:3000
-  ```
-
-### 5. Configure Alerts and Actions
-
-- **Actions**: Use `http://json-server:3000` (if started) for HTTP actions to log events/messages.
-- **Alert Rules**:
-  - Base rules on the provisioned `Test Dashboard` using thresholds or regex patterns.
-  - Use the `Metrics` dashboard for variable-based rules with threshold overrides.
-
-![Engine Alerts](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/overview.png)
-
-### 6. Monitor with Prometheus
-
-- View performance metrics in the provisioned `Business Engine` dashboard:
-
-![Prometheus Metrics](https://raw.githubusercontent.com/VolkovLabs/business-intelligence/main/img/prometheus.png)
-
-### 7. Shut Down
-
-- Stop all components:
-  ```bash
-  docker compose --profile grafana down
-  docker compose --profile engine down
-  docker compose --profile actions down
-  docker compose --profile emulator down
-  ```
+The [Quick Start guide](https://volkovlabs.io/big/quick-start/) provides the essential steps to deploy the Business Intelligence platform using an existing Grafana LGTM (Loki, Grafana, Tempo, Mimir) stack and production data.
 
 ## Support
 
@@ -92,8 +26,5 @@ Need help? Request assistance directly in Business Studio:
 
 ## Connect with Us
 
-- **GitHub Issues**: Ask questions, suggest features, or report bugs at [github.com/volkovlabs/business-intelligence/issues](https://github.com/volkovlabs/business-intelligence/issues).
-- **YouTube**: Subscribe to [youtube.com/@volkovlabs](https://youtube.com/@volkovlabs) and share your feedback in the comments.
-- **Business Suite Enterprise**: Open Zendesk tickets via our [Support Portal](https://volkovlabs.zendesk.com/hc/en-us).
-
-We’re excited to hear from you!
+- **Questions, Features, or Bugs**: Open a [Zendesk ticket](https://support.volkovlabs.io).
+- **Join the Conversation**: Subscribe to our [YouTube Channel](https://youtube.com/@volkovlabs) and share your thoughts in the comments.

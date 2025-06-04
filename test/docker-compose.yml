@@ -1,8 +1,0 @@
-services:
-  test:
-    build:
-      context: .
-    env_file: .env
-    volumes:
-      - ./playwright-report:/app/playwright-report
-    network_mode: host

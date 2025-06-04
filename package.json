@@ -5,13 +5,7 @@
   "license": "Volkov Labs",
   "name": "business-intelligence",
   "scripts": {
-    "start:actions": "docker compose --profile actions pull && docker compose --profile actions up",
-    "start:emulator": "docker compose --profile emulator pull && docker compose --profile emulator up",
-    "start:engine": "docker compose --profile engine pull && docker compose --profile engine up",
-    "start:grafana": "docker compose --profile grafana pull && docker compose --profile grafana up",
-    "stop:actions": "docker compose --profile actions down",
-    "stop:emulator": "docker compose --profile emulator down",
-    "stop:engine": "docker compose --profile engine down",
-    "stop:grafana": "docker compose --profile grafana down"
+    "start": "docker compose pull && docker compose up",
+    "stop": "docker compose down"
   }
 }
