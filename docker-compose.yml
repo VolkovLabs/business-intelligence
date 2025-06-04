@@ -45,6 +45,7 @@ services:
       - "--web.enable-lifecycle"
 
   json-server:
+    container_name: json-server
     build:
       context: ./json-server
     volumes:
