@@ -20,11 +20,11 @@ This guide provides step-by-step instructions to deploy the Business Intelligenc
 
 ## Usage
 
-- Configure data workflows and alerts using the **Business Studio** interface.
+- Configure data workflows and alerts using the [**Business Studio**](https://github.com/VolkovLabs/business-intelligence/releases) application.
 - Set up custom alerts based on thresholds and dashboard variables for real-time notifications.
 - Monitor analytics and insights directly within your Grafana dashboards using Prometheus metrics.
 
-For advanced configurations and use cases, refer to the [Documentation](https://volkovlabs.io/big/documentation/).
+For advanced configurations and use cases, refer to the [Documentation](https://volkovlabs.io/big/).
 
 ## Connect with Us
 
@@ -33,6 +33,6 @@ For advanced configurations and use cases, refer to the [Documentation](https://
 
 ## License
 
-Please review the [End-User License Agreement (EULA)](https://github.com/VolkovLabs/business-intelligence/blob/main/LICENSE) carefully before downloading or using Business Intelligence platform.
+Please review the [End-User License Agreement (EULA)](https://github.com/VolkovLabs/business-intelligence/blob/main/LICENSE.md) carefully before downloading or using Business Intelligence platform.
 
 **Built with ❤️ by [Volkov Labs](https://volkovlabs.io)**.
