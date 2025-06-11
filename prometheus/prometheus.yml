@@ -6,7 +6,7 @@ scrape_configs:
     static_configs:
       - targets: ["business-engine:3001"]
 ##
-## Grafana Cloud
+## Send to Grafana Cloud
 ##
 #remote_write:
 #  - url: https://prometheus-blocks-prod-us-central1.grafana.net/api/prom/push
