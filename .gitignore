@@ -16,3 +16,4 @@ prometheus/data
 
 ## Node-RED
 .config.runtime.json
+node-red/data
