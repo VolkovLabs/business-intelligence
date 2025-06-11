@@ -12,21 +12,18 @@ services:
       - ./postgres:/var/lib/postgresql/data
 
   engine:
-    image: ghcr.io/volkovlabs/business-engine:3.3.0
+    container_name: business-engine
+    image: ghcr.io/volkovlabs/business-engine:3.4.0
     depends_on:
       - postgres
     ports:
-      - "3001-3002:3001"
-    #env_file: .env
+      - 3001:3001
     environment:
       DATABASE_HOST: postgres
       DATABASE_PORT: 5432
       DATABASE_DB: postgres
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
-    deploy:
-      mode: replicated
-      replicas: 1
 
   prometheus:
     image: prom/prometheus:latest
@@ -50,3 +47,11 @@ services:
       context: ./json-server
     volumes:
       - ./json-server/events:/app/events
+
+  node-red:
+    container_name: node-red
+    image: nodered/node-red:latest
+    ports:
+      - 1880:1880
+    volumes:
+      - ./node-red/data:/data

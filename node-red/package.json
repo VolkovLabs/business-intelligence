@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "node-red-contrib-slack": "~2.0.0"
-  },
-  "description": "A Node-RED Project from Business Intelligence for Grafana",
-  "name": "volkovlabs-bi-node-red",
-  "private": true,
-  "version": "1.0.0"
-}
