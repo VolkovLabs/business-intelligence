@@ -42,13 +42,6 @@ services:
       - "--web.console.templates=/etc/prometheus/consoles"
       - "--web.enable-lifecycle"
 
-  json-server:
-    container_name: json-server
-    build:
-      context: ./json-server
-    volumes:
-      - ./json-server/events:/app/events
-
   node-red:
     container_name: node-red
     image: nodered/node-red:latest
