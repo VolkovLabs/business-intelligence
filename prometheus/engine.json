@@ -174,7 +174,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "orientation": "horizontal",
         "showValue": "auto",
@@ -250,6 +250,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 30,
             "fillOpacity": 50,
             "gradientMode": "none",
             "hideFrom": {
@@ -302,7 +303,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "orientation": "horizontal",
         "showValue": "auto",
@@ -310,7 +311,7 @@
         "tooltip": {
           "hideZeros": false,
           "mode": "multi",
-          "sort": "none"
+          "sort": "desc"
         },
         "xField": "alert",
         "xTickLabelRotation": 0,
@@ -420,6 +421,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 10,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -444,7 +446,7 @@
               "mode": "normal"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "area"
             }
           },
           "mappings": [],
@@ -453,6 +455,14 @@
             "steps": [
               {
                 "color": "green"
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              },
+              {
+                "color": "red",
+                "value": 20
               }
             ]
           }
@@ -569,7 +579,7 @@
         "maxVizHeight": 300,
         "minVizHeight": 10,
         "minVizWidth": 0,
-        "namePlacement": "auto",
+        "namePlacement": "top",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": ["first"],
@@ -579,7 +589,7 @@
         "showUnfilled": true,
         "sizing": "auto",
         "text": {},
-        "valueMode": "color"
+        "valueMode": "text"
       },
       "pluginVersion": "12.0.0",
       "targets": [
@@ -653,6 +663,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 10,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -677,7 +688,7 @@
               "mode": "normal"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "area"
             }
           },
           "mappings": [],
@@ -687,6 +698,14 @@
             "steps": [
               {
                 "color": "green"
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              },
+              {
+                "color": "red",
+                "value": 20
               }
             ]
           }
@@ -789,7 +808,7 @@
         "maxVizHeight": 300,
         "minVizHeight": 10,
         "minVizWidth": 0,
-        "namePlacement": "auto",
+        "namePlacement": "top",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [],
@@ -877,6 +896,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 10,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -901,7 +921,7 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "area"
             }
           },
           "mappings": [],
@@ -933,20 +953,24 @@
       "id": 22,
       "options": {
         "legend": {
-          "calcs": [],
-          "displayMode": "list",
+          "calcs": ["mean", "lastNotNull", "max", "min"],
+          "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
         },
         "tooltip": {
           "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
+          "mode": "multi",
+          "sort": "desc"
         }
       },
       "pluginVersion": "12.0.0",
       "targets": [
         {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
           "disableTextWrap": false,
           "editorMode": "code",
           "expr": "alert_count_in_the_execution_queue{app=~\"$app\",instance=~\"$instance\"}",
@@ -955,11 +979,7 @@
           "legendFormat": "{{instance}}",
           "range": true,
           "refId": "A",
-          "useBackend": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          }
+          "useBackend": false
         }
       ],
       "title": "Scheduler Queue",
@@ -981,6 +1001,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 10,
             "fillOpacity": 50,
             "gradientMode": "none",
             "hideFrom": {
@@ -1015,11 +1036,11 @@
               },
               {
                 "color": "#EAB839",
-                "value": 1.5
+                "value": 6
               },
               {
                 "color": "red",
-                "value": 5
+                "value": 10
               }
             ]
           },
@@ -1043,7 +1064,7 @@
           "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "orientation": "horizontal",
         "showValue": "auto",
@@ -1051,7 +1072,7 @@
         "tooltip": {
           "hideZeros": false,
           "mode": "multi",
-          "sort": "none"
+          "sort": "desc"
         },
         "xField": "alert",
         "xTickLabelRotation": 0,
@@ -1078,7 +1099,7 @@
           "useBackend": false
         }
       ],
-      "title": "Internal Requests",
+      "title": "Internal Requests Latency",
       "transformations": [
         {
           "id": "groupBy",
@@ -1165,6 +1186,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 10,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -1284,6 +1306,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 0.2,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -1390,6 +1413,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 200000010,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -1431,7 +1455,7 @@
               },
               {
                 "color": "red",
-                "value": 400000000
+                "value": 400000000.0029
               }
             ]
           },
@@ -1535,6 +1559,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
+            "axisSoftMax": 20,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -1562,6 +1587,7 @@
               "mode": "area"
             }
           },
+          "fieldMinMax": false,
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -1595,7 +1621,9 @@
           "calcs": ["mean", "lastNotNull", "max", "min"],
           "displayMode": "table",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": true,
+          "sortBy": "Mean",
+          "sortDesc": true
         },
         "tooltip": {
           "hideZeros": false,
@@ -1636,7 +1664,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "5s",
+  "refresh": "15s",
   "schemaVersion": 41,
   "tags": [],
   "templating": {

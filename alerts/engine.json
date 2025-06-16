@@ -1,0 +1,435 @@
+{
+  "version": "3.4.0",
+  "alerts": [
+    {
+      "id": "de393705-b177-41be-b023-1161a8f586c2",
+      "title": "Business Engine - Growing Action Handlers",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 9,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "alerting",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-06-16T18:32:24.990Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "55f56c2f-eddc-4f2a-910f-36ce92a87c32",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "dac21101-a792-4c6c-901d-0b2519d7cd1b",
+      "title": "Business Engine - High CPU Usage",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 6,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-06-16T10:44:15.853Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "da69c930-405a-492c-8f05-f9de8d87bd2a",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "c542a59e-5349-4df9-839d-808d4765e2a1",
+      "title": "Business Engine - High Engine Latency",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 13,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "alerting",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-06-16T18:32:24.655Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "039dac9a-a4a5-4a26-857f-42a758a9fea7",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "ba05170e-0339-4a9f-9693-b10d6536e0d1",
+      "title": "Business Engine - High Grafana Latency",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 14,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": null,
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "cc3a6681-1950-49f0-9b8e-6df1c7ce03b2",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "e2f7a751-cdfc-42e7-ade4-ebfcceeae8d0",
+      "title": "Business Engine - High Memory Usage",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 7,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-06-16T12:00:11.692Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "9f4680ab-4de4-42ea-90a3-c454ebde9a09",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "31fdca0f-48f3-49d1-b582-41041cc5e0e1",
+      "title": "Business Engine - Long Scheduler Queue",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 22,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "error",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": null,
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "e60d1b46-8385-464e-b350-f8846a25db57",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "e43eff6e-f617-4da6-9703-cc44d08461af",
+      "title": "Business Engines - Event Loop Lag",
+      "dashboardId": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
+      "panelId": 8,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "alerting",
+      "noDataState": "error",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-06-16T18:32:13.002Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "4ac3ab04-5f61-4bfa-8205-77f306f9b138",
+        "repeat": "instance",
+        "variables": {
+          "app": {
+            "name": "app",
+            "label": "App",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    }
+  ],
+  "actions": [
+    {
+      "id": "a34ee556-55d0-49b3-b634-3e96f70c6b86",
+      "title": "Logs",
+      "type": "custom",
+      "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nInstance: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
+      "options": {
+        "url": null
+      },
+      "useFor": [],
+      "latestEvent": null
+    },
+    {
+      "id": "f33a3dd4-2908-4661-9d0f-93566d601552",
+      "title": "Slack",
+      "type": "request",
+      "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nInstance: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
+      "options": {
+        "url": "http://node-red:1880/slack",
+        "headers": [
+          {
+            "key": "channel_id",
+            "value": "C090L07LNP9"
+          }
+        ]
+      },
+      "useFor": [
+        "e2f7a751-cdfc-42e7-ade4-ebfcceeae8d0",
+        "de393705-b177-41be-b023-1161a8f586c2",
+        "c542a59e-5349-4df9-839d-808d4765e2a1",
+        "dac21101-a792-4c6c-901d-0b2519d7cd1b",
+        "ba05170e-0339-4a9f-9693-b10d6536e0d1",
+        "31fdca0f-48f3-49d1-b582-41041cc5e0e1",
+        "e43eff6e-f617-4da6-9703-cc44d08461af"
+      ],
+      "latestEvent": null
+    }
+  ]
+}
