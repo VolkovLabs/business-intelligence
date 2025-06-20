@@ -13,7 +13,7 @@ services:
 
   engine:
     container_name: business-engine
-    image: ghcr.io/volkovlabs/business-engine:3.4.0
+    image: ghcr.io/volkovlabs/business-engine:3.5.0
     init: true
     depends_on:
       - postgres

@@ -1,27 +1,29 @@
 # Business Intelligence Platform
 
-![Business Studio](https://volkovlabs.io/img/big/business-studio/engine.png)
-
 ## Introduction
 
 Transform your analytics with the **Business Intelligence Platform**—crafted by [Volkov Labs](https://volkovlabs.io) for high-performance, scalable, and alert-driven insights in Grafana. This platform enables organizations to harness data effectively with seamless integration with Grafana dashboards.
 
+![Business Studio](https://volkovlabs.io/img/big/business-studio/engine.png)
+
 ### Key Features
 
-- **High-Performance Business Engine**: Powers robust analytics with distributed load balancing and high availability.
-- **User-Friendly Business Studio**: Simplifies engine management, enabling easy configuration and monitoring of data workflows for all users.
-- **Advanced Business Alerts**: Leverages Grafana panel queries with customizable thresholds and variables for timely, actionable notifications.
-- **Compatibility**: Grafana 11 and Grafana 12.
+- **[User-Friendly Business Studio](https://volkovlabs.io/big/studio/)**: Simplifies Business Engine management, enabling non-technical users to configure, monitor, and maintain data workflows effortlessly.
+- **[High-Performance Business Engine](https://volkovlabs.io/big/engine/)**: Provides robust performance with distributed load balancing and high availability, seamlessly integrating with Grafana for efficient data processing.
+- **[Load-Balanced Business Alerting](https://volkovlabs.io/big/alerting/)**: Offers customizable alert rules tied to Grafana panel queries, with support for thresholds and variables to deliver timely, relevant business metric notifications..
+
+## Compatibility
+
+Grafana 11 and Grafana 12.
 
 ## Quick Start
 
-Get up and running quickly with the [Quick Start Guide](https://volkovlabs.io/big/quick-start/).
-This guide provides step-by-step instructions to deploy the Business Intelligence Platform using an existing Grafana LGTM (Loki, Grafana, Tempo, Mimir) stack and production data.
+Get up and running quickly with the [Quick Start Guide](https://volkovlabs.io/big/quick-start/). This guide provides step-by-step instructions to deploy the Business Intelligence Platform using an existing Grafana OSS, Enterprise, and Cloud.
 
 ## Usage
 
-- Configure data workflows and alerts using the [**Business Studio**](https://github.com/VolkovLabs/business-intelligence/releases) application.
-- Set up custom alerts based on thresholds and dashboard variables for real-time notifications.
+- Configure data workflows and alerts using the native [**Business Studio**](https://github.com/VolkovLabs/business-intelligence/releases) application.
+- Set up custom alerts based on thresholds, Regex patterns and dashboard variables for real-time notifications.
 - Monitor analytics and insights directly within your Grafana dashboards using Prometheus metrics.
 
 For advanced configurations and use cases, refer to the [Documentation](https://volkovlabs.io/big/).
