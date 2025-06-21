@@ -1666,7 +1666,7 @@
       "type": "timeseries"
     }
   ],
-  "refresh": "15s",
+  "refresh": "10s",
   "schemaVersion": 41,
   "tags": [],
   "templating": {
