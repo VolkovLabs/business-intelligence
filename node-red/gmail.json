@@ -1,0 +1,316 @@
+[
+  {
+    "id": "9b2c3d4e5f6g7h8i",
+    "type": "tab",
+    "label": "Gmail",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "1a",
+    "type": "http in",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Email Trigger /email",
+    "url": "/email",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 150,
+    "y": 440,
+    "wires": [["2a", "3a", "4a"]],
+    "outputLabels": ["event"]
+  },
+  {
+    "id": "2a",
+    "type": "debug",
+    "z": "9b2c3d4e5f6g7h8i",
+    "d": true,
+    "name": "Show Payload",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 460,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "3a",
+    "type": "debug",
+    "z": "9b2c3d4e5f6g7h8i",
+    "d": true,
+    "name": "Show Headers",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "req.headers",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 470,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "4a",
+    "type": "function",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Prepare Payload",
+    "func": "/**\n * Email Content\n */\nlet title = msg.payload.event.alert?.title || \"Screenshot\";\nlet image = msg.payload.event.condition?.panelScreenshot || \"\";\n\n/**\n * Payload\n */\nmsg.payload = {\n    to: msg.req.headers.recipient,\n    title,\n    text: msg.payload.message,\n    image\n};\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 440,
+    "wires": [["5a", "6a"]]
+  },
+  {
+    "id": "5a",
+    "type": "switch",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Check Image",
+    "property": "payload.image",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "nempty"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 710,
+    "y": 440,
+    "wires": [["7a"], ["8a"]]
+  },
+  {
+    "id": "6a",
+    "type": "debug",
+    "z": "9b2c3d4e5f6g7h8i",
+    "d": true,
+    "name": "Show Prepared Payload",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 750,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "7a",
+    "type": "function",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Set Image Content",
+    "func": "/**\n * Convert Base64 to Buffer\n */\nlet image = msg.payload.image;\nif (image.startsWith('data:')) {\n    image = image.substring(image.indexOf(',') + 1);\n    image = Buffer.from(image, 'base64');\n}\n\n/**\n * Set Message\n */\nmsg.to = msg.payload.to;\nmsg.topic = msg.payload.title;\nmsg.filename = msg.payload.title + '.png';\nmsg.description = msg.payload.text;\nmsg.payload= image;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 970,
+    "y": 400,
+    "wires": [["9a", "11a", "10a"]]
+  },
+  {
+    "id": "8a",
+    "type": "function",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Set Email Content",
+    "func": "/**\n * Payload for email without attachment\n */\nmsg.to = msg.payload.to;\nmsg.topic = msg.payload.title;\nmsg.payload = msg.payload.text;\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 970,
+    "y": 500,
+    "wires": [["9a", "11a", "10a"]]
+  },
+  {
+    "id": "9a",
+    "type": "e-mail",
+    "z": "9b2c3d4e5f6g7h8i",
+    "server": "smtp.gmail.com",
+    "port": "465",
+    "authtype": "BASIC",
+    "saslformat": false,
+    "token": "oauth2Response.access_token",
+    "secure": true,
+    "tls": true,
+    "name": "",
+    "dname": "Send Email via Gmail",
+    "x": 1260,
+    "y": 400,
+    "wires": []
+  },
+  {
+    "id": "10a",
+    "type": "function",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Response Status",
+    "func": "/**\n * Success\n */\nif (!msg.error) {\n   msg.statusCode = 200;\n   msg.payload = { ok: true, message: 'Email sent successfully' };\n   return msg;\n}\n\n/**\n * Error\n */\nmsg.statusCode = 400;\nmsg.payload = { ok: false, message: 'Failed to send email' };\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1250,
+    "y": 500,
+    "wires": [["12a"]]
+  },
+  {
+    "id": "11a",
+    "type": "debug",
+    "z": "9b2c3d4e5f6g7h8i",
+    "d": true,
+    "name": "Show Email Payload",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1260,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "12a",
+    "type": "http response",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 1480,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "13a",
+    "type": "catch",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Error Catch",
+    "scope": null,
+    "uncaught": false,
+    "x": 450,
+    "y": 600,
+    "wires": [["14a", "15a"]]
+  },
+  {
+    "id": "14a",
+    "type": "http response",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Error Response",
+    "statusCode": "400",
+    "headers": {},
+    "x": 1500,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "15a",
+    "type": "debug",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Show Catched Error",
+    "active": true,
+    "tosidebar": false,
+    "console": true,
+    "tostatus": false,
+    "complete": "error",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 720,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "16a",
+    "type": "inject",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Send Email",
+    "props": [
+      {
+        "p": "req.headers.recipient",
+        "v": "test@example.com",
+        "vt": "str"
+      },
+      {
+        "p": "payload.message",
+        "v": "Test Message",
+        "vt": "str"
+      },
+      {
+        "p": "payload.event",
+        "v": "{}",
+        "vt": "json"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 130,
+    "y": 220,
+    "wires": [["4a"]]
+  },
+  {
+    "id": "17a",
+    "type": "inject",
+    "z": "9b2c3d4e5f6g7h8i",
+    "name": "Send Email with Attachment",
+    "props": [
+      {
+        "p": "req.headers.recipient",
+        "v": "test@example.com",
+        "vt": "str"
+      },
+      {
+        "p": "payload.message",
+        "v": "Test Message",
+        "vt": "str"
+      },
+      {
+        "p": "payload.event.alert.title",
+        "v": "Test Attachment",
+        "vt": "str"
+      },
+      {
+        "p": "payload.event.condition.panelScreenshot",
+        "v": "data:image/png;base64,ABC",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 180,
+    "y": 280,
+    "wires": [["4a"]]
+  }
+]
