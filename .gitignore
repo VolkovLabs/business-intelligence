@@ -15,3 +15,6 @@ postgres/
 ## Node-RED
 .config.runtime.json
 node-red/data
+
+## Alloy
+alloy/data
