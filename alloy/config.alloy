@@ -25,9 +25,25 @@ loki.source.docker "default" {
   forward_to = [loki.write.default.receiver]
 }
 
-// Write logs to Loki with retry and batching configuration
+// Write logs to Loki
 loki.write "default" {
   endpoint {
     url = "http://localhost:3100/loki/api/v1/push"
+  }
+}
+
+// Collect metrics from Business Intelligence
+prometheus.scrape "BI" {
+  targets = [{
+    __address__ = "business-engine:3001",
+  }]
+
+  forward_to = [prometheus.remote_write.default.receiver]
+}
+
+// Write metrics to Prometheus
+prometheus.remote_write "default" {
+  endpoint {
+    url = "http://localhost:9090/api/prom/push"
   }
 }

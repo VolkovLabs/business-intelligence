@@ -5,10 +5,8 @@ npm-debug.log*
 
 # Files
 node_modules/
-grafana/
 events/
 postgres/
-prometheus/data
 
 # Editor
 .idea
