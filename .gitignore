@@ -5,10 +5,8 @@ npm-debug.log*
 
 # Files
 node_modules/
-grafana/
 events/
 postgres/
-prometheus/data
 
 # Editor
 .idea
@@ -17,3 +15,6 @@ prometheus/data
 ## Node-RED
 .config.runtime.json
 node-red/data
+
+## Alloy
+alloy/data

@@ -12,8 +12,8 @@ services:
       - ./postgres:/var/lib/postgresql/data
 
   engine:
-    container_name: business-engine
-    image: ghcr.io/volkovlabs/business-engine:3.5.0
+    container_name: engine
+    image: ghcr.io/volkovlabs/business-engine:3.6.0
     init: true
     depends_on:
       - postgres
@@ -26,22 +26,6 @@ services:
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
 
-  prometheus:
-    image: prom/prometheus:latest
-    container_name: prometheus
-    restart: always
-    ports:
-      - 9090:9090
-    volumes:
-      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./prometheus/data:/prometheus
-    command:
-      - "--config.file=/etc/prometheus/prometheus.yml"
-      - "--storage.tsdb.path=/prometheus"
-      - "--web.console.libraries=/etc/prometheus/console_libraries"
-      - "--web.console.templates=/etc/prometheus/consoles"
-      - "--web.enable-lifecycle"
-
   node-red:
     container_name: node-red
     image: nodered/node-red:latest
@@ -49,3 +33,14 @@ services:
       - 1880:1880
     volumes:
       - ./node-red/data:/data
+
+  alloy:
+    container_name: alloy
+    image: grafana/alloy:latest
+    ports:
+      - 12345:12345
+    volumes:
+      - ./alloy/config.alloy:/etc/alloy/config.alloy
+      - ./alloy/data:/var/lib/alloy/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: run --server.http.listen-addr=0.0.0.0:12345 --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy

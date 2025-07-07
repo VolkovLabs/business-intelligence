@@ -1,0 +1,49 @@
+// Discover Docker containers
+discovery.docker "default" {
+  host = "unix:///var/run/docker.sock"
+}
+
+// Relabeling rules to extract meaningful metadata from Docker containers
+discovery.relabel "docker" {
+  targets = discovery.docker.default.targets
+
+  // Extract container name without leading slash
+  rule {
+    source_labels = ["__meta_docker_container_name"]
+    regex         = "/(.*)"
+    target_label  = "container_name"
+  }
+}
+
+// Configure loki.source.docker to collect logs with structured parsing
+loki.source.docker "default" {
+  host        = "unix:///var/run/docker.sock"
+  targets     = discovery.docker.default.targets
+  labels     = {"platform" = "docker"}
+  relabel_rules = discovery.relabel.docker.rules
+  
+  forward_to = [loki.write.default.receiver]
+}
+
+// Write logs to Loki
+loki.write "default" {
+  endpoint {
+    url = "http://localhost:3100/loki/api/v1/push"
+  }
+}
+
+// Collect metrics from Business Intelligence
+prometheus.scrape "BI" {
+  targets = [{
+    __address__ = "business-engine:3001",
+  }]
+
+  forward_to = [prometheus.remote_write.default.receiver]
+}
+
+// Write metrics to Prometheus
+prometheus.remote_write "default" {
+  endpoint {
+    url = "http://localhost:9090/api/prom/push"
+  }
+}
