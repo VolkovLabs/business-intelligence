@@ -1,0 +1,272 @@
+[
+  {
+    "id": "6718c5f282937364",
+    "type": "tab",
+    "label": "Twilio SMS",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "e981e2832ce621de",
+    "type": "http in",
+    "z": "6718c5f282937364",
+    "name": "Twilio Trigger /sms",
+    "url": "/sms",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 150,
+    "y": 440,
+    "wires": [["60cf7329c83b51b3", "7dff564ef99cae37", "a26326278a016942"]],
+    "outputLabels": ["event"]
+  },
+  {
+    "id": "60cf7329c83b51b3",
+    "type": "debug",
+    "z": "6718c5f282937364",
+    "d": true,
+    "name": "Show Payload",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 400,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "1f3a42830ce841a1",
+    "type": "catch",
+    "z": "6718c5f282937364",
+    "name": "Error Catch",
+    "scope": null,
+    "uncaught": false,
+    "x": 390,
+    "y": 600,
+    "wires": [["abdeb6dc309d4eae", "af77760fa419bf0a"]]
+  },
+  {
+    "id": "7dff564ef99cae37",
+    "type": "debug",
+    "z": "6718c5f282937364",
+    "d": true,
+    "name": "Show Headers",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "req.headers",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 410,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "cba7f9632400450f",
+    "type": "function",
+    "z": "6718c5f282937364",
+    "name": "Response status",
+    "func": "/**\n * Success\n */\nif (!msg.error_message) {\n   msg.statusCode = 200;\n   msg.payload = { ok: true, message: msg.body };\n   return msg;\n}\n\n/**\n * Error\n */\nmsg.statusCode = 400;\nmsg.payload = { ok: false, message: msg.error_message };\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 990,
+    "y": 440,
+    "wires": [["406fcfa94fd18fb0"]]
+  },
+  {
+    "id": "406fcfa94fd18fb0",
+    "type": "http response",
+    "z": "6718c5f282937364",
+    "name": "Response",
+    "statusCode": "",
+    "headers": {},
+    "x": 1240,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "abdeb6dc309d4eae",
+    "type": "http response",
+    "z": "6718c5f282937364",
+    "name": "Error Response",
+    "statusCode": "400",
+    "headers": {},
+    "x": 1260,
+    "y": 600,
+    "wires": []
+  },
+  {
+    "id": "a26326278a016942",
+    "type": "function",
+    "z": "6718c5f282937364",
+    "name": "Prepare Payload",
+    "func": "// Prepare the body parameters for Twilio API\nmsg.payload.From= \"+1\";\nmsg.payload.To= msg.req.headers.phone_number;\nmsg.payload.Body= msg.payload.message || \"Default SMS message\";\n\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 400,
+    "y": 440,
+    "wires": [["b2b04767a6838499", "14765d918e397f26"]]
+  },
+  {
+    "id": "af77760fa419bf0a",
+    "type": "debug",
+    "z": "6718c5f282937364",
+    "name": "Show Catched Error",
+    "active": true,
+    "tosidebar": false,
+    "console": true,
+    "tostatus": false,
+    "complete": "error",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 660,
+    "y": 680,
+    "wires": []
+  },
+  {
+    "id": "b2b04767a6838499",
+    "type": "debug",
+    "z": "6718c5f282937364",
+    "d": true,
+    "name": "Show Prepared Payload",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 690,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "f255d279a196adb1",
+    "type": "inject",
+    "z": "6718c5f282937364",
+    "name": "Send SMS",
+    "props": [
+      {
+        "p": "req.headers.phone_number",
+        "v": "+1",
+        "vt": "str"
+      },
+      {
+        "p": "payload.message",
+        "v": "Test SMS Message",
+        "vt": "str"
+      },
+      {
+        "p": "payload.event",
+        "v": "{}",
+        "vt": "json"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 160,
+    "y": 220,
+    "wires": [["a26326278a016942"]]
+  },
+  {
+    "id": "3e973d6fc67f44e9",
+    "type": "inject",
+    "z": "6718c5f282937364",
+    "name": "Send MMS",
+    "props": [
+      {
+        "p": "req.headers.phone_number",
+        "v": "+1",
+        "vt": "str"
+      },
+      {
+        "p": "payload.message",
+        "v": "Test MMS Message",
+        "vt": "str"
+      },
+      {
+        "p": "payload.event.alert.title",
+        "v": "Title",
+        "vt": "str"
+      },
+      {
+        "p": "payload.mediaURL",
+        "v": "https://",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "x": 160,
+    "y": 280,
+    "wires": [["a26326278a016942"]]
+  },
+  {
+    "id": "14765d918e397f26",
+    "type": "http request",
+    "z": "6718c5f282937364",
+    "name": "Send via Twilio API",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "https://api.twilio.com/2010-04-01/Accounts/ACCOUNT-ID/Messages.json",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "basic",
+    "senderr": false,
+    "headers": [
+      {
+        "keyType": "other",
+        "keyValue": "Content-Type",
+        "valueType": "other",
+        "valueValue": "application/x-www-form-urlencoded"
+      }
+    ],
+    "x": 670,
+    "y": 440,
+    "wires": [["cba7f9632400450f", "70f3366bc01a79e9"]]
+  },
+  {
+    "id": "70f3366bc01a79e9",
+    "type": "debug",
+    "z": "6718c5f282937364",
+    "d": true,
+    "name": "Show Response",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 990,
+    "y": 280,
+    "wires": []
+  }
+]
