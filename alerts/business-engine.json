@@ -1,5 +1,5 @@
 {
-  "version": "3.5.0",
+  "version": "3.6.0",
   "alerts": [
     {
       "id": "de393705-b177-41be-b023-1161a8f586c2",
@@ -9,17 +9,20 @@
       "schedule": "* * * * *",
       "annotations": "disabled",
       "status": "active",
-      "state": "alerting",
+      "state": "ok",
       "noDataState": "error",
       "timeRangeSource": "dashboard",
-      "lastTriggered": "2025-06-16T18:32:24.990Z",
+      "lastTriggered": "2025-07-04T03:39:03.612Z",
       "sampleSize": 3,
       "screenshots": true,
       "timeRange": {
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "f33a3dd4-2908-4661-9d0f-93566d601552",
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c"
+      ],
       "condition": {
         "id": "55f56c2f-eddc-4f2a-910f-36ce92a87c32",
         "repeat": "instance",
@@ -45,8 +48,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -68,14 +71,17 @@
       "state": "ok",
       "noDataState": "error",
       "timeRangeSource": "dashboard",
-      "lastTriggered": "2025-06-16T10:44:15.853Z",
+      "lastTriggered": null,
       "sampleSize": 3,
       "screenshots": true,
       "timeRange": {
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "f33a3dd4-2908-4661-9d0f-93566d601552",
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c"
+      ],
       "condition": {
         "id": "da69c930-405a-492c-8f05-f9de8d87bd2a",
         "repeat": "instance",
@@ -101,8 +107,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -121,17 +127,20 @@
       "schedule": "* * * * *",
       "annotations": "disabled",
       "status": "active",
-      "state": "alerting",
+      "state": "ok",
       "noDataState": "error",
       "timeRangeSource": "dashboard",
-      "lastTriggered": "2025-06-16T18:32:24.655Z",
+      "lastTriggered": "2025-07-06T01:38:03.434Z",
       "sampleSize": 3,
       "screenshots": true,
       "timeRange": {
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "f33a3dd4-2908-4661-9d0f-93566d601552",
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c"
+      ],
       "condition": {
         "id": "039dac9a-a4a5-4a26-857f-42a758a9fea7",
         "repeat": "instance",
@@ -157,8 +166,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -178,7 +187,7 @@
       "annotations": "disabled",
       "status": "active",
       "state": "ok",
-      "noDataState": "error",
+      "noDataState": "ok",
       "timeRangeSource": "dashboard",
       "lastTriggered": null,
       "sampleSize": 3,
@@ -187,7 +196,10 @@
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c",
+        "f33a3dd4-2908-4661-9d0f-93566d601552"
+      ],
       "condition": {
         "id": "cc3a6681-1950-49f0-9b8e-6df1c7ce03b2",
         "repeat": "instance",
@@ -213,8 +225,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -236,14 +248,17 @@
       "state": "ok",
       "noDataState": "error",
       "timeRangeSource": "dashboard",
-      "lastTriggered": "2025-06-16T12:00:11.692Z",
+      "lastTriggered": null,
       "sampleSize": 3,
       "screenshots": true,
       "timeRange": {
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "f33a3dd4-2908-4661-9d0f-93566d601552",
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c"
+      ],
       "condition": {
         "id": "9f4680ab-4de4-42ea-90a3-c454ebde9a09",
         "repeat": "instance",
@@ -269,8 +284,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -289,8 +304,8 @@
       "schedule": "* * * * *",
       "annotations": "disabled",
       "status": "active",
-      "state": "error",
-      "noDataState": "error",
+      "state": "ok",
+      "noDataState": "ok",
       "timeRangeSource": "dashboard",
       "lastTriggered": null,
       "sampleSize": 3,
@@ -299,7 +314,10 @@
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "f33a3dd4-2908-4661-9d0f-93566d601552",
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c"
+      ],
       "condition": {
         "id": "e60d1b46-8385-464e-b350-f8846a25db57",
         "repeat": "instance",
@@ -325,12 +343,183 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
           "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "7ac09d50-f289-4ee4-a74d-8e4d1811e6e1",
+      "title": "Business Engine - Renderer Errors",
+      "dashboardId": "del1jba8ttv5sb",
+      "panelId": 4,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-05T18:00:08.253Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["5d11aafb-f191-40d0-ba36-970a80c1a28c"],
+      "condition": {
+        "id": "e91ae1c8-2f5f-4cfe-8e18-9be2f302c905",
+        "repeat": "engine",
+        "variables": {
+          "engine": {
+            "name": "engine",
+            "label": "Business Engine",
+            "multi": true,
+            "order": 0,
+            "value": [],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "levels": {
+            "name": "levels",
+            "label": "Levels",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "pattern",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0.05
+        },
+        "evaluation": {
+          "type": "pattern",
+          "field": "Line",
+          "pattern": "\\[error\\]"
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "176b09e4-f611-4e22-8e3e-1b6c70980e18",
+      "title": "Business Engine - Scheduler Errors",
+      "dashboardId": "del1jba8ttv5sb",
+      "panelId": 2,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-06T23:44:02.583Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "69d483b3-7db4-4029-96d4-7d7e762f164e",
+        "repeat": "engine",
+        "variables": {
+          "engine": {
+            "name": "engine",
+            "label": "Business Engine",
+            "multi": true,
+            "order": 0,
+            "value": [],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "levels": {
+            "name": "levels",
+            "label": "Levels",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "pattern",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0.05
+        },
+        "evaluation": {
+          "type": "pattern",
+          "field": "Line",
+          "pattern": "\\[error\\]"
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "3e173dde-8246-4271-9357-9945f78984aa",
+      "title": "Business Engine - Server Errors",
+      "dashboardId": "del1jba8ttv5sb",
+      "panelId": 3,
+      "schedule": "* * * * *",
+      "annotations": "disabled",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-07T17:47:01.772Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "condition": {
+        "id": "64a461ad-5b51-45c2-a77b-f640a13ffbfa",
+        "repeat": "engine",
+        "variables": {
+          "engine": {
+            "name": "engine",
+            "label": "Business Engine",
+            "multi": true,
+            "order": 0,
+            "value": [],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "levels": {
+            "name": "levels",
+            "label": "Levels",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "pattern",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0.05
+        },
+        "evaluation": {
+          "type": "pattern",
+          "field": "Line",
+          "pattern": "\\[error\\]"
         }
       },
       "conditionOverrides": [],
@@ -345,17 +534,20 @@
       "schedule": "* * * * *",
       "annotations": "disabled",
       "status": "active",
-      "state": "alerting",
+      "state": "ok",
       "noDataState": "error",
       "timeRangeSource": "dashboard",
-      "lastTriggered": "2025-06-16T18:32:13.002Z",
+      "lastTriggered": null,
       "sampleSize": 3,
       "screenshots": true,
       "timeRange": {
         "from": null,
         "to": null
       },
-      "actionIds": ["f33a3dd4-2908-4661-9d0f-93566d601552"],
+      "actionIds": [
+        "5d11aafb-f191-40d0-ba36-970a80c1a28c",
+        "f33a3dd4-2908-4661-9d0f-93566d601552"
+      ],
       "condition": {
         "id": "4ac3ab04-5f61-4bfa-8205-77f306f9b138",
         "repeat": "instance",
@@ -381,8 +573,8 @@
         },
         "evaluationType": "thresholds",
         "evaluationApply": {
-          "mode": "all",
-          "percentage": 0
+          "mode": "percentage",
+          "percentage": 0.05
         },
         "evaluation": {
           "type": "thresholds",
@@ -396,40 +588,62 @@
   ],
   "actions": [
     {
-      "id": "a34ee556-55d0-49b3-b634-3e96f70c6b86",
-      "title": "Logs",
-      "type": "custom",
-      "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nInstance: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
+      "id": "5d11aafb-f191-40d0-ba36-970a80c1a28c",
+      "title": "Gmail",
+      "type": "request",
+      "target": "alerting",
+      "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nValue: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
       "options": {
-        "url": null
+        "url": "http://node-red:1880/email",
+        "headers": [
+          {
+            "key": "recipient",
+            "value": "hello@bi.io"
+          }
+        ]
       },
-      "useFor": [],
+      "useFor": [
+        "e43eff6e-f617-4da6-9703-cc44d08461af",
+        "ba05170e-0339-4a9f-9693-b10d6536e0d1",
+        "31fdca0f-48f3-49d1-b582-41041cc5e0e1",
+        "de393705-b177-41be-b023-1161a8f586c2",
+        "7ac09d50-f289-4ee4-a74d-8e4d1811e6e1",
+        "e2f7a751-cdfc-42e7-ade4-ebfcceeae8d0",
+        "dac21101-a792-4c6c-901d-0b2519d7cd1b",
+        "c542a59e-5349-4df9-839d-808d4765e2a1"
+      ],
+      "useForReports": [],
       "latestEvent": null
     },
     {
       "id": "f33a3dd4-2908-4661-9d0f-93566d601552",
       "title": "Slack",
       "type": "request",
+      "target": "alerting",
       "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nInstance: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
       "options": {
         "url": "http://node-red:1880/slack",
         "headers": [
           {
             "key": "channel_id",
-            "value": "C090L07LNP9"
+            "value": "C123"
           }
         ]
       },
       "useFor": [
-        "e2f7a751-cdfc-42e7-ade4-ebfcceeae8d0",
-        "de393705-b177-41be-b023-1161a8f586c2",
-        "c542a59e-5349-4df9-839d-808d4765e2a1",
-        "dac21101-a792-4c6c-901d-0b2519d7cd1b",
-        "ba05170e-0339-4a9f-9693-b10d6536e0d1",
         "31fdca0f-48f3-49d1-b582-41041cc5e0e1",
-        "e43eff6e-f617-4da6-9703-cc44d08461af"
+        "176b09e4-f611-4e22-8e3e-1b6c70980e18",
+        "3e173dde-8246-4271-9357-9945f78984aa",
+        "e2f7a751-cdfc-42e7-ade4-ebfcceeae8d0",
+        "e43eff6e-f617-4da6-9703-cc44d08461af",
+        "ba05170e-0339-4a9f-9693-b10d6536e0d1",
+        "de393705-b177-41be-b023-1161a8f586c2",
+        "dac21101-a792-4c6c-901d-0b2519d7cd1b",
+        "c542a59e-5349-4df9-839d-808d4765e2a1"
       ],
+      "useForReports": [],
       "latestEvent": null
     }
-  ]
+  ],
+  "reports": []
 }
