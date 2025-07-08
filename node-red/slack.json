@@ -111,7 +111,7 @@
     "type": "function",
     "z": "8a85552c35acc9b0",
     "name": "Prepare Payload",
-    "func": "/**\n * Panel Screenshot\n */\nlet image = msg.payload.event.condition?.panelScreenshot || \"\";\nlet title = msg.payload.event.alert?.title || \"Screenshot\";\n\n/**\n * Payload\n */\nmsg.payload = {\n    channel_id: msg.req.headers.channel_id,\n    text: msg.payload.message,\n    title,\n    image\n};\n\nreturn msg;",
+    "func": "/**\n * Panel Screenshot\n */\nlet image = msg.payload.event.condition?.panelScreenshot || \"\";\nlet title = msg.payload.event.alert?.title || \"Screenshot\";\n\n/**\n * Report\n */\nif (!image && msg.payload.event.reportEvent) {\n    image = msg.payload.event.reportEvent.file;\n    title = msg.payload.event.report.title || \"Dashboard\";\n}\n\n/**\n * Payload\n */\nmsg.payload = {\n    channel_id: msg.req.headers.channel_id,\n    text: msg.payload.message,\n    title,\n    image\n};\n\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
