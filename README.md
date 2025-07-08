@@ -11,6 +11,7 @@ This platform enables organizations to harness data effectively, delivering acti
 - **[User-Friendly Business Studio](https://volkovlabs.io/big/studio/)**: Simplify Business Engine management with an intuitive interface, enabling non-technical users to configure, monitor, and maintain data workflows effortlessly.
 - **[High-Performance Business Engine](https://volkovlabs.io/big/engine/)**: Achieve robust performance with distributed load balancing and high availability, seamlessly integrating with Grafana for efficient data processing.
 - **[Load-Balanced Business Alerting](https://volkovlabs.io/big/alerting/)**: Create customizable alert rules tied to Grafana panel queries, supporting thresholds and variables for timely, relevant notifications on business metrics.
+- **[Automated Business Reporting](https://volkovlabs.io/big/reporting/)**: Create scheduled dashboard screenshots and distribute them to stakeholders for easy trend analysis, performance tracking, and insight sharing.
 
 ## 📋 Compatibility
 
