@@ -250,7 +250,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
-            "axisSoftMax": 30,
+            "axisSoftMax": 10,
             "fillOpacity": 50,
             "gradientMode": "none",
             "hideFrom": {
@@ -387,6 +387,17 @@
               "Value #C (mean)": "Create Annotations",
               "Value (mean)": "Execution time"
             }
+          }
+        },
+        {
+          "id": "sortBy",
+          "options": {
+            "fields": {},
+            "sort": [
+              {
+                "field": "alert"
+              }
+            ]
           }
         }
       ],
@@ -538,7 +549,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "decimals": 0,
           "mappings": [],
           "min": 0,
           "noValue": "0",
@@ -550,7 +560,7 @@
               },
               {
                 "color": "yellow",
-                "value": 1
+                "value": 2
               },
               {
                 "color": "red",
@@ -590,7 +600,7 @@
         "showUnfilled": true,
         "sizing": "auto",
         "text": {},
-        "valueMode": "color"
+        "valueMode": "text"
       },
       "pluginVersion": "12.0.2",
       "targets": [
@@ -768,7 +778,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "decimals": 0,
           "mappings": [],
           "min": 0,
           "noValue": "0",
@@ -810,7 +819,7 @@
         "maxVizHeight": 300,
         "minVizHeight": 10,
         "minVizWidth": 0,
-        "namePlacement": "auto",
+        "namePlacement": "top",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [],
@@ -1022,6 +1031,10 @@
           "mappings": [
             {
               "options": {
+                "takeDashboardScreenshot": {
+                  "index": 1,
+                  "text": "Dashboard Screenshot"
+                },
                 "takePanelScreenshot": {
                   "index": 0,
                   "text": "Panel Screenshot"
@@ -1487,7 +1500,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.0.0",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
           "datasource": {
@@ -1561,7 +1574,7 @@
             "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
-            "axisSoftMax": 20,
+            "axisSoftMax": 32,
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
@@ -1599,11 +1612,11 @@
               },
               {
                 "color": "#EAB839",
-                "value": 10
+                "value": 20
               },
               {
                 "color": "red",
-                "value": 20
+                "value": 30
               }
             ]
           },
@@ -1633,7 +1646,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.0.0",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
           "datasource": {
@@ -1736,9 +1749,9 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "Business Engine",
   "uid": "a93bc75f-c7db-4518-af61-0f75f3a055e7",
-  "version": 4,
+  "version": 1,
   "weekStart": ""
 }
