@@ -73,7 +73,7 @@
     "type": "function",
     "z": "53150579b274ef7f",
     "name": "Response status",
-    "func": "/**\n _ Success\n _/\nif (!msg.error) {\n msg.statusCode = 200;\n msg.payload = { ok: true, message: \"Incident created successfully in KeepHq.\" };\n return msg;\n}\n\n/**\n _ Error\n _/\nmsg.statusCode = 400;\nmsg.payload = { ok: false, message: msg.error };\n\nreturn msg;",
+    "func": "/**\n * Success\n */\nif (!msg.error) {\n msg.statusCode = 200;\n msg.payload = { ok: true, message: \"Incident created successfully in KeepHq.\" };\n return msg;\n}\n\n/**\n * Error\n */\nmsg.statusCode = 400;\nmsg.payload = { ok: false, message: msg.error };\n\nreturn msg;",
     "outputs": 1,
     "timeout": 0,
     "noerr": 0,
