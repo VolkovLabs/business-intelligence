@@ -14,7 +14,6 @@ services:
   engine:
     container_name: engine
     image: ghcr.io/volkovlabs/business-engine:3.6.0
-    init: true
     depends_on:
       - postgres
     ports:
