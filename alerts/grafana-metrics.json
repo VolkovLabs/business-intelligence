@@ -1,0 +1,317 @@
+{
+  "version": "3.6.0",
+  "alerts": [
+    {
+      "id": "0060042d-6f84-4172-8a7d-d7cf41047084",
+      "title": "Grafana - API, Web, Proxy Requests",
+      "dashboardId": "NWQetfvSz",
+      "panelId": 30,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": null,
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["62d4041a-f2e6-449e-8f42-f172a6c2a0e1"],
+      "condition": {
+        "id": "33ba7fc5-0419-4480-ad4e-88dc1df83f33",
+        "repeat": "instance",
+        "variables": {
+          "job": {
+            "name": "job",
+            "label": "Job",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "84fd375f-7569-44e2-81e5-eaea7d1b91d6",
+      "title": "Grafana - Dashboard Get",
+      "dashboardId": "NWQetfvSz",
+      "panelId": 9,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-16T02:08:05.453Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["62d4041a-f2e6-449e-8f42-f172a6c2a0e1"],
+      "condition": {
+        "id": "6c49b0da-1e5c-4a3b-bef3-77626dde4698",
+        "repeat": "instance",
+        "variables": {
+          "job": {
+            "name": "job",
+            "label": "Job",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "a1e586bd-197f-4309-8bf5-4f27919da725",
+      "title": "Grafana - HTTP Requests",
+      "dashboardId": "NWQetfvSz",
+      "panelId": 31,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": null,
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["62d4041a-f2e6-449e-8f42-f172a6c2a0e1"],
+      "condition": {
+        "id": "c78430ac-394e-4d16-9d36-0ffc6806debf",
+        "repeat": null,
+        "variables": {
+          "job": {
+            "name": "job",
+            "label": "Job",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "percentage",
+          "percentage": 0.05
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "5b11b227-acc1-4dc4-8578-b16758e04c0a",
+      "title": "Grafana - High CPU Usage",
+      "dashboardId": "NWQetfvSz",
+      "panelId": 14,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "alerting",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-16T02:09:03.893Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["62d4041a-f2e6-449e-8f42-f172a6c2a0e1"],
+      "condition": {
+        "id": "4fc8b86f-ef00-492c-b87f-41117bd5db89",
+        "repeat": "instance",
+        "variables": {
+          "job": {
+            "name": "job",
+            "label": "Job",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "percentage",
+          "percentage": 0.05
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green", "orange"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    },
+    {
+      "id": "1c8d0f08-5b04-43f6-b149-ece7d651e0d0",
+      "title": "Grafana - Open File Descriptors",
+      "dashboardId": "NWQetfvSz",
+      "panelId": 17,
+      "schedule": "* * * * *",
+      "annotations": "panel",
+      "status": "active",
+      "state": "ok",
+      "noDataState": "ok",
+      "timeRangeSource": "dashboard",
+      "lastTriggered": "2025-07-15T18:13:02.647Z",
+      "sampleSize": 3,
+      "screenshots": true,
+      "timeRange": {
+        "from": null,
+        "to": null
+      },
+      "actionIds": ["62d4041a-f2e6-449e-8f42-f172a6c2a0e1"],
+      "condition": {
+        "id": "1db4bcd4-985a-49a6-9280-11e920f33e8a",
+        "repeat": "instance",
+        "variables": {
+          "job": {
+            "name": "job",
+            "label": "Job",
+            "multi": true,
+            "order": 1,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          },
+          "instance": {
+            "name": "instance",
+            "label": "instance",
+            "multi": true,
+            "order": 0,
+            "value": ["$__all"],
+            "includeAll": true,
+            "allowCustomValue": false
+          }
+        },
+        "evaluationType": "thresholds",
+        "evaluationApply": {
+          "mode": "all",
+          "percentage": 0
+        },
+        "evaluation": {
+          "type": "thresholds",
+          "colors": ["green"]
+        }
+      },
+      "conditionOverrides": [],
+      "stateStartDate": null,
+      "isConfigurationValid": true
+    }
+  ],
+  "actions": [
+    {
+      "id": "62d4041a-f2e6-449e-8f42-f172a6c2a0e1",
+      "title": "Grafana Incident",
+      "type": "request",
+      "target": "alerting",
+      "messageType": "template",
+      "message": "{{ event.alert.title }} [{{ event.alert.state }}]\n{{#if event.condition.repeatValue}}\nInstance: {{event.condition.repeatValue}}\n{{/if}}\nAlerting values count: {{ event.condition.alertingValuesCount }}\n{{#unless event.condition.hasData}}\nNo data in condition run\n{{/unless}}",
+      "options": {
+        "url": "http://node-red:1880/incident",
+        "headers": [
+          {
+            "key": "severity",
+            "value": "major"
+          }
+        ]
+      },
+      "ai": {
+        "message": ""
+      },
+      "useFor": [
+        "0060042d-6f84-4172-8a7d-d7cf41047084",
+        "84fd375f-7569-44e2-81e5-eaea7d1b91d6",
+        "a1e586bd-197f-4309-8bf5-4f27919da725",
+        "5b11b227-acc1-4dc4-8578-b16758e04c0a",
+        "1c8d0f08-5b04-43f6-b149-ece7d651e0d0"
+      ],
+      "useForReports": [],
+      "latestEvent": null
+    }
+  ],
+  "reports": []
+}
