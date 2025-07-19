@@ -4,7 +4,7 @@ Transform your analytics with the **Business Intelligence Platform**—a high-pe
 
 This platform enables organizations to harness data effectively, delivering actionable insights through Grafana dashboards with ease.
 
-![Business Studio](https://volkovlabs.io/img/big/business-studio/engine.png)
+![Business Studio](https://volkovlabs.io/img/big/business-studio.gif)
 
 ## 🌟 Key Features
 
