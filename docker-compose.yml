@@ -13,7 +13,7 @@ services:
 
   engine:
     container_name: engine
-    image: ghcr.io/volkovlabs/business-engine:3.6.0
+    image: ghcr.io/volkovlabs/business-engine:3.7.0
     depends_on:
       - postgres
     ports:
